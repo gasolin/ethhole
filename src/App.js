@@ -1,19 +1,22 @@
-import human from 'human-format'
+
 
 import chainData from './data/data'
-// import logo from './logo.svg';
-import './App.css';
+import { Nav } from './components/Nav'
+import { Table } from './components/Table'
+import { TableRow } from './components/TableRow'
 
 function App() {
   // console.log('%O', chainData)
   const projects = Object.keys(chainData)
+    .filter(proj => proj !== 'ethereum')
     .sort((a, b) => chainData[b].tvl - chainData[a].tvl)
+  const ethUsdPrice = chainData.ethereum.usd
   return (
     <div className="App">
-      <header className="App-header">
-        {projects.map(proj => <p key={proj}>{proj} ♦
-{human(chainData[proj].tvl)}</p>)}
-      </header>
+      <Nav ethUsdPrice={ethUsdPrice}/>
+      <Table>
+        {projects.map(proj => <TableRow key={proj} ethUsdPrice={ethUsdPrice} name={proj} project={chainData[proj]} />)}
+      </Table>
     </div>
   );
 }
