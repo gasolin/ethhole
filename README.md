@@ -3,7 +3,7 @@ How the token flows
 
 ## Data
 
-In `/data` Layer 2 and side chain bridge contracts balances are list by date.
+In `src/data` Layer 2 and side chain bridge contracts balances are list by date.
 
 The format is
 

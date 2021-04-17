@@ -39,10 +39,19 @@ const getBalanceURL = address => `https://api.covalenthq.com/v1/1/address/${addr
 function writeJson(data, path) {
   try {
     const now = new Date()
-    const filePath = `data/${now.toISOString().split('T')[0]}.json`
+    const today = now.toISOString().split('T')[0]
+    const filePath = `src/data/${today}.json`
     console.log('write to', path ? path : filePath)
-    writeTextFileSync(path ? path : filePath, JSON.stringify(data));
-    return "Written to " + path ? path : filePath;
+    writeTextFileSync(path ? path : filePath, JSON.stringify(data))
+
+    const dataPath = `src/data/data.js`
+    const content = `import chainData from './${today}.json'
+
+export default chainData
+`
+    writeTextFileSync(dataPath, content)
+    return "Written to " + dataPath
+
   } catch (e) {
     console.error(e.message)
   }
