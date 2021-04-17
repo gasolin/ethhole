@@ -5,6 +5,8 @@ How the token flows
 
 In `/data` Layer 2 and side chain bridge contracts balances are list by date.
 
+Can explorer data with JSON viewer, ex http://jsonviewer.stack.hu/
+
 ## Usage
 
 ```sh

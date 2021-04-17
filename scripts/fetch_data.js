@@ -67,13 +67,25 @@ async function main() {
     for (const addr of addrs) {
       const data = await getBalances(addr)
       const proj = contractsMap[addr]
+      console.log('process ', proj)
       if (!collectData[proj]) {
-        collectData[proj] = [data.data]
+        collectData[proj] = {}
+        collectData[proj].bridges = [data.data]
       }
-      collectData[proj].push(data.data)
+      collectData[proj].bridges.push(data.data)
       // to not brute the API limit
       await Timeout.wait(200)
     }
+
+    // calc tvl per project
+    (Object.keys(ETH_BRIDGE_CONTRACTS))
+      .map(proj => {
+        let tvl = 0
+        collectData[proj].bridges.map(bridge => bridge.items.map(item => {
+          tvl += item.quote
+        }))
+        collectData[proj].tvl = tvl
+      })
 
     writeJson(collectData)
   } catch (e) {
