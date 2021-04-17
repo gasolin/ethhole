@@ -4,6 +4,14 @@ const TYPE_LAYER2_EXCHANGE = 'l2ex'
 // const TYPE_SIDECHAIN = 'sidechain'
 const mainnet = 1 // ethereum
 
+export const typeMap = {
+  [TYPE_LAYER2]: 'General',
+  [TYPE_LAYER2_PAYMENT]: 'Payment',
+  [TYPE_LAYER2_EXCHANGE]: 'DEX',
+}
+
+export const getTypeMap = (type) => typeMap[type] || 'Unknown'
+
 export const ETH_BRIDGE_CONTRACTS = {
   "Aztec": {
     "bridges": [
@@ -12,7 +20,8 @@ export const ETH_BRIDGE_CONTRACTS = {
       }
     ],
     "chainId": mainnet,
-    "website": "https://zk.money",
+    "website": "https://aztec.network/",
+    "color": "#944af2",
     "type": TYPE_LAYER2_PAYMENT
   },
   "dydx": {
@@ -23,6 +32,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     "chainId": mainnet,
     "website": "https://dydx.exchange/",
+    "color": "#6966FF",
     "type": TYPE_LAYER2_EXCHANGE
   },
   "DeversiFi": {
@@ -33,6 +43,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     "chainId": mainnet,
     "website": "https://www.deversifi.com/",
+    "color": "#5500FC",
     "type": TYPE_LAYER2_EXCHANGE
   },
   "Fuel": {
@@ -43,6 +54,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     "chainId": mainnet,
     "website": "https://fuel.sh/",
+    "color": "#04c399",
     "type": TYPE_LAYER2_PAYMENT
   },
   "ImmutableX": {
@@ -53,6 +65,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     "chainId": mainnet,
     "website": "https://www.immutable.com/",
+    "color": "#24d1e9",
     "type": TYPE_LAYER2_EXCHANGE
   },
   "Loopring": {
@@ -62,6 +75,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     "chainId": mainnet,
     "website": "https://loopring.org",
+    "color": "#1c42ff",
     "type": TYPE_LAYER2_EXCHANGE
   },
   "Optimism": {
@@ -72,6 +86,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     "chainId": mainnet,
     "website": "https://optimism.io/",
+    "color": "#f01a37",
     "type": TYPE_LAYER2
   },
   "ZKSwap": {
@@ -82,6 +97,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     "chainId": mainnet,
     "website": "https://zkswap.info/en",
+    "color": "#596efd",
     "type": TYPE_LAYER2_EXCHANGE
   },
   "zkSync": {
@@ -92,6 +108,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     "chainId": mainnet,
     "website": "https://zksync.io/",
+    "color": "#8c8dfc",
     "type": TYPE_LAYER2_PAYMENT
   }
 }

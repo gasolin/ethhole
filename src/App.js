@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <Nav ethUsdPrice={ethUsdPrice}/>
       <Table>
-        {projects.map(proj => <TableRow key={proj} ethUsdPrice={ethUsdPrice} name={proj} project={chainData[proj]} />)}
+        {projects.map(proj => <TableRow key={proj} ethUsdPrice={ethUsdPrice} name={proj} data={chainData} />)}
       </Table>
     </div>
   );
