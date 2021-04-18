@@ -1,6 +1,11 @@
 import React from 'react'
 import {Sankey, LineSeriesPoint} from 'react-vis'
 
+import { ETH_BRIDGE_CONTRACTS } from '../data/bridge_contracts.js'
+
+const ETH_COLOR = '#747c84' //'#8facee'
+const LINK_COLOR = '#babcbc' //'#ecf0f1',
+
 export const BalanceFlow = React.memo(({ data, projects, width = 400 }) => {
   const THRESHOLD = 10000
   // console.log('%O', data)
@@ -12,8 +17,11 @@ export const BalanceFlow = React.memo(({ data, projects, width = 400 }) => {
   //   {name: 'others'},
   // ]
   const nodes = [
-    {name: 'Ethereum'},
-    ...entries.map((entry) => ({name: entry})),
+    {name: 'Ethereum', color: ETH_COLOR},
+    ...entries.map((entry) => ({
+      name: entry,
+      color: ETH_BRIDGE_CONTRACTS[entry].color,
+    })),
     {name: 'Others'},
   ]
 
@@ -28,6 +36,7 @@ export const BalanceFlow = React.memo(({ data, projects, width = 400 }) => {
     source: 0,
     target: idx + 1,
     value: data[entry].tvl,
+    color: idx < 3 ? ETH_BRIDGE_CONTRACTS[entry].color : LINK_COLOR,
   }))
   // const restShare = entries.reduce(
   //   (a, c) => a - c.share,
@@ -35,7 +44,12 @@ export const BalanceFlow = React.memo(({ data, projects, width = 400 }) => {
   // )
   const restShare = rests.reduce((a,c)=> a + data[c].tvl, 0)
   const links = [...mainLinks,
-    {source: 0, target: entries.length + 1, value: restShare}
+    {
+      source: 0,
+      target: entries.length + 1,
+      value: restShare,
+      color: LINK_COLOR,
+    }
   ]
   // console.log('%O', links)
   // if (container === null) {
