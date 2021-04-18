@@ -14,15 +14,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - run: git config --global user.email "gasolin@gmail.com"
-    - run: git config --global user.name "gasolin[bot]"
+    #- run: git config user.email "gasolin+bot@gmail.com"
+    #- run: git config user.name "gasolin[bot]"
     - name: Use Node.js
       uses: actions/setup-node@v2
       with:
         node-version: 14.x
-    - uses: borales/actions-yarn@v2.3.0
-      with:
-        cmd: install
-    - uses: borales/actions-yarn@v2.3.0
-      with:
-        cmd: deploy
+    - run: yarn install
+    - run: yarn deploy
