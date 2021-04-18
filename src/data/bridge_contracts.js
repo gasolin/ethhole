@@ -1,13 +1,14 @@
 const TYPE_LAYER2 = 'layer2'
 const TYPE_LAYER2_PAYMENT = 'l2payment'
 const TYPE_LAYER2_EXCHANGE = 'l2ex'
-// const TYPE_SIDECHAIN = 'sidechain'
+const TYPE_SIDECHAIN = 'sidechain'
 const mainnet = 1 // ethereum
 
 export const typeMap = {
   [TYPE_LAYER2]: 'General',
   [TYPE_LAYER2_PAYMENT]: 'Payment',
   [TYPE_LAYER2_EXCHANGE]: 'DEX',
+  [TYPE_SIDECHAIN]: 'SIDE CHAIN',
 }
 
 export const getTypeMap = (type) => typeMap[type] || 'Unknown'
@@ -88,6 +89,22 @@ export const ETH_BRIDGE_CONTRACTS = {
     "website": "https://optimism.io/",
     "color": "#f01a37",
     "type": TYPE_LAYER2
+  },
+  "xDai": {
+    "bridges": [
+      {
+        "address": "0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016",
+        "name": "xDai Bridge",
+      },
+      {
+        "address": "0x88ad09518695c6c3712ac10a214be5109a655671",
+        "name": "Omni Bridge",
+      }
+    ],
+    "chainId": mainnet,
+    "website": "https://www.xdaichain.com/",
+    "color": "#1ca9a6",
+    "type": TYPE_SIDECHAIN
   },
   "ZKSwap": {
     "bridges": [
