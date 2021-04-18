@@ -4,6 +4,8 @@ import chainData from './data/data'
 import { Nav } from './components/Nav'
 import { Table } from './components/Table'
 import { TableRow } from './components/TableRow'
+import { Panel } from './components/Panel'
+import { BalanceFlow } from './components/BalanceFlow'
 
 function App() {
   // console.log('%O', chainData)
@@ -14,6 +16,7 @@ function App() {
   return (
     <div className="App">
       <Nav ethUsdPrice={ethUsdPrice}/>
+      <Panel><BalanceFlow projects={projects} data={chainData} /></Panel>
       <Table>
         {projects.map(proj => <TableRow key={proj} ethUsdPrice={ethUsdPrice} name={proj} data={chainData} />)}
       </Table>
