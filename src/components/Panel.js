@@ -2,17 +2,17 @@ import useDimensions from "react-cool-dimensions"
 import _throttle from 'lodash/throttle'
 
 export const Panel = ({children}) => {
-  const { observe, unobserve, width, height, entry } = useDimensions({
-    onResize: _throttle(({ observe, unobserve, width, height, entry }) => {
+  const { observe, width } = useDimensions({
+    onResize: _throttle(({ observe, unobserve }) => {
       unobserve(); // To stop observing the current target element
       observe(); // To re-start observing the current target element
     }, 500),
   });
-  const adaptWidth = width > 600
-    ? 600
-    : width < 450
-      ? 400
-      : width
+  // const adaptWidth = width > 600
+  //   ? 600
+  //   : width < 450
+  //     ? 400
+  //     : width
   // console.log(width, adaptWidth)
   return (
     <div ref={observe} className="container mx-auto px-4 sm:px-8 max-w-3xl">

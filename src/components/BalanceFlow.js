@@ -1,5 +1,5 @@
 import React from 'react'
-import {Sankey, LineSeriesPoint} from 'react-vis'
+import { Sankey } from 'react-vis'
 
 import { ETH_BRIDGE_CONTRACTS } from '../data/bridge_contracts.js'
 
