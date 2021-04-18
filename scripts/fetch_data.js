@@ -27,7 +27,7 @@ const addrInfo = {}
 Array.from(new Set(
   (Object.keys(ETH_BRIDGE_CONTRACTS))
     .map(project => ETH_BRIDGE_CONTRACTS[project]?.bridges.map(entry => {
-      addrInfo[entry.address] = {project: project, chainId: ETH_BRIDGE_CONTRACTS[project].chainId}
+      addrInfo[entry.address] = {project: project, chainId: entry.chainId}
       return entry.address
     }))
     .flat(1)
