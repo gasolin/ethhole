@@ -6,6 +6,7 @@ import { Table } from './components/Table'
 import { TableRow } from './components/TableRow'
 import { Panel } from './components/Panel'
 import { BalanceFlow } from './components/BalanceFlow'
+import { Footer } from './components/Footer'
 
 function App() {
   // console.log('%O', chainData)
@@ -20,6 +21,7 @@ function App() {
       <Table>
         {projects.map(proj => <TableRow key={proj} ethUsdPrice={ethUsdPrice} name={proj} data={chainData} />)}
       </Table>
+      <Footer/>
     </div>
   );
 }
