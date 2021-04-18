@@ -9392,6 +9392,11 @@ react-app-polyfill@^2.0.0:
     regenerator-runtime "^0.13.7"
     whatwg-fetch "^3.4.1"
 
+react-cool-dimensions@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-cool-dimensions/-/react-cool-dimensions-2.0.1.tgz#afa96d1131d4dbe60384a738dc494955543a4b98"
+  integrity sha512-9T1j2cCGBjZtVQs5R7YVvDmr7W52wgjdRISpO5voCCRjOum/ZZNBFShquGwySswWH8XxCSR28HcRGza1J+70cw==
+
 react-dev-utils@^11.0.3:
   version "11.0.4"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-11.0.4.tgz#a7ccb60257a1ca2e0efe7a83e38e6700d17aa37a"

@@ -5,6 +5,7 @@
   "dependencies": {
     "human-format": "^0.11.0",
     "react": "^17.0.2",
+    "react-cool-dimensions": "^2.0.1",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "react-vis": "^1.11.7",
