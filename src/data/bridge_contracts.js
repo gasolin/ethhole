@@ -120,6 +120,18 @@ export const ETH_BRIDGE_CONTRACTS = {
     "color": "#f01a37",
     "type": TYPE_LAYER2
   },
+  // https://docs.matic.network/docs/develop/ethereum-matic/pos/deployment/
+  "Polygon": {
+    "bridges": [
+      {
+        "address": "0x401F6c983eA34274ec46f84D70b31C151321188b",
+        "chainId": MAINNET,
+      }
+    ],
+    "website": "https://polygon.technology/",
+    "color": "#8248e5",
+    "type": TYPE_SIDECHAIN
+  },
   "xDai": {
     "bridges": [
       {
