@@ -1,4 +1,4 @@
-import human from 'human-format'
+import human from 'millify'
 import { ETH_BRIDGE_CONTRACTS, getTypeMap } from '../data/bridge_contracts.js'
 
 export const TableRow = ({name, data, ethUsdPrice, showEth}) => {

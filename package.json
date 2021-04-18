@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "homepage": "http://gasolin.idv.tw/ethhole",
   "dependencies": {
-    "human-format": "^0.11.0",
     "lodash": "^4.17.21",
+    "millify": "^3.5.2",
     "react": "^17.0.2",
     "react-cool-dimensions": "^2.0.1",
     "react-dom": "^17.0.2",
