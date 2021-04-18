@@ -2,7 +2,7 @@ import useDimensions from "react-cool-dimensions"
 import _throttle from 'lodash/throttle'
 
 export const Panel = ({children}) => {
-  const { observe, width } = useDimensions({
+  const { observe/*, width*/ } = useDimensions({
     onResize: _throttle(({ observe, unobserve }) => {
       unobserve(); // To stop observing the current target element
       observe(); // To re-start observing the current target element
