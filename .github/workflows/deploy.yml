@@ -24,7 +24,7 @@ jobs:
       run: |
         git config --global user.name $user_name
         git config --global user.email $user_email
-        git remote set-url origin https://${user_name}:${github_token}@github.com/gasolin/ethhole.git
+        git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/gasolin/ethhole.git
         yarn deploy
       env:
         user_name: 'gasolin'
