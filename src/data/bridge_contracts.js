@@ -120,12 +120,23 @@ export const ETH_BRIDGE_CONTRACTS = {
     "color": "#f01a37",
     "type": TYPE_LAYER2
   },
-  // https://docs.matic.network/docs/develop/ethereum-matic/pos/deployment/
+  // https://github.com/maticnetwork/static/blob/master/network/mainnet/v1/index.json
   "Polygon": {
     "bridges": [
       {
         "address": "0x401F6c983eA34274ec46f84D70b31C151321188b",
         "chainId": MAINNET,
+        "name": "Plasma bridge"
+      },
+      {
+        "address": "0x40ec5B33f54e0E8A33A975908C5BA1c14e5BbbDf",
+        "chainId": MAINNET,
+        "name": "PoS ERC20 bridge"
+      },
+      {
+        "address": "0x8484Ef722627bf18ca5Ae6BcF031c23E6e922B30",
+        "chainId": MAINNET,
+        "name": "PoS ether bridge"
       }
     ],
     "website": "https://polygon.technology/",
