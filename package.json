@@ -17,7 +17,7 @@
     "build": "craco build",
     "test": "craco test",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -b main -d build"
   },
   "eslintConfig": {
     "extends": [
