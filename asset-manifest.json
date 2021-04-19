@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/ethhole/static/css/main.296709ab.chunk.css",
-    "main.js": "/ethhole/static/js/main.e57fad04.chunk.js",
-    "main.js.map": "/ethhole/static/js/main.e57fad04.chunk.js.map",
+    "main.css": "/ethhole/static/css/main.cc52b4d5.chunk.css",
+    "main.js": "/ethhole/static/js/main.b49a1f3e.chunk.js",
+    "main.js.map": "/ethhole/static/js/main.b49a1f3e.chunk.js.map",
     "runtime-main.js": "/ethhole/static/js/runtime-main.3b5010fc.js",
     "runtime-main.js.map": "/ethhole/static/js/runtime-main.3b5010fc.js.map",
     "static/js/2.bde9fd90.chunk.js": "/ethhole/static/js/2.bde9fd90.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.b8945be0.chunk.js": "/ethhole/static/js/3.b8945be0.chunk.js",
     "static/js/3.b8945be0.chunk.js.map": "/ethhole/static/js/3.b8945be0.chunk.js.map",
     "index.html": "/ethhole/index.html",
-    "static/css/main.296709ab.chunk.css.map": "/ethhole/static/css/main.296709ab.chunk.css.map",
+    "static/css/main.cc52b4d5.chunk.css.map": "/ethhole/static/css/main.cc52b4d5.chunk.css.map",
     "static/js/2.bde9fd90.chunk.js.LICENSE.txt": "/ethhole/static/js/2.bde9fd90.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3b5010fc.js",
     "static/js/2.bde9fd90.chunk.js",
-    "static/css/main.296709ab.chunk.css",
-    "static/js/main.e57fad04.chunk.js"
+    "static/css/main.cc52b4d5.chunk.css",
+    "static/js/main.b49a1f3e.chunk.js"
   ]
 }
