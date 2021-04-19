@@ -17,9 +17,9 @@ function App() {
   return (
     <div className="App">
       <Nav ethUsdPrice={ethUsdPrice}/>
-      <Panel><BalanceFlow projects={projects} data={chainData} /></Panel>
+      <Panel><BalanceFlow projects={projects} data={chainData} price={ethUsdPrice} /></Panel>
       <Table>
-        {projects.map(proj => <TableRow key={proj} ethUsdPrice={ethUsdPrice} name={proj} data={chainData} />)}
+        {projects.map(proj => <TableRow key={proj} price={ethUsdPrice} name={proj} data={chainData} />)}
       </Table>
       <Footer/>
     </div>

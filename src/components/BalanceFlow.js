@@ -1,12 +1,18 @@
-import React from 'react'
-import { Sankey } from 'react-vis'
+import {memo, useState} from 'react'
+import { Sankey, Hint } from 'react-vis'
+import human from 'millify'
 
 import { ETH_BRIDGE_CONTRACTS } from '../data/bridge_contracts.js'
 
 const ETH_COLOR = '#747c84' //'#8facee'
 const LINK_COLOR = '#babcbc' //'#ecf0f1',
 
-export const BalanceFlow = React.memo(({ data, projects, width = 400 }) => {
+const BLURRED_LINK_OPACITY = 0.3;
+const FOCUSED_LINK_OPACITY = 0.6;
+
+export const BalanceFlow = memo(({ data, price, projects, width = 400 }) => {
+  const [activeLink, setActiveLink] = useState(null)
+
   const THRESHOLD = 10000
   // console.log('%O', data)
   const entries = projects
@@ -50,11 +56,27 @@ export const BalanceFlow = React.memo(({ data, projects, width = 400 }) => {
       value: restShare,
       color: LINK_COLOR,
     }
-  ]
+  ].map((d, i) => ({
+    ...d,
+    opacity:
+      activeLink && i === activeLink.index
+        ? FOCUSED_LINK_OPACITY
+        : BLURRED_LINK_OPACITY
+  }))
   // console.log('%O', links)
-  // if (container === null) {
-  //   return null
-  // }
+
+  const renderHint = () => {
+    const hintValue = {
+      [`${activeLink.target.name}`]: human(activeLink.value * price)
+    };
+
+    return <Hint
+      value={hintValue}
+      align={{vertical: 'top', horizontal: 'left'}}
+      x={20}
+      y={-50}
+    />;
+  }
 
   return (
     <Sankey
@@ -63,7 +85,10 @@ export const BalanceFlow = React.memo(({ data, projects, width = 400 }) => {
       margin={{ left: 50, right: 10, top: 10, bottom: 20 }}
       height={300}
       width={width}
-      hasVoronoi
-    />
+      onLinkMouseOver={node => setActiveLink(node)}
+      onLinkMouseOut={() => setActiveLink(null)}
+    >
+      {activeLink && renderHint()}
+    </Sankey>
   )
 })
