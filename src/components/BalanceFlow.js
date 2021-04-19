@@ -60,9 +60,10 @@ export const BalanceFlow = React.memo(({ data, projects, width = 400 }) => {
     <Sankey
       nodes={nodes}
       links={links}
-      margin={{ left: 50, right: 10, top: 10, bottom: 40 }}
+      margin={{ left: 50, right: 10, top: 10, bottom: 20 }}
       height={300}
       width={width}
+      hasVoronoi
     />
   )
 })
