@@ -87,6 +87,23 @@ export const ETH_BRIDGE_CONTRACTS = {
     "color": "#04c399",
     "type": TYPE_LAYER2_PAYMENT
   },
+  "Hermez": {
+    "bridges": [
+      {
+        "address": "0xA68D85dF56E733A06443306A095646317B5Fa633",
+        "chainId": MAINNET
+      }
+    ],
+    "explorers": [
+      {
+        "explorer": "https://explorer.hermez.io/",
+        "name": "Hermez Batch Explorer"
+      }
+    ],
+    "website": "https://hermez.io/",
+    "color": "#e75a2b",
+    "type": TYPE_LAYER2_PAYMENT
+  },
   "ImmutableX": {
     "bridges": [
       {
