@@ -32,6 +32,12 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET,
       }
     ],
+    "explorers": [
+      {
+        "explorer": "https://explorer.aztec.network/",
+        "name": "Explorer"
+      }
+    ],
     "website": "https://aztec.network/",
     "color": "#944af2",
     "type": TYPE_LAYER2_PAYMENT
@@ -87,6 +93,12 @@ export const ETH_BRIDGE_CONTRACTS = {
       {
         "address": "0x6880f6Fd960D1581C2730a451A22EED1081cfD72",
         "chainId": MAINNET,
+      }
+    ],
+    "explorers": [
+      {
+        "explorer": "https://mainnet.fuel.sh/network",
+        "name": "Network"
       }
     ],
     "website": "https://fuel.sh/",
@@ -169,6 +181,12 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET,
       }
     ],
+    "explorers": [
+      {
+        "explorer": "https://mainnet-l2-explorer.surge.sh/",
+        "name": "Optimistic Ethereum Explorer"
+      }
+    ],
     "website": "https://optimism.io/",
     "color": "#f01a37",
     "type": TYPE_LAYER2
@@ -192,6 +210,12 @@ export const ETH_BRIDGE_CONTRACTS = {
         "name": "PoS ether bridge"
       }
     ],
+    "explorers": [
+      {
+        "explorer": "https://explorer-mainnet.maticvigil.com/",
+        "name": "Explorer"
+      }
+    ],
     "website": "https://polygon.technology/",
     "color": "#8248e5",
     "type": TYPE_SIDECHAIN
@@ -209,6 +233,12 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET,
       }
     ],
+    "explorers": [
+      {
+        "explorer": "https://blockscout.com/poa/xdai/",
+        "name": "Blockscout"
+      }
+    ],
     "website": "https://www.xdaichain.com/",
     "color": "#1ca9a6",
     "type": TYPE_SIDECHAIN
@@ -220,6 +250,12 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET,
       }
     ],
+    "explorers": [
+      {
+        "explorer": "https://zkswap.info/en/transactions",
+        "name": "Explorer"
+      }
+    ],
     "website": "https://zkswap.info/en",
     "color": "#596efd",
     "type": TYPE_LAYER2_EXCHANGE
@@ -229,6 +265,12 @@ export const ETH_BRIDGE_CONTRACTS = {
       {
         "address": "0xaBEA9132b05A70803a4E85094fD0e1800777fBEF",
         "chainId": MAINNET,
+      }
+    ],
+    "explorers": [
+      {
+        "explorer": "https://zkscan.io/explorer/",
+        "name": "zkSync Mainnet Block Explorer"
       }
     ],
     "website": "https://zksync.io/",
