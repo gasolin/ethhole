@@ -2,6 +2,9 @@ const TYPE_LAYER2 = 'layer2'
 const TYPE_LAYER2_PAYMENT = 'l2payment'
 const TYPE_LAYER2_EXCHANGE = 'l2ex'
 const TYPE_SIDECHAIN = 'sidechain'
+// const TYPE_OPTIMISTIC_ROLLUP = 'optimisticrollup'
+// const TYPE_ZK_ROLLUP = 'zkrollup'
+// const TYPE_STATE_CHANNEL = 'statechannel'
 
 // chainId
 const MAINNET = 1 // ethereum
@@ -14,6 +17,9 @@ export const typeMap = {
   [TYPE_LAYER2_PAYMENT]: 'Payment',
   [TYPE_LAYER2_EXCHANGE]: 'DEX',
   [TYPE_SIDECHAIN]: 'SIDE CHAIN',
+  // [TYPE_OPTIMISTIC_ROLLUP]: "Optimistic",
+  // [TYPE_ZK_ROLLUP]: "Zk",
+  // [TYPE_STATE_CHANNEL]: "State Channel",
 }
 
 export const getTypeMap = (type) => typeMap[type] || 'Unknown'
@@ -86,6 +92,36 @@ export const ETH_BRIDGE_CONTRACTS = {
     "website": "https://fuel.sh/",
     "color": "#04c399",
     "type": TYPE_LAYER2_PAYMENT
+  },
+  // https://github.com/harmony-one/ethhmy-bridge.sdk/blob/main/src/configs/mainnet.ts
+  "Harmony": {
+    "bridges": [
+      {
+        "address": "0xfD53b1B4AF84D59B20bF2C20CA89a6BeeAa2c628",
+        "name": "BUSD manager"
+      },
+      {
+        "address": "0xfE601dE9D4295274b9904D5a9Ad7069F23eE2B32",
+        "name": "LINK manager"
+      },
+      {
+        "address": "0x2dCCDB493827E15a5dC8f8b72147E6c4A5620857",
+        "name": "ERC20 manager"
+      },
+      // {
+      //   "address": "0x426A61A2127fDD1318Ec0EdCe02474f382FdAd30",
+      //   "name": "ERC721 manager"
+      // }
+    ],
+    "explorers": [
+      {
+        "explorer": "https://explorer.harmony.one/",
+        "name": "Explorer"
+      }
+    ],
+    "website": "https://www.harmony.one/",
+    "color": "#00ade8",
+    "type": TYPE_SIDECHAIN
   },
   "Hermez": {
     "bridges": [
