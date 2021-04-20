@@ -2,6 +2,7 @@ import { getTodayTag } from '../helpers/formatDate'
 import { Badge } from './Badge'
 
 export const Nav = ({ethUsdPrice}) => {
+  const price = ethUsdPrice === 1 ? '' : `♦ = $${ethUsdPrice}`
   return (
   <nav className="flex bg-white flex-wrap items-center justify-between p-4">
     <div className="lg:order-2 w-auto lg:w-1/5 lg:text-center">
@@ -19,7 +20,7 @@ export const Nav = ({ethUsdPrice}) => {
                 </path>
             </svg>
         </button> */}
-        <Badge text={`${getTodayTag()} ♦ = ${ethUsdPrice}`} />
+        <Badge text={`${getTodayTag()} ${price}`} />
     </div>
     <div className="navbar-menu hidden lg:order-1 lg:block w-full lg:w-2/5">
         {/* <a className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-indigo-600" href="#">
@@ -31,7 +32,7 @@ export const Nav = ({ethUsdPrice}) => {
         <a className="block lg:inline-block mt-4 lg:mt-0 text-blue-900 hover:text-indigo-600" href="#">
 
         </a> */}
-        <Badge text={`${getTodayTag()} ♦ = ${ethUsdPrice}`} />
+        <Badge text={`${getTodayTag()} ${price}`} />
     </div>
     <div className="navbar-menu hidden lg:order-3 lg:block w-full lg:w-2/5 lg:text-right">
         {/* <a className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-indigo-600" href="#">

@@ -1,9 +1,10 @@
 import human from 'millify'
 import { ETH_BRIDGE_CONTRACTS, getTypeMap } from '../data/bridge_contracts.js'
 
-export const TableRow = ({name, data, price, showEth}) => {
+export const TableRow = ({name, data, price}) => {
   const project = data[name]
   const projMeta = ETH_BRIDGE_CONTRACTS[name]
+  const tvl = price === 1 ? `♦ ${human(project.tvl)}` : `$ ${human(project.tvl * price)}`
   return (
     <tr>
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
@@ -23,7 +24,7 @@ export const TableRow = ({name, data, price, showEth}) => {
       </td>
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
           <p className="text-gray-900 whitespace-no-wrap">
-              ${showEth ? `♦${human(project.tvl)}` : human(project.tvl * price)}
+              {tvl}
           </p>
       </td>
       {/* <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
