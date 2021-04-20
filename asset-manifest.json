@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/ethhole/static/css/main.80325562.chunk.css",
-    "main.js": "/ethhole/static/js/main.efe1f74f.chunk.js",
-    "main.js.map": "/ethhole/static/js/main.efe1f74f.chunk.js.map",
+    "main.css": "/ethhole/static/css/main.2a0966b3.chunk.css",
+    "main.js": "/ethhole/static/js/main.1e1b88b8.chunk.js",
+    "main.js.map": "/ethhole/static/js/main.1e1b88b8.chunk.js.map",
     "runtime-main.js": "/ethhole/static/js/runtime-main.a6eca21b.js",
     "runtime-main.js.map": "/ethhole/static/js/runtime-main.a6eca21b.js.map",
-    "static/js/2.52705268.chunk.js": "/ethhole/static/js/2.52705268.chunk.js",
-    "static/js/2.52705268.chunk.js.map": "/ethhole/static/js/2.52705268.chunk.js.map",
+    "static/js/2.5b6738cc.chunk.js": "/ethhole/static/js/2.5b6738cc.chunk.js",
+    "static/js/2.5b6738cc.chunk.js.map": "/ethhole/static/js/2.5b6738cc.chunk.js.map",
     "static/js/3.c812ade6.chunk.js": "/ethhole/static/js/3.c812ade6.chunk.js",
     "static/js/3.c812ade6.chunk.js.map": "/ethhole/static/js/3.c812ade6.chunk.js.map",
     "index.html": "/ethhole/index.html",
-    "static/css/main.80325562.chunk.css.map": "/ethhole/static/css/main.80325562.chunk.css.map",
-    "static/js/2.52705268.chunk.js.LICENSE.txt": "/ethhole/static/js/2.52705268.chunk.js.LICENSE.txt"
+    "static/css/main.2a0966b3.chunk.css.map": "/ethhole/static/css/main.2a0966b3.chunk.css.map",
+    "static/js/2.5b6738cc.chunk.js.LICENSE.txt": "/ethhole/static/js/2.5b6738cc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a6eca21b.js",
-    "static/js/2.52705268.chunk.js",
-    "static/css/main.80325562.chunk.css",
-    "static/js/main.efe1f74f.chunk.js"
+    "static/js/2.5b6738cc.chunk.js",
+    "static/css/main.2a0966b3.chunk.css",
+    "static/js/main.1e1b88b8.chunk.js"
   ]
 }
