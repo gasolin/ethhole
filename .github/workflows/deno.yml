@@ -9,9 +9,9 @@
 name: Deno
 
 on:
-  # everyday at 2 am
+  # everyday at 00:13 am
   schedule:
-    - cron: "0 2 * * *"
+    - cron: "13 0 * * *"
 
 jobs:
   test:
