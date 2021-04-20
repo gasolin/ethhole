@@ -1,3 +1,3 @@
-import chainData from './2021-04-19.json'
+import chainData from './2021-04-20.json'
 
 export default chainData

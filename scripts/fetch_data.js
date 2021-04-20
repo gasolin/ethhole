@@ -27,7 +27,7 @@ const addrInfo = {}
 Array.from(new Set(
   (Object.keys(ETH_BRIDGE_CONTRACTS))
     .map(project => ETH_BRIDGE_CONTRACTS[project]?.bridges.map(entry => {
-      addrInfo[entry.address] = {project: project, chainId: entry.chainId}
+      addrInfo[entry.address] = {project: project, name: entry.name || '', chainId: entry.chainId}
       return entry.address
     }))
     .flat(1)
@@ -72,7 +72,7 @@ async function main() {
       const data = await res.json()
 
       const proj = addrInfo[addr].project
-      console.log('process ', proj)
+      console.log('process ', proj, addrInfo[addr].name)
       if (!collectData[proj]) {
         collectData[proj] = {}
         collectData[proj].bridges = [data.data]
