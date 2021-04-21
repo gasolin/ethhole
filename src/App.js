@@ -26,9 +26,11 @@ function App() {
       <Panel>
         <TotalValueLocked projects={projects} data={chainData} price={ethUsdPrice} setShowEth={setShowEth} />
       </Panel>
+      <Panel>
       <Table>
         {projects.map(proj => <TableRow key={proj} price={ethUsdPrice} name={proj} data={chainData} />)}
       </Table>
+      </Panel>
       <Footer/>
     </div>
   );

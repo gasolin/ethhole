@@ -3,7 +3,7 @@
 import { parse } from 'https://deno.land/std/flags/mod.ts'
 import { Timeout } from "https://deno.land/x/timeout/mod.ts"
 
-import { getTodayTag } from '../src/helpers/formatDate.js'
+import { getTimeStamp } from '../src/helpers/formatDate.js'
 import { ETH_BRIDGE_CONTRACTS } from '../src/data/bridge_contracts.js'
 const { args, exit, writeTextFileSync } = Deno
 
@@ -39,14 +39,15 @@ const getBalanceURL = (address, chainId = 1) => `https://api.covalenthq.com/v1/$
 // write file
 function writeJson(data, path) {
   try {
-    const today = getTodayTag()
+    const today = getTimeStamp(true)
+    const timestamp = getTimeStamp()
     const filePath = `src/data/${today}.json`
     console.log('write to', path ? path : filePath)
     writeTextFileSync(path ? path : filePath, JSON.stringify(data))
 
     const dataPath = `src/data/data.js`
     const content = `import chainData from './${today}.json'
-
+export const timestamp = '${timestamp}'
 export default chainData
 `
     writeTextFileSync(dataPath, content)
