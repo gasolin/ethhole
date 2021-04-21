@@ -18,13 +18,24 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: 14.x
+
+    - name: Cache YARN dependencies
+      uses: actions/cache@v2
+      with:
+        path: |
+          node_modules
+        key: yarn-cache-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: yarn-cache-
+
     - run: yarn install
     # https://dev.to/dyarleniber/setting-up-a-ci-cd-workflow-on-github-actions-for-a-react-app-with-github-pages-and-codecov-4hnp
     - name: Deploy
       run: |
         git config --global user.name $user_name
         git config --global user.email $user_email
-        git remote set-url origin https://x-access-token:${github_token}@github.com/gasolin/ethhole.git
+        git remote -v
+        git remote set-url origin https://${github_token}@github.com/gasolin/ethhole.git
+        git remote -v
         yarn deploy
       env:
         user_name: 'gasolin'
