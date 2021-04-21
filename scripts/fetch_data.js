@@ -39,9 +39,9 @@ const getBalanceURL = (address, chainId = 1) => `https://api.covalenthq.com/v1/$
 // write file
 function writeJson(data, path) {
   try {
-    const today = getTimeStamp(true)
-    const yesterday = getTimeTag('yesterday', today)
     const timestamp = getTimeStamp()
+    const today = getTimeTag('today', timestamp)
+    const yesterday = getTimeTag('yesterday', timestamp)
     const filePath = `src/data/${today}.json`
     console.log('write to', path ? path : filePath)
     writeTextFileSync(path ? path : filePath, JSON.stringify(data))
@@ -92,7 +92,7 @@ async function main() {
     (Object.keys(ETH_BRIDGE_CONTRACTS))
       .map(proj => {
         let tvl = 0
-        // console.log('tvl of ', proj)
+        console.log('tvl of ', proj)
         collectData[proj].bridges.map(bridge => bridge.items.map(item => {
           tvl += item.quote
           return ''
