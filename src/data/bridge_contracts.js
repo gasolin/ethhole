@@ -34,12 +34,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET,
       }
     ],
-    "explorers": [
-      {
-        "explorer": "https://explorer.aztec.network/",
-        "name": "Explorer"
-      }
-    ],
+    "explorer": "https://explorer.aztec.network/",
     "website": "https://aztec.network/",
     "color": "#944af2",
     "type": TYPE_LAYER2_PAYMENT
@@ -97,12 +92,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET,
       }
     ],
-    "explorers": [
-      {
-        "explorer": "https://mainnet.fuel.sh/network",
-        "name": "Network"
-      }
-    ],
+    "explorer": "https://mainnet.fuel.sh/network",
     "website": "https://fuel.sh/",
     "color": "#04c399",
     "type": TYPE_LAYER2_PAYMENT
@@ -127,12 +117,7 @@ export const ETH_BRIDGE_CONTRACTS = {
       //   "name": "ERC721 manager"
       // }
     ],
-    "explorers": [
-      {
-        "explorer": "https://explorer.harmony.one/",
-        "name": "Explorer"
-      }
-    ],
+    "explorer": "https://explorer.harmony.one/",
     "website": "https://www.harmony.one/",
     "color": "#00ade8",
     "type": TYPE_SIDECHAIN
@@ -144,12 +129,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET
       }
     ],
-    "explorers": [
-      {
-        "explorer": "https://explorer.hermez.io/",
-        "name": "Hermez Batch Explorer"
-      }
-    ],
+    "explorer": "https://explorer.hermez.io/",
     "website": "https://hermez.io/",
     "color": "#e75a2b",
     "type": TYPE_LAYER2_PAYMENT
@@ -183,12 +163,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET,
       }
     ],
-    "explorers": [
-      {
-        "explorer": "https://mainnet-l2-explorer.surge.sh/",
-        "name": "Optimistic Ethereum Explorer"
-      }
-    ],
+    "explorer": "https://mainnet-l2-explorer.surge.sh/",
     "website": "https://optimism.io/",
     "color": "#f01a37",
     "type": TYPE_LAYER2_DERIVATIVES
@@ -212,12 +187,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "name": "PoS ether bridge"
       }
     ],
-    "explorers": [
-      {
-        "explorer": "https://explorer-mainnet.maticvigil.com/",
-        "name": "Explorer"
-      }
-    ],
+    "explorer": "https://explorer-mainnet.maticvigil.com/",
     "website": "https://polygon.technology/",
     "color": "#8248e5",
     "type": TYPE_SIDECHAIN
@@ -235,12 +205,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET,
       }
     ],
-    "explorers": [
-      {
-        "explorer": "https://blockscout.com/poa/xdai/",
-        "name": "Blockscout"
-      }
-    ],
+    "explorer": "https://blockscout.com/poa/xdai/",
     "website": "https://www.xdaichain.com/",
     "color": "#1ca9a6",
     "type": TYPE_SIDECHAIN
@@ -252,12 +217,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET,
       }
     ],
-    "explorers": [
-      {
-        "explorer": "https://zkswap.info/en/transactions",
-        "name": "Explorer"
-      }
-    ],
+    "explorer": "https://zkswap.info/en/transactions",
     "website": "https://zkswap.info/en",
     "color": "#596efd",
     "type": TYPE_LAYER2_EXCHANGE
@@ -269,12 +229,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET,
       }
     ],
-    "explorers": [
-      {
-        "explorer": "https://zkscan.io/explorer/",
-        "name": "zkSync Mainnet Block Explorer"
-      }
-    ],
+    "explorer": "https://zkscan.io/explorer/",
     "website": "https://zksync.io/",
     "color": "#8c8dfc",
     "type": TYPE_LAYER2_PAYMENT
