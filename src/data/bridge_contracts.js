@@ -2,6 +2,7 @@ const TYPE_LAYER2 = 'layer2'
 const TYPE_LAYER2_PAYMENT = 'l2payment'
 const TYPE_LAYER2_EXCHANGE = 'l2ex'
 const TYPE_SIDECHAIN = 'sidechain'
+const TYPE_LAYER2_DERIVATIVES = 'l2derivatives'
 // const TYPE_OPTIMISTIC_ROLLUP = 'optimisticrollup'
 // const TYPE_ZK_ROLLUP = 'zkrollup'
 // const TYPE_STATE_CHANNEL = 'statechannel'
@@ -16,7 +17,8 @@ export const typeMap = {
   [TYPE_LAYER2]: 'General',
   [TYPE_LAYER2_PAYMENT]: 'Payment',
   [TYPE_LAYER2_EXCHANGE]: 'DEX',
-  [TYPE_SIDECHAIN]: 'SIDE CHAIN',
+  [TYPE_SIDECHAIN]: 'Side Chain',
+  [TYPE_LAYER2_DERIVATIVES]: 'Derivatives',
   // [TYPE_OPTIMISTIC_ROLLUP]: "Optimistic",
   // [TYPE_ZK_ROLLUP]: "Zk",
   // [TYPE_STATE_CHANNEL]: "State Channel",
@@ -189,7 +191,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     "website": "https://optimism.io/",
     "color": "#f01a37",
-    "type": TYPE_LAYER2
+    "type": TYPE_LAYER2_DERIVATIVES
   },
   // https://github.com/maticnetwork/static/blob/master/network/mainnet/v1/index.json
   "Polygon": {
