@@ -192,6 +192,25 @@ export const ETH_BRIDGE_CONTRACTS = {
     "color": "#8248e5",
     "type": TYPE_SIDECHAIN
   },
+  // https://github.com/polynetwork/docs/blob/master/config/README.md
+  "PolyNetwork": {
+    "bridges": [
+      {
+        "address": "0x250e76987d838a75310c34bf422ea9f1AC4Cc906",
+        "name": "Lock Proxy",
+        "chainId": MAINNET,
+      },
+      // {
+      //   "address": "0x2f7ac9436ba4B548f9582af91CA1Ef02cd2F1f03",
+      //   "name": "Lock Proxy",
+      //   "chainId": BSC,
+      // },
+    ],
+    "explorer": "https://explorer.poly.network/",
+    "website": "https://www.poly.network/",
+    "color": "#2222FF",
+    "type": TYPE_SIDECHAIN
+  },
   "xDai": {
     "bridges": [
       {
