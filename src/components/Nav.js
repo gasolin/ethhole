@@ -1,14 +1,16 @@
 import { timestamp } from '../data/data.js'
 import { getTimeTag } from '../helpers/formatDate'
 import { Badge } from './Badge'
+import hole from './hole.svg'
 
 export const Nav = ({ethUsdPrice}) => {
   const price = ethUsdPrice === 1 ? '' : `♦ = $${ethUsdPrice}`
   const todayInfo = `${getTimeTag('today', timestamp)} ${price}`
   return (
   <nav className="flex bg-white flex-wrap items-center justify-between p-4">
-    <div className="lg:order-2 w-auto lg:w-1/5 lg:text-center">
-        <a className="text-xl text-gray-800 font-semibold font-heading" href="http://www.gasolin.idv.tw/ethhole">
+    <div className="lg:order-2 w-auto lg:w-1/5 lg:text-center flex flex-row">
+        <img src={hole} width={24} height={24} alt="ethhole.link" />
+        <a className="text-xl text-gray-800 font-semibold font-heading pl-2" href="https://ethhole.link">
             ETH Hole
         </a>
     </div>

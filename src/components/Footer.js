@@ -49,6 +49,11 @@ export const Footer = () => (
                           gasolin
                       </a>
                   </span>
+                  <span>
+                  <a className="underline hover:text-primary-gray-20" href="https://www.flaticon.com/free-icon/hole_595435?term=hole&related_id=595435" target="_blank" rel="noreferrer">
+                    Logo credit freepik
+                  </a>
+                  </span>
               </div>
           </div>
       </div>
