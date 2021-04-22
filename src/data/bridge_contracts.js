@@ -97,6 +97,19 @@ export const ETH_BRIDGE_CONTRACTS = {
     "color": "#04c399",
     "type": TYPE_LAYER2_PAYMENT
   },
+  // https://docs.fuse.io/the-fuse-chain/token-bridges
+  "fuse": {
+    "bridges": [
+      {
+        "address": "0x3014ca10b91cb3D0AD85fEf7A3Cb95BCAc9c0f79",
+        "chainId": MAINNET,
+      }
+    ],
+    "explorer": "https://explorer.fuse.io/",
+    "website": "https://fuse.io/network",
+    "color": "#fae83e",
+    "type": TYPE_LAYER2_PAYMENT
+  },
   // https://github.com/harmony-one/ethhmy-bridge.sdk/blob/main/src/configs/mainnet.ts
   "Harmony": {
     "bridges": [

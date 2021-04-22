@@ -13,7 +13,7 @@ const FOCUSED_LINK_OPACITY = 0.6;
 export const BalanceFlow = memo(({ data, price, projects, width = 400 }) => {
   const [activeLink, setActiveLink] = useState(null)
 
-  const THRESHOLD = 10000 // ETH
+  const THRESHOLD = 20000 // ETH
   // console.log('%O', data)
   const entries = projects
     .filter(proj => data[proj].tvl > THRESHOLD)
