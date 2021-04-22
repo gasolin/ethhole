@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ethhole/static/css/main.51a18b78.chunk.css",
-    "main.js": "/ethhole/static/js/main.0f4da11c.chunk.js",
-    "main.js.map": "/ethhole/static/js/main.0f4da11c.chunk.js.map",
+    "main.js": "/ethhole/static/js/main.de2cdc66.chunk.js",
+    "main.js.map": "/ethhole/static/js/main.de2cdc66.chunk.js.map",
     "runtime-main.js": "/ethhole/static/js/runtime-main.b71207be.js",
     "runtime-main.js.map": "/ethhole/static/js/runtime-main.b71207be.js.map",
     "static/js/2.1e010315.chunk.js": "/ethhole/static/js/2.1e010315.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.b71207be.js",
     "static/js/2.1e010315.chunk.js",
     "static/css/main.51a18b78.chunk.css",
-    "static/js/main.0f4da11c.chunk.js"
+    "static/js/main.de2cdc66.chunk.js"
   ]
 }
