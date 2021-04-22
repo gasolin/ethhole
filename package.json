@@ -1,7 +1,7 @@
 {
   "name": "ethhole",
   "version": "0.1.0",
-  "homepage": "http://gasolin.idv.tw/ethhole",
+  "homepage": "http://ethhole.link",
   "dependencies": {
     "lodash": "^4.17.21",
     "millify": "^3.5.2",
