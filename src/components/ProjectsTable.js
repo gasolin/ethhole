@@ -1,4 +1,4 @@
-export const Table = ({children}) => (
+export const ProjectsTable = ({children}) => (
   <table className="min-w-full leading-normal">
       <thead>
           <tr>

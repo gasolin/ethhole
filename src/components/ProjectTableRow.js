@@ -3,7 +3,7 @@ import {A} from 'hookrouter'
 
 import { ETH_BRIDGE_CONTRACTS, getTypeMap } from '../data/bridge_contracts.js'
 
-export const TableRow = ({name, data, price}) => {
+export const ProjectTableRow = ({name, data, price}) => {
   const project = data[name]
   const projMeta = ETH_BRIDGE_CONTRACTS[name]
   const tvl = price === 1 ? `Ξ ${human(project.tvl)}` : `$ ${human(project.tvl * price)}`

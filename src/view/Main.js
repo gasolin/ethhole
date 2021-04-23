@@ -2,8 +2,8 @@ import { useState } from "react"
 
 import chainData from '../data/data'
 import { TotalValueLocked } from '../components/TotalValueLocked'
-import { Table } from '../components/Table'
-import { TableRow } from '../components/TableRow'
+import { ProjectsTable } from '../components/ProjectsTable'
+import { ProjectTableRow } from '../components/ProjectTableRow'
 import { Panel } from '../components/Panel'
 import { BalanceFlow } from '../components/BalanceFlow'
 import { Nav } from '../components/Nav'
@@ -26,9 +26,9 @@ export const Main = () => {
       <TotalValueLocked projects={projects} data={chainData} price={price} setShowEth={setShowEth} />
     </Panel>
     <Panel>
-      <Table>
-        {projects.map(proj => <TableRow key={proj} price={price} name={proj} data={chainData} />)}
-      </Table>
+      <ProjectsTable>
+        {projects.map(proj => <ProjectTableRow key={proj} price={price} name={proj} data={chainData} />)}
+      </ProjectsTable>
     </Panel>
     <Footer/>
   </>)
