@@ -1,4 +1,6 @@
 import human from 'millify'
+import {A} from 'hookrouter'
+
 import { ETH_BRIDGE_CONTRACTS, getTypeMap } from '../data/bridge_contracts.js'
 
 export const TableRow = ({name, data, price}) => {
@@ -16,9 +18,7 @@ export const TableRow = ({name, data, price}) => {
                   </a>
               </div>)}
               <div className="ml-3">
-                  <p className="text-gray-900 whitespace-no-wrap">
-                      {name}
-                  </p>
+                <A href={`/project/${name}`} className="text-blue-500 underline whitespace-no-wrap">{name}</A>
               </div>
           </div>
       </td>

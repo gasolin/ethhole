@@ -1,5 +1,7 @@
 import {Main} from './Main'
+import {Project} from './Project'
 
 export const routes = {
-  '/': () => ({price, showEth}) => <Main price={price} showEth={showEth} />,
+  '/': () => <Main />,
+  '/project/:proj': ({proj}) => <Project proj={proj} />,
 }
