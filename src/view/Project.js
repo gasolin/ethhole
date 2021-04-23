@@ -2,7 +2,7 @@ import human from 'millify'
 
 import chainData from '../data/data'
 import { ETH_BRIDGE_CONTRACTS } from '../data/bridge_contracts.js'
-
+// import { TokensTree } from '../components/TokensTree'
 // import { TotalValueLocked } from '../components/TotalValueLocked'
 import { Panel } from '../components/Panel'
 import { Nav } from '../components/Nav'
@@ -14,7 +14,7 @@ export const Project = ({proj}) => {
   const projMeta = ETH_BRIDGE_CONTRACTS[proj]
   // const tvl = price === 1 ? `Ξ ${human(project.tvl)}` : `$ ${human(project.tvl * price)}`
   const price =  chainData.ethereum.usd
-  const symbol = '$' //price !== 1 ? 'Ξ' : '$'
+  // const symbol = '$' //price !== 1 ? 'Ξ' : '$'
   return (
     <>
       <Nav ethUsdPrice={price}/>
@@ -30,11 +30,13 @@ export const Project = ({proj}) => {
         return (
           <Panel key={idx}>
             <h2>Bridge {bridge.name || idx + 1}</h2>
+            {/* <TokensTree project={proj} tokens={bridge.items} /> */}
             <TokensTable>
             {bridge.items.filter(item => item.quote > 1).map(item => {
-              console.log('%O', item)
+              // console.log('%O', item)
+              const symbol = item.contract_ticker_symbol
               return (
-                <TokenTableRow token={item.contract_ticker_symbol} sum={`${symbol} ${human(item.quote * price)}`} />
+                <TokenTableRow key={symbol} token={symbol} sum={`${symbol} ${human(item.quote * price)}`} />
               )
             })}
             </TokensTable>
