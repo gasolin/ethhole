@@ -10,7 +10,7 @@ const TYPE_LAYER2_DERIVATIVES = 'l2derivatives'
 // chainId
 const MAINNET = 1 // ethereum
 // const MATIC = 137
-// const BSC = 57
+const BSC = 57
 // const XDAI = 100
 
 export const typeMap = {
@@ -266,4 +266,33 @@ export const ETH_BRIDGE_CONTRACTS = {
     "color": "#8c8dfc",
     "type": TYPE_LAYER2_PAYMENT
   }
+}
+
+export const BSC_BRIDGE_CONTRACTS = {
+  // https://docs.connext.network/connext-MAINNET
+  "connext": {
+    "bridges": [
+      {
+        "address": "0xE540998865aFEB054021dc849Cc6191b8E09dC08",
+        "chainId": BSC,
+      },
+    ],
+    "website": "https://www.connext.network/",
+    "color": "#29c1fc",
+    "type": TYPE_LAYER2_EXCHANGE
+  },
+  // https://github.com/polynetwork/docs/blob/master/config/README.md
+  "PolyNetwork": {
+    "bridges": [
+      {
+        "address": "0x2f7ac9436ba4B548f9582af91CA1Ef02cd2F1f03",
+        "name": "Lock Proxy",
+        "chainId": BSC,
+      },
+    ],
+    "explorer": "https://explorer.poly.network/",
+    "website": "https://www.poly.network/",
+    "color": "#2222FF",
+    "type": TYPE_SIDECHAIN
+  },
 }
