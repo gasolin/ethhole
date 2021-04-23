@@ -31,6 +31,13 @@ Can explorer data with JSON viewer, ex http://jsonviewer.stack.hu/
 
 ## Usage
 
+```
+yarn install
+yarn start
+```
+
+## Fetch Data
+
 Install `deno` from https://deno.land/#installation
 
 ```sh
@@ -41,8 +48,20 @@ Get covalent API key from https://www.covalenthq.com/platform/#/auth/register/
 
 ## Contribution
 
-Can define new contracts in
+To add new contracts
 https://github.com/gasolin/ethhole/blob/main/src/data/bridge_contracts.js
+
+To do analytics
+https://github.com/gasolin/ethhole/blob/main/src/data/
+
+To suggest
+https://github.com/gasolin/ethhole/issues
+
+## Credit
+
+- Initial version made during [Scaling Ethereum Hackthon](https://scaling.ethglobal.co/)
+- Collect lots of Layer 2 contract addresses from [l2beat](https://www.l2beat.com/)
+- Original icon design from [freepik](https://www.flaticon.com/free-icon/hole_595435?term=hole&related_id=595435)
 
 ## License
 
