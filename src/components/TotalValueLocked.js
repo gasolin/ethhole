@@ -3,7 +3,7 @@ import human from 'millify'
 export const TotalValueLocked = ({ data, price, projects, setShowEth}) => {
   const tvl = projects.reduce((a,c) => a + data[c].tvl, 0)
   const enabled = price === 1
-  const token = enabled ? '♦' : '$'
+  const token = enabled ? 'Ξ' : '$'
   const symbol = enabled ? 'ETH' : 'USD'
   return (
     <div className="shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-800">
