@@ -3,6 +3,7 @@ const TYPE_LAYER2_PAYMENT = 'l2payment'
 const TYPE_LAYER2_EXCHANGE = 'l2ex'
 const TYPE_SIDECHAIN = 'sidechain'
 const TYPE_LAYER2_DERIVATIVES = 'l2derivatives'
+const TYPE_LAYER2_LEND = 'l2lend'
 // const TYPE_OPTIMISTIC_ROLLUP = 'optimisticrollup'
 // const TYPE_ZK_ROLLUP = 'zkrollup'
 // const TYPE_STATE_CHANNEL = 'statechannel'
@@ -19,6 +20,7 @@ export const typeMap = {
   [TYPE_LAYER2_EXCHANGE]: 'DEX',
   [TYPE_SIDECHAIN]: 'Side Chain',
   [TYPE_LAYER2_DERIVATIVES]: 'Derivatives',
+  [TYPE_LAYER2_LEND]: 'Lend',
   // [TYPE_OPTIMISTIC_ROLLUP]: "Optimistic",
   // [TYPE_ZK_ROLLUP]: "Zk",
   // [TYPE_STATE_CHANNEL]: "State Channel",
@@ -157,6 +159,17 @@ export const ETH_BRIDGE_CONTRACTS = {
     "website": "https://www.immutable.com/",
     "color": "#24d1e9",
     "type": TYPE_LAYER2_EXCHANGE
+  },
+  "Layer2.Finance": {
+    "bridges": [
+      {
+        "address": "0xf86FD6735f88d5b6aa709B357AD5Be22CEDf1A05",
+        "chainId": MAINNET,
+      }
+    ],
+    "website": "https://layer2.finance/",
+    "color": "#ca9979",
+    "type": TYPE_LAYER2_LEND
   },
   "Loopring": {
     "bridges": [
