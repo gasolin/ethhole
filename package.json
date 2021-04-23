@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "homepage": "http://ethhole.link",
   "dependencies": {
+    "hookrouter": "^1.2.5",
     "lodash": "^4.17.21",
     "millify": "^3.5.2",
     "react": "^17.0.2",
