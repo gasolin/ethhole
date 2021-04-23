@@ -4,7 +4,7 @@ import { Badge } from './Badge'
 import hole from './hole.svg'
 
 export const Nav = ({ethUsdPrice}) => {
-  const price = ethUsdPrice === 1 ? '' : `♦ = $${ethUsdPrice}`
+  const price = ethUsdPrice === 1 ? '' : `Ξ = $${ethUsdPrice}`
   const todayInfo = `${getTimeTag('today', timestamp)} ${price}`
   return (
   <nav className="flex bg-white flex-wrap items-center justify-between p-4">
