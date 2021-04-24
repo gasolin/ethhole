@@ -10,10 +10,13 @@ import { Footer } from '../components/Footer'
 import { TokensTable } from '../components/TokensTable'
 import { TokenTableRow } from '../components/TokenTableRow'
 
+const FILLTER = 1000 // USD
+
 export const Project = ({proj}) => {
   const projMeta = ETH_BRIDGE_CONTRACTS[proj]
   // const tvl = price === 1 ? `Ξ ${human(project.tvl)}` : `$ ${human(project.tvl * price)}`
   const price =  chainData.ethereum.usd
+  const threshold = FILLTER / price
   const symbol = '$' //price !== 1 ? 'Ξ' : '$'
   return (
     <>
@@ -100,7 +103,7 @@ export const Project = ({proj}) => {
             </div>
             {/* <TokensTree project={proj} tokens={bridge.items} /> */}
             <TokensTable>
-            {bridge.items.filter(item => item.quote > 1).map(item => {
+            {bridge.items.filter(item => item.quote > threshold).map(item => {
               // console.log('%O', item)
               const symbol = item.contract_ticker_symbol
               return (
