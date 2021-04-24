@@ -41,6 +41,18 @@ export const ETH_BRIDGE_CONTRACTS = {
     "color": "#944af2",
     "type": TYPE_LAYER2_PAYMENT
   },
+  "Avalanche": {
+    "bridges": [
+      {
+        "address": "0xdAC7Bb7Ce4fF441A235F08408e632FA1D799A147",
+        "chainId": MAINNET,
+      }
+    ],
+    "explorer": "https://cchain.explorer.avax.network/",
+    "website": "https://www.avalabs.org/",
+    "color": "#e84142",
+    "type": TYPE_LAYER2
+  },
   // https://docs.connext.network/connext-MAINNET
   "connext": {
     "bridges": [
