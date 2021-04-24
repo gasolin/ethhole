@@ -59,9 +59,18 @@ https://github.com/gasolin/ethhole/issues
 
 ## Credit
 
+Event
+
 - Initial version made during [Scaling Ethereum Hackthon](https://scaling.ethglobal.co/)
+
+Contract
+
 - Collect lots of Layer 2 contract addresses from [l2beat](https://www.l2beat.com/)
 - Bridges balance fetched through [Covalent API](https://www.covalenthq.com/docs/api/#overview)
+
+Design
+
+- UI style based on [Tail-kit](https://www.tailwind-kit.com/)
 - Original icon design from [freepik](https://www.flaticon.com/free-icon/hole_595435?term=hole&related_id=595435)
 
 ## License
