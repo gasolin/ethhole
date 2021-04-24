@@ -1,12 +1,12 @@
-import human from 'millify'
-
-export const TokenTableRow = ({token, sum}) => {
+export const TokenTableRow = ({token, sum, logo_url}) => {
+  console.log('logo ', token, ': ', logo_url)
   return (
     <tr>
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
           <div className="flex items-center">
-              <div className="ml-3">
-                {token}
+              <div className="ml-3 flex flex-row">
+                <img src={logo_url} width="16" height="12"/>
+                <span className="pl-2">{token}</span>
               </div>
           </div>
       </td>

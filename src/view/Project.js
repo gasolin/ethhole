@@ -14,7 +14,7 @@ export const Project = ({proj}) => {
   const projMeta = ETH_BRIDGE_CONTRACTS[proj]
   // const tvl = price === 1 ? `Ξ ${human(project.tvl)}` : `$ ${human(project.tvl * price)}`
   const price =  chainData.ethereum.usd
-  // const symbol = '$' //price !== 1 ? 'Ξ' : '$'
+  const symbol = '$' //price !== 1 ? 'Ξ' : '$'
   return (
     <>
       <Nav ethUsdPrice={price}/>
@@ -24,6 +24,20 @@ export const Project = ({proj}) => {
               ●
           </a> {proj}
         </div>)}</h1>
+        <hr/>
+        {projMeta.website && (
+          <div>
+            <span>Website: </span>
+            <a href={projMeta.website} target="_blank" rel="noreferrer" className="text-blue-500 underline whitespace-no-wrap">{projMeta.website}</a>
+          </div>
+        )}
+        {projMeta.explorer && (
+          <div>
+            <span>Explorer: </span>
+            <a href={projMeta.explorer} target="_blank" rel="noreferrer" className="text-blue-500 underline whitespace-no-wrap">{projMeta.explorer}</a>
+          </div>
+        )}
+        <div>Total Value Locked: {symbol} {human(chainData[proj].tvl * price)}</div>
       </Panel>
       {chainData[proj].bridges.map((bridge, idx) => {
         // console.log('%O', bridge)
@@ -36,7 +50,7 @@ export const Project = ({proj}) => {
               // console.log('%O', item)
               const symbol = item.contract_ticker_symbol
               return (
-                <TokenTableRow key={symbol} token={symbol} sum={`${symbol} ${human(item.quote * price)}`} />
+                <TokenTableRow key={symbol} token={symbol} sum={`${symbol} ${human(item.quote * price)}`} logo_url={item.logo_url} />
               )
             })}
             </TokensTable>
