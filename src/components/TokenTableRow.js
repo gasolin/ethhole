@@ -1,12 +1,12 @@
-export const TokenTableRow = ({token, sum, logo_url}) => {
-  console.log('logo ', token, ': ', logo_url)
+export const TokenTableRow = ({bridge, tokenData, sum}) => {
+  const {contract_ticker_symbol, logo_url, contract_address} = tokenData
   return (
     <tr>
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
           <div className="flex items-center">
               <div className="ml-3 flex flex-row">
                 <img src={logo_url} width="16" height="12"/>
-                <span className="pl-2">{token}</span>
+                <a href={`https://etherscan.io/token/${contract_address}?a=${bridge}`} target="_blank" rel="noreferrer" className="text-blue-500 underline whitespace-no-wrap pl-2">{contract_ticker_symbol}</a>
               </div>
           </div>
       </td>

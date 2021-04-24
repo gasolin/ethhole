@@ -50,7 +50,7 @@ export const Project = ({proj}) => {
               // console.log('%O', item)
               const symbol = item.contract_ticker_symbol
               return (
-                <TokenTableRow key={symbol} token={symbol} sum={`${symbol} ${human(item.quote * price)}`} logo_url={item.logo_url} />
+                <TokenTableRow key={symbol} tokenData={item} bridge={bridge.address} sum={`${symbol} ${human(item.quote * price)}`} />
               )
             })}
             </TokensTable>
