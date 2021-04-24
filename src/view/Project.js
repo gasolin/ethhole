@@ -29,7 +29,7 @@ export const Project = ({proj}) => {
         // console.log('%O', bridge)
         return (
           <Panel key={idx}>
-            <h2>Bridge {bridge.name || idx + 1}</h2>
+            <h2>Bridge {bridge.name || idx + 1} <a href={`https://etherscan.io/address/${bridge.address}`} target="_blank" rel="noreferrer">🔎</a></h2>
             {/* <TokensTree project={proj} tokens={bridge.items} /> */}
             <TokensTable>
             {bridge.items.filter(item => item.quote > 1).map(item => {
