@@ -1,13 +1,13 @@
 module.exports = {
   important: true,
   // Active dark mode on class basis
-  darkMode: "class",
+  // false or 'media' or 'class'
+  darkMode: false,
   i18n: {
     locales: ["en-US"],
     defaultLocale: "en-US",
   },
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       backgroundImage: (theme) => ({

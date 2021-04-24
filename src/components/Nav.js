@@ -8,10 +8,10 @@ export const Nav = ({ethUsdPrice}) => {
   const todayInfo = `${getTimeTag('today', timestamp)} ${price}`
   return (
   <nav className="flex bg-white flex-wrap items-center justify-between p-4">
-    <div className="lg:order-2 w-auto lg:w-1/5 lg:text-center flex flex-row">
-        <img src={hole} width={24} height={24} alt="ethhole.link" />
-        <a className="text-xl text-gray-800 font-semibold font-heading pl-2" href="https://ethhole.link">
-            ETH Hole
+    <div className="lg:order-2 w-auto lg:w-1/5 lg:text-center">
+        <img className="absolute hidden md:block md:mt-1 lg:ml-6" src={hole} width={24} height={24} alt="ethhole.link" />
+        <a className="md:ml-6 lg:ml-2 text-xl text-gray-800 font-semibold font-heading pl-2" href="/">
+        ETH Hole
         </a>
     </div>
     <div className="block lg:hidden">

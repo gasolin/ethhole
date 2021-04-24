@@ -3,9 +3,9 @@ export const TokenTableRow = ({bridge, tokenData, sum}) => {
   return (
     <tr>
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-          <div className="flex items-center">
-              <div className="ml-3 flex flex-row">
-                <img src={logo_url} width="16" height="12"/>
+          <div className="flex flex-row items-center">
+              <img src={logo_url} width="14" height="14"/>
+              <div className="ml-3">
                 <a href={`https://etherscan.io/token/${contract_address}?a=${bridge}`} target="_blank" rel="noreferrer" className="text-blue-500 underline whitespace-no-wrap pl-2">{contract_ticker_symbol}</a>
               </div>
           </div>
