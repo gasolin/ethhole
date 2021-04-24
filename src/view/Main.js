@@ -9,11 +9,12 @@ import { BalanceFlow } from '../components/BalanceFlow'
 import { Nav } from '../components/Nav'
 import { Footer } from '../components/Footer'
 
+const FILTEROUT = ['ethereum', 'fuse']
 // console.log('%O', chainData)
 const projects = Object.keys(chainData)
-  .filter(proj => proj !== 'ethereum')
+  .filter(proj => !FILTEROUT.includes(proj))
   .sort((a, b) => chainData[b].tvl - chainData[a].tvl)
-
+// console.log('projects %O', projects)
 export const Main = () => {
   const [showEth, setShowEth] = useState(false);
   const price = showEth ? 1 : chainData.ethereum.usd
