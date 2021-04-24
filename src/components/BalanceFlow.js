@@ -73,7 +73,7 @@ export const BalanceFlow = memo(({ data, price, projects, width = 400 }) => {
     return <Hint
       value={hintValue}
       align={{vertical: 'top', horizontal: 'left'}}
-      x={20}
+      x={50}
       y={-50}
     />;
   }
@@ -82,7 +82,7 @@ export const BalanceFlow = memo(({ data, price, projects, width = 400 }) => {
     <Sankey
       nodes={nodes}
       links={links}
-      margin={{ left: 50, right: 10, top: 10, bottom: 20 }}
+      margin={{ left: 20, right: 20, top: 10, bottom: 10 }}
       height={300}
       width={width}
       onLinkMouseOver={node => setActiveLink(node)}
