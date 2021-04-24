@@ -224,6 +224,20 @@ export const ETH_BRIDGE_CONTRACTS = {
     "color": "#2222FF",
     "type": TYPE_SIDECHAIN
   },
+  // https://developers.rsk.co/tools/tokenbridge/contractaddresses/
+  "RSK": {
+    "bridges": [
+      {
+        "address": "0x12ed69359919fc775bc2674860e8fe2d2b6a7b5d",
+        "name": "Bridge",
+        "chainId": MAINNET,
+      }
+    ],
+    "explorer": "https://explorer.rsk.co/",
+    "website": "https://www.rsk.co/",
+    "color": "#00b520",
+    "type": TYPE_SIDECHAIN
+  },
   "xDai": {
     "bridges": [
       {
