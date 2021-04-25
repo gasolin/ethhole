@@ -1,10 +1,8 @@
-// import { Treemap, Hint } from 'react-vis'
-// import human from 'millify'
+import human from 'millify'
 import { Chart } from "react-google-charts"
 
-export const TokensTree = ({project, data, width = 400}) => {
-  const tokens = data.bridges.map(bridge => bridge.items.map(item => [item.contract_ticker_symbol, project, item.quote, item.quote])).flat(1)
-  // console.log('%O', tokens)
+// https://react-google-charts.com/treemap-chart
+export const TokensTree = ({project, tokens, price, width = 400}) => {
   const tokenData = [
     [
       'Token',
@@ -13,7 +11,7 @@ export const TokensTree = ({project, data, width = 400}) => {
       'Amount',
     ],
     [project, null, 0, 0],
-    ...tokens,
+    ...tokens.map(item => [item.contract_ticker_symbol, project, item.quote, item.quote]),
   ]
 
   return (
@@ -31,6 +29,11 @@ export const TokensTree = ({project, data, width = 400}) => {
         fontColor: 'black',
         showScale: true,
         legend: 'none',
+        generateTooltip: (row, size, value) => {
+          return (
+            `<div>$${human(size * price)}</div>`
+          )
+        },
       }}
       rootProps={{ 'data-testid': '1' }}
     />

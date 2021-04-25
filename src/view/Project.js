@@ -63,9 +63,6 @@ export const Project = ({proj}) => {
         </div>
       </Panel>
       <Panel>
-        <TokensTree project={proj} data={chainData[proj]} />
-      </Panel>
-      <Panel>
         <div className="shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-800">
               <div className="flex items-center">
                   <span className="rounded-xl relative p-4 bg-purple-200">
@@ -97,6 +94,7 @@ export const Project = ({proj}) => {
       {chainData[proj].bridges.map((bridge, idx) => {
         // console.log('%O', bridge)
         const bridgesMeta = ETH_BRIDGE_CONTRACTS[proj].bridges
+        const tokens = bridge.items.filter(item => item.quote > threshold)
         return (
           <Panel key={idx}>
             <div className="shadow-lg p-4 bg-white dark:bg-gray-800">
@@ -106,9 +104,9 @@ export const Project = ({proj}) => {
                 </p>
               </div>
             </div>
-            {/* <TokensTree project={proj} tokens={bridge.items} /> */}
+            <TokensTree project={proj} tokens={tokens} price={price} />
             <TokensTable>
-            {bridge.items.filter(item => item.quote > threshold).map(item => {
+            {tokens.map(item => {
               // console.log('%O', item)
               const symbol = item.contract_ticker_symbol
               return (
