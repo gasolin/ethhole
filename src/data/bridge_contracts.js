@@ -197,9 +197,9 @@ export const ETH_BRIDGE_CONTRACTS = {
   "Polygon": {
     "bridges": [
       {
-        "address": "0x401F6c983eA34274ec46f84D70b31C151321188b",
+        "address": "0x8484Ef722627bf18ca5Ae6BcF031c23E6e922B30",
         "chainId": MAINNET,
-        "name": "Plasma bridge"
+        "name": "PoS Ether bridge"
       },
       {
         "address": "0x40ec5B33f54e0E8A33A975908C5BA1c14e5BbbDf",
@@ -207,9 +207,9 @@ export const ETH_BRIDGE_CONTRACTS = {
         "name": "PoS ERC20 bridge"
       },
       {
-        "address": "0x8484Ef722627bf18ca5Ae6BcF031c23E6e922B30",
+        "address": "0x401F6c983eA34274ec46f84D70b31C151321188b",
         "chainId": MAINNET,
-        "name": "PoS ether bridge"
+        "name": "Plasma bridge"
       }
     ],
     "explorer": "https://explorer-mainnet.maticvigil.com/",
