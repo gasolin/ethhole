@@ -98,6 +98,7 @@ async function main() {
           tvl += item.quote
           return ''
         }))
+        console.log(tvl)
         collectData[proj].tvl = tvl
         return ''
       })
