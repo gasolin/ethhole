@@ -9,6 +9,7 @@ import { Nav } from '../components/Nav'
 import { Footer } from '../components/Footer'
 import { TokensTable } from '../components/TokensTable'
 import { TokenTableRow } from '../components/TokenTableRow'
+import { TokensTree } from '../components/TokensTree'
 
 const FILLTER = 1000 // USD
 
@@ -22,9 +23,9 @@ export const Project = ({proj}) => {
     <>
       <Nav ethUsdPrice={price}/>
       <Panel>
-        <div class="bg-white overflow-hidden">
-            <div class="px-4 py-5 sm:px-6">
-                <h3 class="text-lg leading-6 font-medium text-gray-900 flex flex-row">
+        <div className="bg-white overflow-hidden">
+            <div className="px-4 py-5 sm:px-6">
+                <h3 className="text-lg leading-6 font-medium text-gray-900 flex flex-row">
                   {projMeta.color && (<span>
                     <a href={projMeta.website} target="_blank" className="block relative pr-2" style={{color: projMeta.color}} rel="noreferrer">
                         ●
@@ -35,24 +36,24 @@ export const Project = ({proj}) => {
                     Details and informations about user.
                 </p> */}
             </div>
-            <div class="border-t border-gray-200">
+            <div className="border-t border-gray-200">
                 <dl>
                   {projMeta.website && (
-                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                      <dt class="text-sm font-medium text-gray-500">
+                    <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                      <dt className="text-sm font-medium text-gray-500">
                         Website:
                       </dt>
-                      <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                      <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                         <a href={projMeta.website} target="_blank" rel="noreferrer" className="text-blue-500 underline whitespace-no-wrap">{projMeta.website}</a>
                       </dd>
                     </div>
                   )}
                   {projMeta.explorer && (
-                    <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                      <dt class="text-sm font-medium text-gray-500">
+                    <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                      <dt className="text-sm font-medium text-gray-500">
                       Explorer:
                       </dt>
-                      <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                      <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                       <a href={projMeta.explorer} target="_blank" rel="noreferrer" className="text-blue-500 underline whitespace-no-wrap">{projMeta.explorer}</a>
                       </dd>
                     </div>
@@ -60,6 +61,9 @@ export const Project = ({proj}) => {
                 </dl>
             </div>
         </div>
+      </Panel>
+      <Panel>
+        <TokensTree project={proj} data={chainData[proj]} />
       </Panel>
       <Panel>
         <div className="shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-800">
@@ -92,12 +96,13 @@ export const Project = ({proj}) => {
       </Panel>
       {chainData[proj].bridges.map((bridge, idx) => {
         // console.log('%O', bridge)
+        const bridgesMeta = ETH_BRIDGE_CONTRACTS[proj].bridges
         return (
           <Panel key={idx}>
             <div className="shadow-lg p-4 bg-white dark:bg-gray-800">
               <div className="flex items-center">
                 <p className="text-md text-black dark:text-white ml-2">
-                <a href={`https://etherscan.io/address/${bridge.address}`} target="_blank" rel="noreferrer">🔎</a> Bridge {bridge.name || idx + 1}
+                <a href={`https://etherscan.io/address/${bridge.address}`} target="_blank" rel="noreferrer">🔎</a> {bridgesMeta[idx].name || `Bridge ${idx + 1}`}
                 </p>
               </div>
             </div>
