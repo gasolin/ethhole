@@ -97,7 +97,7 @@ export const Project = ({proj}) => {
         const tokens = bridge.items.filter(item => item.quote > threshold)
         return (
           <Panel key={idx}>
-            <div className="shadow-lg p-4 bg-white dark:bg-gray-800">
+            <div className="p-4 bg-white dark:bg-gray-800 border-b border-gray-200">
               <div className="flex items-center">
                 <p className="text-md text-black dark:text-white ml-2">
                 <a href={`https://etherscan.io/address/${bridge.address}`} target="_blank" rel="noreferrer">🔎</a> {bridgesMeta[idx].name || `Bridge ${idx + 1}`}
