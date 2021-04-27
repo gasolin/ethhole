@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-import chainData from '../data/data'
+import { useChainData } from '../hooks/useChainData'
 import { TotalValueLocked } from '../components/TotalValueLocked'
 import { ProjectsTable } from '../components/ProjectsTable'
 import { ProjectTableRow } from '../components/ProjectTableRow'
@@ -11,15 +11,18 @@ import { Footer } from '../components/Footer'
 
 const FILTEROUT = ['ethereum', 'fuse']
 // console.log('%O', chainData)
-const projects = Object.keys(chainData)
+export const Main = () => {
+  const [chainData, timestamp] = useChainData()
+  const [showEth, setShowEth] = useState(false)
+
+  const projects = Object.keys(chainData)
   .filter(proj => !FILTEROUT.includes(proj))
   .sort((a, b) => chainData[b].tvl - chainData[a].tvl)
-// console.log('projects %O', projects)
-export const Main = () => {
-  const [showEth, setShowEth] = useState(false);
-  const price = showEth ? 1 : chainData.ethereum.usd
+  // console.log('projects %O', projects)
+
+  const price = showEth ? 1 : chainData?.ethereum?.usd || 1
   return (<>
-    <Nav ethUsdPrice={price}/>
+    <Nav ethUsdPrice={price} timestamp={timestamp} />
     <Panel>
       <BalanceFlow projects={projects} data={chainData} price={price} />
     </Panel>

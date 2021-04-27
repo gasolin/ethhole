@@ -1,10 +1,8 @@
 import {useTitle} from 'hookrouter'
 import human from 'millify'
 
+import { useChainData } from '../hooks/useChainData'
 import { ETH_BRIDGE_CONTRACTS } from '../data/bridge_contracts'
-import chainData from '../data/data'
-// import { TokensTree } from '../components/TokensTree'
-// import { TotalValueLocked } from '../components/TotalValueLocked'
 import { Panel } from '../components/Panel'
 import { Nav } from '../components/Nav'
 import { Footer } from '../components/Footer'
@@ -16,15 +14,19 @@ import { TokensTree } from '../components/TokensTree'
 const FILLTER = 1000 // USD
 
 export const Project = ({proj}) => {
+  const [chainData, timestamp] = useChainData()
   useTitle(proj)
 
   // const tvl = price === 1 ? `Ξ ${human(project.tvl)}` : `$ ${human(project.tvl * price)}`
-  const price =  chainData.ethereum.usd
+  const price =  chainData?.ethereum?.usd || 1
   const threshold = FILLTER / price
   const symbol = '$' //price !== 1 ? 'Ξ' : '$'
+
+  if (!chainData[proj]) return null
+
   return (
     <>
-      <Nav ethUsdPrice={price}/>
+      <Nav ethUsdPrice={price} timestamp={timestamp} />
       <Panel>
         <ProjectMetas proj={proj} />
       </Panel>

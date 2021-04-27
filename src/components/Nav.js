@@ -1,11 +1,10 @@
-import { timestamp } from '../data/data.js'
 import { getTimeTag } from '../helpers/formatDate'
 import { Badge } from './Badge'
 import hole from './hole.svg'
 
-export const Nav = ({ethUsdPrice}) => {
+export const Nav = ({ethUsdPrice, timestamp}) => {
   const price = ethUsdPrice === 1 ? '' : `Ξ = $${ethUsdPrice}`
-  const todayInfo = `${getTimeTag('today', timestamp)} ${price}`
+  const todayInfo = timestamp && `${getTimeTag('today', timestamp)} ${price}`
   return (
   <nav className="flex bg-white flex-wrap items-center justify-between p-4">
     <div className="lg:order-2 w-auto lg:w-1/5 lg:text-center">
