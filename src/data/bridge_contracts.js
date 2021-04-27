@@ -38,6 +38,8 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     "explorer": "https://explorer.aztec.network/",
     "website": "https://aztec.network/",
+    "github": "https://github.com/AztecProtocol",
+    "twitter": "https://twitter.com/aztecprotocol",
     "color": "#944af2",
     "type": TYPE_LAYER2_PAYMENT
   },
@@ -50,6 +52,8 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     "explorer": "https://cchain.explorer.avax.network/",
     "website": "https://www.avalabs.org/",
+    "github": "https://github.com/ava-labs",
+    "twitter": "https://twitter.com/avalancheavax",
     "color": "#e84142",
     "type": TYPE_LAYER2
   },
@@ -74,6 +78,8 @@ export const ETH_BRIDGE_CONTRACTS = {
       // },
     ],
     "website": "https://www.connext.network/",
+    "github": "https://github.com/connext",
+    "twitter": "https://twitter.com/connextnetwork",
     "color": "#29c1fc",
     "type": TYPE_LAYER2_EXCHANGE
   },
@@ -85,6 +91,8 @@ export const ETH_BRIDGE_CONTRACTS = {
       }
     ],
     "website": "https://dydx.exchange/",
+    "github": "https://github.com/dydxprotocol",
+    "twitter": "https://twitter.com/dydxprotocol",
     "color": "#6966FF",
     "type": TYPE_LAYER2_EXCHANGE
   },
@@ -96,6 +104,8 @@ export const ETH_BRIDGE_CONTRACTS = {
       }
     ],
     "website": "https://www.deversifi.com/",
+    "github": "https://github.com/deversifi",
+    "twitter": "https://twitter.com/deversifi",
     "color": "#5500FC",
     "type": TYPE_LAYER2_EXCHANGE
   },
@@ -108,6 +118,8 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     "explorer": "https://mainnet.fuel.sh/network",
     "website": "https://fuel.sh/",
+    "github": "https://github.com/fuellabs",
+    "twitter": "https://twitter.com/fuellabs_",
     "color": "#04c399",
     "type": TYPE_LAYER2_PAYMENT
   },
@@ -133,6 +145,8 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     "explorer": "https://explorer.harmony.one/",
     "website": "https://www.harmony.one/",
+    "github": "https://github.com/harmony-one",
+    "twitter": "https://harmony.one/twitter",
     "color": "#00ade8",
     "type": TYPE_SIDECHAIN
   },
@@ -145,6 +159,8 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     "explorer": "https://explorer.hermez.io/",
     "website": "https://hermez.io/",
+    "github": "https://github.com/hermeznetwork/",
+    "twitter": "https://twitter.com/hermez_network",
     "color": "#e75a2b",
     "type": TYPE_LAYER2_PAYMENT
   },
@@ -156,6 +172,7 @@ export const ETH_BRIDGE_CONTRACTS = {
       }
     ],
     "website": "https://www.immutable.com/",
+    "twitter": "https://twitter.com/immutable",
     "color": "#24d1e9",
     "type": TYPE_LAYER2_EXCHANGE
   },
@@ -167,6 +184,8 @@ export const ETH_BRIDGE_CONTRACTS = {
       }
     ],
     "website": "https://layer2.finance/",
+    "github": "https://github.com/celer-network/layer2-finance-contracts",
+    "twitter": "https://twitter.com/layer2finance",
     "color": "#ca9979",
     "type": TYPE_LAYER2_LEND
   },
@@ -178,6 +197,8 @@ export const ETH_BRIDGE_CONTRACTS = {
       }
     ],
     "website": "https://loopring.org",
+    "github": "https://github.com/Loopring",
+    "twitter": "https://twitter.com/loopringorg",
     "color": "#1c42ff",
     "type": TYPE_LAYER2_EXCHANGE
   },
@@ -190,6 +211,8 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     "explorer": "https://mainnet-l2-explorer.surge.sh/",
     "website": "https://optimism.io/",
+    "github": "https://github.com/ethereum-optimism",
+    "twitter": "https://twitter.com/optimismPBC",
     "color": "#f01a37",
     "type": TYPE_LAYER2_DERIVATIVES
   },
@@ -214,6 +237,8 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     "explorer": "https://explorer-mainnet.maticvigil.com/",
     "website": "https://polygon.technology/",
+    "github": "https://github.com/maticnetwork/",
+    "twitter": "https://twitter.com/maticnetwork",
     "color": "#8248e5",
     "type": TYPE_SIDECHAIN
   },
@@ -233,6 +258,8 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     "explorer": "https://explorer.poly.network/",
     "website": "https://www.poly.network/",
+    "github": "https://github.com/polynetwork",
+    "twitter": "https://twitter.com/PolyNetwork2",
     "color": "#2222FF",
     "type": TYPE_SIDECHAIN
   },
@@ -247,6 +274,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     "explorer": "https://explorer.rsk.co/",
     "website": "https://www.rsk.co/",
+    "twitter": "https://twitter.com/rsksmart",
     "color": "#00b520",
     "type": TYPE_SIDECHAIN
   },
@@ -265,6 +293,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     "explorer": "https://blockscout.com/poa/xdai/",
     "website": "https://www.xdaichain.com/",
+    "twitter": "https://twitter.com/xdaichain",
     "color": "#1ca9a6",
     "type": TYPE_SIDECHAIN
   },
@@ -277,6 +306,8 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     "explorer": "https://zkswap.info/en/transactions",
     "website": "https://zkswap.info/en",
+    "github": "https://github.com/l2labs",
+    "twitter": "https://twitter.com/ZKSwapOfficial",
     "color": "#596efd",
     "type": TYPE_LAYER2_EXCHANGE
   },
@@ -289,6 +320,8 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     "explorer": "https://zkscan.io/explorer/",
     "website": "https://zksync.io/",
+    "github": "https://github.com/matter-labs/zksync",
+    "twitter": "https://twitter.com/zksync",
     "color": "#8c8dfc",
     "type": TYPE_LAYER2_PAYMENT
   }
@@ -304,6 +337,8 @@ export const BSC_BRIDGE_CONTRACTS = {
       },
     ],
     "website": "https://www.connext.network/",
+    "github": "https://github.com/connext",
+    "twitter": "https://twitter.com/connextnetwork",
     "color": "#29c1fc",
     "type": TYPE_LAYER2_EXCHANGE
   },
@@ -318,6 +353,8 @@ export const BSC_BRIDGE_CONTRACTS = {
     ],
     "explorer": "https://explorer.poly.network/",
     "website": "https://www.poly.network/",
+    "github": "https://github.com/polynetwork",
+    "twitter": "https://twitter.com/PolyNetwork2",
     "color": "#2222FF",
     "type": TYPE_SIDECHAIN
   },
