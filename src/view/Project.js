@@ -1,13 +1,14 @@
 import {useTitle} from 'hookrouter'
 import human from 'millify'
 
+import { ETH_BRIDGE_CONTRACTS } from '../data/bridge_contracts'
 import chainData from '../data/data'
-import { ETH_BRIDGE_CONTRACTS } from '../data/bridge_contracts.js'
 // import { TokensTree } from '../components/TokensTree'
 // import { TotalValueLocked } from '../components/TotalValueLocked'
 import { Panel } from '../components/Panel'
 import { Nav } from '../components/Nav'
 import { Footer } from '../components/Footer'
+import { ProjectMetas } from '../components/ProjectMetas'
 import { TokensTable } from '../components/TokensTable'
 import { TokenTableRow } from '../components/TokenTableRow'
 import { TokensTree } from '../components/TokensTree'
@@ -17,7 +18,6 @@ const FILLTER = 1000 // USD
 export const Project = ({proj}) => {
   useTitle(proj)
 
-  const projMeta = ETH_BRIDGE_CONTRACTS[proj]
   // const tvl = price === 1 ? `Ξ ${human(project.tvl)}` : `$ ${human(project.tvl * price)}`
   const price =  chainData.ethereum.usd
   const threshold = FILLTER / price
@@ -26,44 +26,7 @@ export const Project = ({proj}) => {
     <>
       <Nav ethUsdPrice={price}/>
       <Panel>
-        <div className="bg-white overflow-hidden">
-            <div className="px-4 py-5 sm:px-6">
-                <h3 className="text-lg leading-6 font-medium text-gray-900 flex flex-row">
-                  {projMeta.color && (<span>
-                    <a href={projMeta.website} target="_blank" className="block relative pr-2" style={{color: projMeta.color}} rel="noreferrer">
-                        ●
-                    </a>
-                  </span>)} {proj}
-                </h3>
-                {/* <p class="mt-1 max-w-2xl text-sm text-gray-500">
-                    Details and informations about user.
-                </p> */}
-            </div>
-            <div className="border-t border-gray-200">
-                <dl>
-                  {projMeta.website && (
-                    <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                      <dt className="text-sm font-medium text-gray-500">
-                        Website:
-                      </dt>
-                      <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                        <a href={projMeta.website} target="_blank" rel="noreferrer" className="text-blue-500 underline whitespace-no-wrap">{projMeta.website}</a>
-                      </dd>
-                    </div>
-                  )}
-                  {projMeta.explorer && (
-                    <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                      <dt className="text-sm font-medium text-gray-500">
-                      Explorer:
-                      </dt>
-                      <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                      <a href={projMeta.explorer} target="_blank" rel="noreferrer" className="text-blue-500 underline whitespace-no-wrap">{projMeta.explorer}</a>
-                      </dd>
-                    </div>
-                  )}
-                </dl>
-            </div>
-        </div>
+        <ProjectMetas proj={proj} />
       </Panel>
       <Panel>
         <div className="shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-800">
