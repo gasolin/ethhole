@@ -1,8 +1,8 @@
-export const TokenTableRow = ({bridge, tokenData, sum}) => {
+export const TokenTableRow = ({bridge, idx, tokenData, sum}) => {
   const {contract_ticker_symbol, logo_url, contract_address} = tokenData
   return (
     <tr>
-      <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+      <td className={`${idx%2 ? 'bg-white' : 'bg-gray-50'} px-5 py-5 border-b border-gray-200 bg-white text-sm`}>
           <div className="flex flex-row items-center">
               <img src={logo_url} width="14" height="14"/>
               <div className="ml-3">
@@ -15,7 +15,7 @@ export const TokenTableRow = ({bridge, tokenData, sum}) => {
             {balance}
           </p>
       </td> */}
-      <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+      <td className={`${idx%2 ? 'bg-white' : 'bg-gray-50'} px-5 py-5 border-b border-gray-200 bg-white text-sm`}>
           <p className="text-gray-900 whitespace-no-wrap">
               {sum}
           </p>

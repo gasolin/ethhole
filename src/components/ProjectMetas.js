@@ -24,7 +24,7 @@ export const ProjectMetas = ({proj}) => {
       </div>
       <div className="border-t border-gray-200">
           <dl>
-            {meta.map((item, idx) => item[1] && (
+            {meta.filter(item => item[1]).map((item, idx) => (
               <div key={item[0]} className={`${idx%2 ? 'bg-white' : 'bg-gray-50'} px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6`}>
                 <dt className="text-sm font-medium text-gray-500">
                   {item[0]}:

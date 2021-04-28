@@ -74,11 +74,11 @@ export const Project = ({proj}) => {
             </div>
             <TokensTree project={proj} tokens={tokens} price={price} />
             <TokensTable>
-            {tokens.map(item => {
+            {tokens.map((item, idx) => {
               // console.log('%O', item)
               const symbol = item.contract_ticker_symbol
               return (
-                <TokenTableRow key={symbol} tokenData={item} bridge={bridge.address} sum={`${symbol} $${human(item.quote * price)}`} />
+                <TokenTableRow key={symbol} idx={idx} tokenData={item} bridge={bridge.address} sum={`${symbol} $${human(item.quote * price)}`} />
               )
             })}
             </TokensTable>
