@@ -68,7 +68,7 @@ export const Project = ({proj}) => {
             <div className="p-4 bg-white dark:bg-gray-800 border-b border-gray-200">
               <div className="flex items-center">
                 <p className="text-md text-black dark:text-white ml-2">
-                🔎 <a href={`https://etherscan.io/address/${bridge.address}`} className="text-blue-500 underline whitespace-no-wrap" target="_blank" rel="noreferrer">{bridgesMeta[idx].name || `Bridge ${idx + 1}`}</a>
+                🔎 <a href={`https://etherscan.io/address/${bridge.address}`} className="text-blue-500 underline whitespace-no-wrap" target="_blank" rel="noreferrer">{bridgesMeta[idx]?.name || `Bridge ${idx + 1}`}</a>
                 </p>
               </div>
             </div>

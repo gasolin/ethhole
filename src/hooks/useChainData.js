@@ -36,7 +36,7 @@ export const useChainData = () => {
 
     timestamp && fetchData()
   }, [timestamp])
-console.log('timestamp ', timestamp)
 
+  // console.log('timestamp ', timestamp)
   return [JSON.parse(data), timestamp]
 }
