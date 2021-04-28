@@ -12,7 +12,7 @@ const TYPE_LAYER2_LEND = 'l2lend'
 const MAINNET = 1 // ethereum
 // const MATIC = 137
 const BSC = 57
-// const XDAI = 100
+const XDAI = 100
 
 export const typeMap = {
   [TYPE_LAYER2]: 'General',
@@ -176,12 +176,76 @@ export const ETH_BRIDGE_CONTRACTS = {
     "color": "#24d1e9",
     "type": TYPE_LAYER2_EXCHANGE
   },
+  // https://etherscan.io/address/0xFe81ab6930A30BdaE731fe7b6C6ABFbEAFc014a8#readContract
+  // the main address's token balance will flow to other DEFI periodically,
+  // need to track strategies TVL
   "Layer2.Finance": {
     "bridges": [
       {
         "address": "0xf86FD6735f88d5b6aa709B357AD5Be22CEDf1A05",
         "chainId": MAINNET,
-      }
+        "name": "Layer 2",
+      },
+      {//1
+        "address": "0x9D233A907E065855D2A9c7d4B552ea27fB2E5a36",
+        "chainId": MAINNET,
+        "name": "AAVE DAI"
+      },
+      {//2
+        "address": "0xCbE56b00d173A26a5978cE90Db2E33622fD95A28",
+        "chainId": MAINNET,
+        "name": "AAVE USDC"
+      },
+      {//3
+        "address": "0xf4B2cbc3bA04c478F0dC824f4806aC39982Dce73",
+        "chainId": MAINNET,
+        "name": "AAVE USDT"
+      },
+      {//4
+        "address": "0x50B96c4374EFeEA0C183D06679A14e951E33B4Dd",
+        "chainId": MAINNET,
+        "name": "?"
+      },
+      {//5
+        "address": "0x30640476B9b47aBa450e351e8527Ba35B5E995bf",
+        "chainId": MAINNET,
+        "name": "AAVE BUSD"
+      },
+      {//6
+        "address": "0x61fc4d40D313Eb01483F537A6db2B29fB38aEa8d",
+        "chainId": MAINNET,
+        "name": "Compound ETH"
+      },
+      {//7
+        "address": "0x7A05831A2D0Dd5aA0c638c9d22c29b21DA5067Da",
+        "chainId": MAINNET,
+        "name": "Compound DAI"
+      },
+      {//8
+        "address": "0x4d6406895EF1b408F0F3D4c4696e394Cc78629A0",
+        "chainId": MAINNET,
+        "name": "Compound USDC"
+      },
+      {//9
+        "address": "0xc8e3785BCf59aC59d7a449128c633c6F6272D156",
+        "chainId": MAINNET,
+        "name": "Compound USDC"
+      },
+      {//10
+        "address": "0x1DA1cebC2525a5Bb1242CAde6E923F3f1388874E",
+        "chainId": MAINNET,
+        "name": "Compound USDT"
+      },
+      {//11
+        "address": "0x3D3092560d48c02f524dfb3fa3CAdDc8A5717751",
+        "chainId": MAINNET,
+        "name": "Compound USDT"
+      },
+      {//12
+        "address": "0xca222c64b7f3ca0322356fA19e9A09a13bE71e06",
+        "chainId": MAINNET,
+        "name": "?"
+      },
     ],
     "website": "https://layer2.finance/",
     "github": "https://github.com/celer-network/layer2-finance-contracts",
@@ -278,6 +342,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     "color": "#00b520",
     "type": TYPE_SIDECHAIN
   },
+  // https://www.xdaichain.com/about-xdai/news-and-information/comparisons/matic#similarities-and-differences
   "xDai": {
     "bridges": [
       {
@@ -325,6 +390,38 @@ export const ETH_BRIDGE_CONTRACTS = {
     "color": "#8c8dfc",
     "type": TYPE_LAYER2_PAYMENT
   }
+}
+
+export const XDAI_BRIDGE_CONTRACTS = {
+  // https://www.xdaichain.com/for-users/bridges/converting-xdai-via-bridge/transfer-sai-dai-without-the-ui-using-web3-or-mobile-wallet
+  "xDai": {
+    "bridges": [
+      {
+        "address": "0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6",
+        "name": "Dai Bridge",
+        "chainId": XDAI,
+      }, // xdai to ethereum
+    ],
+    "explorer": "https://blockscout.com/poa/xdai/",
+    "website": "https://www.xdaichain.com/",
+    "twitter": "https://twitter.com/xdaichain",
+    "color": "#1ca9a6",
+    "type": TYPE_SIDECHAIN
+  },
+  // https://docs.connext.network/connext-MAINNET
+  "connext": {
+    "bridges": [
+      {
+        "address": "0xE540998865aFEB054021dc849Cc6191b8E09dC08",
+        "chainId": XDAI,
+      },
+    ],
+    "website": "https://www.connext.network/",
+    "github": "https://github.com/connext",
+    "twitter": "https://twitter.com/connextnetwork",
+    "color": "#29c1fc",
+    "type": TYPE_LAYER2_EXCHANGE
+  },
 }
 
 export const BSC_BRIDGE_CONTRACTS = {
