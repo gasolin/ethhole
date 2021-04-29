@@ -57,25 +57,54 @@ export const ETH_BRIDGE_CONTRACTS = {
     "color": "#e84142",
     "type": TYPE_LAYER2
   },
-  // https://docs.connext.network/connext-MAINNET
+  // https://github.com/connext/chaindata/blob/main/chains.json
   "connext": {
     "bridges": [
       {
-        "address": "0xE540998865aFEB054021dc849Cc6191b8E09dC08",
+        "address": "0x13B432914A996b0A48695dF9B2d701edA45FF264",
         "chainId": MAINNET,
+        "name": "BSC bridge"
       },
-      // {
-      //   "address": "0xE540998865aFEB054021dc849Cc6191b8E09dC08",
-      //   "chainId": MATIC,
-      // },
-      // {
-      //   "address": "0xE540998865aFEB054021dc849Cc6191b8E09dC08",
-      //   "chainId": BSC,
-      // },
-      // {
-      //   "address": "0xE540998865aFEB054021dc849Cc6191b8E09dC08",
-      //   "chainId": XDAI,
-      // },
+      {
+        "address": "0x533e3c0e6b48010873B947bddC4721b1bDFF9648",
+        "chainId": MAINNET,
+        "name": "BSC bridge"
+      },
+      {
+        "address": "0x2F10c5eE93ac666dA72195abA8a49FD6D27fA02F",
+        "chainId": MAINNET,
+        "name": "XDAI bridge"
+      },
+      {
+        "address": "0xD779967F8B511C5edf39115341B310022900eFED",
+        "chainId": MAINNET,
+        "name": "HECO bridge"
+      },
+      {
+        "address": "0x65e64963b755043CA4FFC88029FfB8305615EeDD",
+        "chainId": MAINNET,
+        "name": "Fantom bridge"
+      },
+      {
+        "address": "0xC564EE9f21Ed8A2d8E7e76c085740d5e4c5FaFbE",
+        "chainId": MAINNET,
+        "name": "Fantom bridge"
+      },
+      {
+        "address": "0xBe008e52c5682A49dd0260735a26Aa221f303456",
+        "chainId": MAINNET,
+        "name": "Fantom bridge"
+      },
+      {
+        "address": "0x46290B0c3A234E3d538050d8F34421797532A827",
+        "chainId": MAINNET,
+        "name": "Fusion bridge"
+      },
+      {
+        "address": "0x820A9eb227BF770A9dd28829380d53B76eAf1209",
+        "chainId": MAINNET,
+        "name": "Avalanche bridge"
+      }
     ],
     "website": "https://www.connext.network/",
     "github": "https://github.com/connext",
@@ -234,17 +263,20 @@ export const ETH_BRIDGE_CONTRACTS = {
       {//10
         "address": "0x1DA1cebC2525a5Bb1242CAde6E923F3f1388874E",
         "chainId": MAINNET,
-        "name": "Curve3Pool Dai"
+        "name": "Curve3Pool Dai",
+        "protocol": "curve"
       },
       {//11
         "address": "0x3D3092560d48c02f524dfb3fa3CAdDc8A5717751",
         "chainId": MAINNET,
-        "name": "Curve3Pool USDC"
+        "name": "Curve3Pool USDC",
+        "protocol": "curve"
       },
       {//12
         "address": "0xca222c64b7f3ca0322356fA19e9A09a13bE71e06",
         "chainId": MAINNET,
-        "name": "Curve3Pool USDT"
+        "name": "Curve3Pool USDT",
+        "protocol": "curve"
       },
     ],
     "website": "https://layer2.finance/",
