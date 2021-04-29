@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { getTimeTag } from '../helpers/formatDate'
 
+// import chainData from '../data/2021-04-29.json'
+
 export const useChainData = () => {
   const [data, setData] = useState('{}')
   const [timestamp, setTimestamp] = useState('')
