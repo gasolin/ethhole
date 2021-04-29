@@ -4,6 +4,7 @@ const TYPE_LAYER2_EXCHANGE = 'l2ex'
 const TYPE_SIDECHAIN = 'sidechain'
 const TYPE_LAYER2_DERIVATIVES = 'l2derivatives'
 const TYPE_LAYER2_LEND = 'l2lend'
+const TYPE_LIQUIDITY = 'liquidity'
 // const TYPE_OPTIMISTIC_ROLLUP = 'optimisticrollup'
 // const TYPE_ZK_ROLLUP = 'zkrollup'
 // const TYPE_STATE_CHANNEL = 'statechannel'
@@ -21,6 +22,7 @@ export const typeMap = {
   [TYPE_SIDECHAIN]: 'Side Chain',
   [TYPE_LAYER2_DERIVATIVES]: 'Derivatives',
   [TYPE_LAYER2_LEND]: 'Lend',
+  [TYPE_LIQUIDITY]: 'Liquidity',
   // [TYPE_OPTIMISTIC_ROLLUP]: "Optimistic",
   // [TYPE_ZK_ROLLUP]: "Zk",
   // [TYPE_STATE_CHANNEL]: "State Channel",
@@ -110,7 +112,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     "github": "https://github.com/connext",
     "twitter": "https://twitter.com/connextnetwork",
     "color": "#29c1fc",
-    "type": TYPE_LAYER2_EXCHANGE
+    "type": TYPE_LIQUIDITY
   },
   "dydx": {
     "bridges": [
