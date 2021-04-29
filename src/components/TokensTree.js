@@ -11,7 +11,10 @@ export const TokensTree = ({project, tokens, price, width = 400}) => {
       'Amount',
     ],
     [project, null, 0, 0],
-    ...tokens.map(item => [item.contract_ticker_symbol, project, item.quote, item.quote]),
+    ...tokens
+      // dirty hack for showing matic bridge tree
+      .filter(item => item.contract_ticker_symbol !== 'YLD')
+      .map(item => [item.contract_ticker_symbol, project, item.quote, item.quote]),
   ]
 
   return (
