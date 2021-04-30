@@ -7,7 +7,7 @@ const routes = [
 ];
 
 // copy index.html to 404.html
-fs.copySync(path.join('build', 'index.html'), path.join('build', '404.html'))
+// fs.copySync(path.join('build', 'index.html'), path.join('build', '404.html'))
 // ​add a folder per route and copy index.html
 routes.forEach((route) => {
   fs.copySync(path.join('build', 'index.html'), path.join('build', route, 'index.html'))
