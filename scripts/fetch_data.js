@@ -36,6 +36,8 @@ Array.from(new Set(projects
 
 const getBalanceURL = (address, chainId = 1) => `https://api.covalenthq.com/v1/${chainId}/address/${address}/balances_v2/?${params}`
 
+const QUOTE_THRESHOLD = 0.1
+
 // main
 async function main() {
   try {
@@ -49,6 +51,17 @@ async function main() {
       const link = getBalanceURL(addr, addrInfo[addr].chainId)
       const res = await fetch(link)
       const data = await res.json()
+      // calc per bridge tvl
+      let tvl = 0
+      data.data.items = data.data.items
+        .filter(token => token.quote > QUOTE_THRESHOLD)
+        .map(token => {
+          // console.log('tvl of ', bridge.address)
+          tvl += token.quote
+          return token
+        })
+      console.log(tvl)
+      data.data.tvl = tvl
 
       const proj = addrInfo[addr].project
       console.log('process ', proj, addrInfo[addr].name)
@@ -67,10 +80,10 @@ async function main() {
       .map(project => {
         let tvl = 0
         console.log('tvl of ', project)
-        collectData[project].bridges.map(bridge => bridge.items.map(item => {
-          tvl += item.quote
+        collectData[project].bridges.map(bridge => {
+          tvl += bridge.tvl
           return ''
-        }))
+        })
         console.log(tvl)
         collectData[project].tvl = tvl
         return ''
