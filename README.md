@@ -1,7 +1,25 @@
 # ethhole
 How the token flows
 
-## Data
+## Usage
+
+```
+yarn install
+yarn start
+```
+
+## Fetch Data
+
+Install `deno` from https://deno.land/#installation
+
+```sh
+deno run --allow-net --allow-write scripts/fetch_data.js --key [COVALENT_API_KEY]
+```
+
+Get covalent API key from https://www.covalenthq.com/platform/#/auth/register/
+
+
+## Data Format
 
 In `src/data` Layer 2 and side chain bridge contracts balances are list by date.
 
@@ -28,23 +46,6 @@ projectName: {
 ```
 
 Can explorer data with JSON viewer, ex http://jsonviewer.stack.hu/
-
-## Usage
-
-```
-yarn install
-yarn start
-```
-
-## Fetch Data
-
-Install `deno` from https://deno.land/#installation
-
-```sh
-deno run --allow-net --allow-write scripts/fetch_data.js --key [COVALENT_API_KEY]
-```
-
-Get covalent API key from https://www.covalenthq.com/platform/#/auth/register/
 
 ## Contribution
 
