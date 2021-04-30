@@ -17,15 +17,33 @@ const XDAI = 100
 
 // define in alphabetic order
 const PROJECT_AZTEC = {
-  name: 'Aztec' // name need to be able to use as key
+  name: 'Aztec', // required, name need to be able to use as key
+  explorer: "https://explorer.aztec.network/",
+  website: "https://aztec.network/",
+  github: "https://github.com/AztecProtocol",
+  twitter: "https://twitter.com/aztecprotocol",
+  color: "#944af2", // required
+  type: TYPE_LAYER2_PAYMENT // required
 }
 
 const PROJECT_AVALANCHE = {
-  name: 'Avalanche'
+  name: 'Avalanche',
+  explorer: "https://cchain.explorer.avax.network/",
+  website: "https://www.avalabs.org/",
+  github: "https://github.com/ava-labs",
+  twitter: "https://twitter.com/avalancheavax",
+  color: "#e84142",
+  type: TYPE_LAYER2
 }
 
 const PROJECT_BINANCE_SMART_CHAIN = {
-  name: 'Binance Smart Chain'
+  name: 'Binance Smart Chain',
+  explorer: "https://bscscan.com/",
+  website: "https://www.binance.org/en/smartChain",
+  github: "https://github.com/binance-chain/",
+  twitter: "https://twitter.com/binancechain",
+  color: "#f8d12f",
+  type: TYPE_SIDECHAIN
 }
 
 // https://github.com/connext/chaindata/blob/main/chains.json
@@ -39,101 +57,175 @@ const PROJECT_CONNEXT = {
 }
 
 const PROJECT_DYDX = {
-  name: 'dydx'
+  name: 'dydx',
+  website: "https://dydx.exchange/",
+  github: "https://github.com/dydxprotocol",
+  twitter: "https://twitter.com/dydxprotocol",
+  color: "#6966FF",
+  type: TYPE_LAYER2_EXCHANGE
 }
 
 const PROJECT_DIVERSIFY = {
-  name: 'DeversiFi'
+  name: 'DeversiFi',
+  website: "https://www.deversifi.com/",
+  github: "https://github.com/deversifi",
+  twitter: "https://twitter.com/deversifi",
+  color: "#5500FC",
+  type: TYPE_LAYER2_EXCHANGE
 }
 
 const PROJECT_FANTOM = {
-  name: 'Fantom'
+  name: 'Fantom',
+  explorer: "https://explorer.fantom.network/",
+  website: "https://fantom.foundation/",
+  github: "https://github.com/Fantom-Foundation",
+  twitter: "https://twitter.com/FantomFDN",
+  color: "#1969ff",
+  type: TYPE_SIDECHAIN
 }
 
 const PROJECT_FUEL = {
-  name: 'Fuel'
+  name: 'Fuel',
+  explorer: "https://mainnet.fuel.sh/network",
+  website: "https://fuel.sh/",
+  github: "https://github.com/fuellabs",
+  twitter: "https://twitter.com/fuellabs_",
+  color: "#04c399",
+  type: TYPE_LAYER2_PAYMENT
 }
 
 const PROJECT_FUSION = {
-  name: 'Fusion'
+  name: 'Fusion',
+  explorer: "https://fsnex.com/blocks",
+  website: "https://www.fusion.org/en",
+  github: "https://github.com/FUSIONFoundation",
+  twitter: "https://twitter.com/FUSIONProtocol",
+  color: "#358dcc",
+  type: TYPE_SIDECHAIN
 }
 
 const PROJECT_HARMONY = {
-  name: 'Harmony'
+  name: 'Harmony',
+  explorer: "https://explorer.harmony.one/",
+  website: "https://www.harmony.one/",
+  github: "https://github.com/harmony-one",
+  twitter: "https://harmony.one/twitter",
+  color: "#00ade8",
+  type: TYPE_SIDECHAIN
 }
 
 const PROJECT_HERMEZ = {
-  name: 'Hermez'
+  name: 'Hermez',
+  explorer: "https://explorer.hermez.io/",
+  website: "https://hermez.io/",
+  github: "https://github.com/hermeznetwork/",
+  twitter: "https://twitter.com/hermez_network",
+  color: "#e75a2b",
+  type: TYPE_LAYER2_PAYMENT
 }
 
 const PROJECT_HUOBI_ECO_CHAIN = {
-  name: 'HUOBI ECO CHAIN'
+  name: 'HUOBI ECO CHAIN',
+  explorer: "https://hecoinfo.com/",
+  website: "https://www.hecochain.com/en-us/",
+  github: "https://github.com/huobiGroup/",
+  twitter: "https://twitter.com/HECO_Chain",
+  color: "#01943f",
+  type: TYPE_SIDECHAIN
 }
 
 const PROJECT_IMMUTABLEX = {
-  name: 'ImmutableX'
+  name: 'ImmutableX',
+  website: "https://www.immutable.com/",
+  twitter: "https://twitter.com/immutable",
+  color: "#24d1e9",
+  type: TYPE_LAYER2_EXCHANGE
 }
 
 const PROJECT_LAYER2_FINANCE = {
-  name: 'Layer2.Finance'
+  name: 'Layer2.Finance',
+  website: "https://layer2.finance/",
+  github: "https://github.com/celer-network/layer2-finance-contracts",
+  twitter: "https://twitter.com/layer2finance",
+  color: "#ca9979",
+  type: TYPE_LAYER2_LEND
 }
 
 const PROJECT_LOOPRING = {
-  name: 'Loopring'
+  name: 'Loopring',
+  website: "https://loopring.org",
+  github: "https://github.com/Loopring",
+  twitter: "https://twitter.com/loopringorg",
+  color: "#1c42ff",
+  type: TYPE_LAYER2_EXCHANGE
 }
 
 const PROJECT_OPTIMISM = {
-  name: 'Optimism'
+  name: 'Optimism',
+  explorer: "https://mainnet-l2-explorer.surge.sh/",
+  website: "https://optimism.io/",
+  github: "https://github.com/ethereum-optimism",
+  twitter: "https://twitter.com/optimismPBC",
+  color: "#f01a37",
+  type: TYPE_LAYER2_DERIVATIVES
 }
 
 const PROJECT_POLYGON = {
-  name: 'Polygon'
+  name: 'Polygon',
+  explorer: "https://explorer-mainnet.maticvigil.com/",
+  website: "https://polygon.technology/",
+  github: "https://github.com/maticnetwork/",
+  twitter: "https://twitter.com/maticnetwork",
+  color: "#8248e5",
+  type: TYPE_SIDECHAIN
 }
 
 const PROJECT_POLY_NETWORK = {
-  name: 'PolyNetwork'
+  name: 'PolyNetwork',
+  explorer: "https://explorer.poly.network/",
+  website: "https://www.poly.network/",
+  github: "https://github.com/polynetwork",
+  twitter: "https://twitter.com/PolyNetwork2",
+  color: "#2222FF",
+  type: TYPE_SIDECHAIN
 }
 
 const PROJECT_RSK = {
-  name: 'RSK'
+  name: 'RSK',
+  explorer: "https://explorer.rsk.co/",
+  website: "https://www.rsk.co/",
+  twitter: "https://twitter.com/rsksmart",
+  color: "#00b520",
+  type: TYPE_SIDECHAIN
 }
 
 const PROJECT_XDAI = {
-  name: "xDai"
+  name: "xDai",
+  explorer: "https://blockscout.com/poa/xdai/",
+  website: "https://www.xdaichain.com/",
+  twitter: "https://twitter.com/xdaichain",
+  color: "#1ca9a6",
+  type: TYPE_SIDECHAIN
 }
 
 const PROJECT_ZKSWAP = {
-  name: "ZKSwap"
+  name: "ZKSwap",
+  explorer: "https://zkswap.info/en/transactions",
+  website: "https://zkswap.info/en",
+  github: "https://github.com/l2labs",
+  twitter: "https://twitter.com/ZKSwapOfficial",
+  color: "#596efd",
+  type: TYPE_LAYER2_EXCHANGE
 }
 
 const PROJECT_ZKSYNC = {
-  name: "zkSync"
-}
-
-// define in alphabetic order
-const PROJECT_META = {
-  [PROJECT_AZTEC.name]: PROJECT_AZTEC,
-  [PROJECT_AVALANCHE.name]: PROJECT_AVALANCHE,
-  [PROJECT_BINANCE_SMART_CHAIN.name]: PROJECT_BINANCE_SMART_CHAIN,
-  [PROJECT_CONNEXT.name]: PROJECT_CONNEXT,
-  [PROJECT_DYDX.name]: PROJECT_DYDX,
-  [PROJECT_DIVERSIFY.name]: PROJECT_DIVERSIFY,
-  [PROJECT_FANTOM.name]: PROJECT_FANTOM,
-  [PROJECT_FUEL.name]: PROJECT_FUEL,
-  [PROJECT_FUSION.name]: PROJECT_FUSION,
-  [PROJECT_HARMONY.name]: PROJECT_HARMONY,
-  [PROJECT_HERMEZ.name]: PROJECT_HERMEZ,
-  [PROJECT_HUOBI_ECO_CHAIN.name]: PROJECT_HUOBI_ECO_CHAIN,
-  [PROJECT_IMMUTABLEX.name]: PROJECT_IMMUTABLEX,
-  [PROJECT_LAYER2_FINANCE.name]: PROJECT_LAYER2_FINANCE,
-  [PROJECT_LOOPRING.name]: PROJECT_LOOPRING,
-  [PROJECT_OPTIMISM.name]: PROJECT_OPTIMISM,
-  [PROJECT_POLYGON.name]: PROJECT_POLYGON,
-  [PROJECT_POLY_NETWORK.name]: PROJECT_POLY_NETWORK,
-  [PROJECT_RSK.name]: PROJECT_RSK,
-  [PROJECT_XDAI.name]: PROJECT_XDAI,
-  [PROJECT_ZKSWAP.name]: PROJECT_ZKSWAP,
-  [PROJECT_ZKSYNC.name]: PROJECT_ZKSYNC,
+  name: "zkSync",
+  explorer: "https://zkscan.io/explorer/",
+  website: "https://zksync.io/",
+  github: "https://github.com/matter-labs/zksync",
+  twitter: "https://twitter.com/zksync",
+  color: "#8c8dfc",
+  type: TYPE_LAYER2_PAYMENT
 }
 
 export const typeMap = {
@@ -151,6 +243,7 @@ export const typeMap = {
 
 export const getTypeMap = (type) => typeMap[type] || 'Unknown'
 
+// define in alphabetic order
 export const ETH_BRIDGE_CONTRACTS = {
   [PROJECT_AZTEC.name]: {
     "bridges": [
@@ -159,12 +252,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET,
       }
     ],
-    "explorer": "https://explorer.aztec.network/",
-    "website": "https://aztec.network/",
-    "github": "https://github.com/AztecProtocol",
-    "twitter": "https://twitter.com/aztecprotocol",
-    "color": "#944af2",
-    "type": TYPE_LAYER2_PAYMENT
+    ...PROJECT_AZTEC,
   },
   [PROJECT_AVALANCHE.name]: {
     "bridges": [
@@ -179,12 +267,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "project": PROJECT_CONNEXT
       }
     ],
-    "explorer": "https://cchain.explorer.avax.network/",
-    "website": "https://www.avalabs.org/",
-    "github": "https://github.com/ava-labs",
-    "twitter": "https://twitter.com/avalancheavax",
-    "color": "#e84142",
-    "type": TYPE_LAYER2
+    ...PROJECT_AVALANCHE,
   },
   [PROJECT_BINANCE_SMART_CHAIN.name]: {
     "bridges": [
@@ -201,12 +284,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "project": PROJECT_CONNEXT,
       },
     ],
-    "explorer": "https://bscscan.com/",
-    "website": "https://www.binance.org/en/smartChain",
-    "github": "https://github.com/binance-chain/",
-    "twitter": "https://twitter.com/binancechain",
-    "color": "#f8d12f",
-    "type": TYPE_SIDECHAIN
+    ...PROJECT_BINANCE_SMART_CHAIN,
   },
   [PROJECT_DYDX.name]: {
     "bridges": [
@@ -215,11 +293,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET,
       }
     ],
-    "website": "https://dydx.exchange/",
-    "github": "https://github.com/dydxprotocol",
-    "twitter": "https://twitter.com/dydxprotocol",
-    "color": "#6966FF",
-    "type": TYPE_LAYER2_EXCHANGE
+    ...PROJECT_DYDX
   },
   [PROJECT_DIVERSIFY.name]: {
     "bridges": [
@@ -228,11 +302,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET,
       }
     ],
-    "website": "https://www.deversifi.com/",
-    "github": "https://github.com/deversifi",
-    "twitter": "https://twitter.com/deversifi",
-    "color": "#5500FC",
-    "type": TYPE_LAYER2_EXCHANGE
+    ...PROJECT_DIVERSIFY
   },
   [PROJECT_FANTOM.name]: {
     "bridges": [
@@ -255,12 +325,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "project": PROJECT_CONNEXT
       },
     ],
-    "explorer": "https://explorer.fantom.network/",
-    "website": "https://fantom.foundation/",
-    "github": "https://github.com/Fantom-Foundation",
-    "twitter": "https://twitter.com/FantomFDN",
-    "color": "#1969ff",
-    "type": TYPE_SIDECHAIN
+    ...PROJECT_FANTOM
   },
   [PROJECT_FUEL.name]: {
     "bridges": [
@@ -269,12 +334,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET,
       }
     ],
-    "explorer": "https://mainnet.fuel.sh/network",
-    "website": "https://fuel.sh/",
-    "github": "https://github.com/fuellabs",
-    "twitter": "https://twitter.com/fuellabs_",
-    "color": "#04c399",
-    "type": TYPE_LAYER2_PAYMENT
+    ...PROJECT_FUEL
   },
   [PROJECT_FUSION.name]: {
     "bridges": [
@@ -285,12 +345,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "project": PROJECT_CONNEXT
       },
     ],
-    "explorer": "https://fsnex.com/blocks",
-    "website": "https://www.fusion.org/en",
-    "github": "https://github.com/FUSIONFoundation",
-    "twitter": "https://twitter.com/FUSIONProtocol",
-    "color": "#358dcc",
-    "type": TYPE_SIDECHAIN
+    ...PROJECT_FUSION
   },
   // https://github.com/harmony-one/ethhmy-bridge.sdk/blob/main/src/configs/mainnet.ts
   [PROJECT_HARMONY.name]: {
@@ -312,12 +367,7 @@ export const ETH_BRIDGE_CONTRACTS = {
       //   "name": "ERC721 manager"
       // }
     ],
-    "explorer": "https://explorer.harmony.one/",
-    "website": "https://www.harmony.one/",
-    "github": "https://github.com/harmony-one",
-    "twitter": "https://harmony.one/twitter",
-    "color": "#00ade8",
-    "type": TYPE_SIDECHAIN
+    ...PROJECT_HARMONY
   },
   [PROJECT_HERMEZ.name]: {
     "bridges": [
@@ -326,12 +376,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET
       }
     ],
-    "explorer": "https://explorer.hermez.io/",
-    "website": "https://hermez.io/",
-    "github": "https://github.com/hermeznetwork/",
-    "twitter": "https://twitter.com/hermez_network",
-    "color": "#e75a2b",
-    "type": TYPE_LAYER2_PAYMENT
+    ...PROJECT_HERMEZ
   },
   [PROJECT_HUOBI_ECO_CHAIN.name]: {
     "bridges": [
@@ -342,12 +387,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "project": PROJECT_CONNEXT
       },
     ],
-    "explorer": "https://hecoinfo.com/",
-    "website": "https://www.hecochain.com/en-us/",
-    "github": "https://github.com/huobiGroup/",
-    "twitter": "https://twitter.com/HECO_Chain",
-    "color": "#01943f",
-    "type": TYPE_SIDECHAIN
+    ...PROJECT_HUOBI_ECO_CHAIN
   },
   [PROJECT_IMMUTABLEX.name]: {
     "bridges": [
@@ -356,10 +396,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET,
       }
     ],
-    "website": "https://www.immutable.com/",
-    "twitter": "https://twitter.com/immutable",
-    "color": "#24d1e9",
-    "type": TYPE_LAYER2_EXCHANGE
+    ...PROJECT_IMMUTABLEX
   },
   // https://etherscan.io/address/0xFe81ab6930A30BdaE731fe7b6C6ABFbEAFc014a8#readContract
   // the main address's token balance will flow to other DEFI periodically,
@@ -435,11 +472,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "protocol": "curve"
       },
     ],
-    "website": "https://layer2.finance/",
-    "github": "https://github.com/celer-network/layer2-finance-contracts",
-    "twitter": "https://twitter.com/layer2finance",
-    "color": "#ca9979",
-    "type": TYPE_LAYER2_LEND
+    ...PROJECT_LAYER2_FINANCE
   },
   [PROJECT_LOOPRING.name]: {
     "bridges": [
@@ -448,11 +481,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET,
       }
     ],
-    "website": "https://loopring.org",
-    "github": "https://github.com/Loopring",
-    "twitter": "https://twitter.com/loopringorg",
-    "color": "#1c42ff",
-    "type": TYPE_LAYER2_EXCHANGE
+    ...PROJECT_LOOPRING
   },
   [PROJECT_OPTIMISM.name]: {
     "bridges": [
@@ -461,12 +490,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET,
       }
     ],
-    "explorer": "https://mainnet-l2-explorer.surge.sh/",
-    "website": "https://optimism.io/",
-    "github": "https://github.com/ethereum-optimism",
-    "twitter": "https://twitter.com/optimismPBC",
-    "color": "#f01a37",
-    "type": TYPE_LAYER2_DERIVATIVES
+    ...PROJECT_OPTIMISM
   },
   // https://github.com/maticnetwork/static/blob/master/network/mainnet/v1/index.json
   [PROJECT_POLYGON.name]: {
@@ -487,12 +511,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "name": "Plasma bridge"
       }
     ],
-    "explorer": "https://explorer-mainnet.maticvigil.com/",
-    "website": "https://polygon.technology/",
-    "github": "https://github.com/maticnetwork/",
-    "twitter": "https://twitter.com/maticnetwork",
-    "color": "#8248e5",
-    "type": TYPE_SIDECHAIN
+    ...PROJECT_POLYGON
   },
   // https://github.com/polynetwork/docs/blob/master/config/README.md
   [PROJECT_POLY_NETWORK.name]: {
@@ -508,12 +527,7 @@ export const ETH_BRIDGE_CONTRACTS = {
       //   "chainId": BSC,
       // },
     ],
-    "explorer": "https://explorer.poly.network/",
-    "website": "https://www.poly.network/",
-    "github": "https://github.com/polynetwork",
-    "twitter": "https://twitter.com/PolyNetwork2",
-    "color": "#2222FF",
-    "type": TYPE_SIDECHAIN
+    ...PROJECT_POLY_NETWORK
   },
   // https://developers.rsk.co/tools/tokenbridge/contractaddresses/
   [PROJECT_RSK.name]: {
@@ -524,11 +538,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET,
       }
     ],
-    "explorer": "https://explorer.rsk.co/",
-    "website": "https://www.rsk.co/",
-    "twitter": "https://twitter.com/rsksmart",
-    "color": "#00b520",
-    "type": TYPE_SIDECHAIN
+    ...PROJECT_RSK
   },
   // https://www.xdaichain.com/about-xdai/news-and-information/comparisons/matic#similarities-and-differences
   [PROJECT_XDAI.name]: {
@@ -546,15 +556,11 @@ export const ETH_BRIDGE_CONTRACTS = {
       {
         "address": "0x2F10c5eE93ac666dA72195abA8a49FD6D27fA02F",
         "chainId": MAINNET,
-        "name": "XDAI bridge",
+        "name": "connext XDAI bridge",
         "project": PROJECT_CONNEXT
       },
     ],
-    "explorer": "https://blockscout.com/poa/xdai/",
-    "website": "https://www.xdaichain.com/",
-    "twitter": "https://twitter.com/xdaichain",
-    "color": "#1ca9a6",
-    "type": TYPE_SIDECHAIN
+    ...PROJECT_XDAI
   },
   [PROJECT_ZKSWAP.name]: {
     "bridges": [
@@ -563,12 +569,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET,
       }
     ],
-    "explorer": "https://zkswap.info/en/transactions",
-    "website": "https://zkswap.info/en",
-    "github": "https://github.com/l2labs",
-    "twitter": "https://twitter.com/ZKSwapOfficial",
-    "color": "#596efd",
-    "type": TYPE_LAYER2_EXCHANGE
+    ...PROJECT_ZKSWAP
   },
   [PROJECT_ZKSYNC.name]: {
     "bridges": [
@@ -577,12 +578,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET,
       }
     ],
-    "explorer": "https://zkscan.io/explorer/",
-    "website": "https://zksync.io/",
-    "github": "https://github.com/matter-labs/zksync",
-    "twitter": "https://twitter.com/zksync",
-    "color": "#8c8dfc",
-    "type": TYPE_LAYER2_PAYMENT
+    ...PROJECT_ZKSYNC
   }
 }
 
