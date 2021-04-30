@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import { getTimeTag } from '../helpers/formatDate'
 
-// import chainData from '../data/2021-04-30.json'
+// comment out for debug
+// import debugData from '../data/2021-04-30.json'
 
 export const useChainData = () => {
   const [data, setData] = useState('{}')
@@ -25,12 +26,16 @@ export const useChainData = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const tag = timestamp
-          ? getTimeTag('today', new Date(timestamp))
-          : getTimeTag('yesterday', new Date())
-        const res =  await fetch(`${baseUrl}/main/src/data/${tag}.json`)
-        const chainData = await res.json()
-        setData(JSON.stringify(chainData))
+        if (debugData) {
+          setData(JSON.stringify(debugData))
+        } else {
+          const tag = timestamp
+            ? getTimeTag('today', new Date(timestamp))
+            : getTimeTag('yesterday', new Date())
+          const res =  await fetch(`${baseUrl}/main/src/data/${tag}.json`)
+          const chainData = await res.json()
+          setData(JSON.stringify(chainData))
+        }
       } catch (e) {
         console.error(e.message)
       }

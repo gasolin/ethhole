@@ -47,7 +47,7 @@ const PROJECT_BINANCE_SMART_CHAIN = {
 }
 
 // https://github.com/connext/chaindata/blob/main/chains.json
-const PROJECT_CONNEXT = {
+export const PROJECT_CONNEXT = {
   name: 'connext',
   website: "https://www.connext.network/",
   github: "https://github.com/connext",
@@ -264,7 +264,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x820A9eb227BF770A9dd28829380d53B76eAf1209",
         "chainId": MAINNET,
         "name": "connext Avalanche bridge",
-        "project": PROJECT_CONNEXT
+        "project": PROJECT_CONNEXT.name
       }
     ],
     ...PROJECT_AVALANCHE,
@@ -275,13 +275,13 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x13B432914A996b0A48695dF9B2d701edA45FF264",
         "chainId": MAINNET,
         "name": "connext BSC bridge",
-        "project": PROJECT_CONNEXT,
+        "project": PROJECT_CONNEXT.name,
       },
       {
         "address": "0x533e3c0e6b48010873B947bddC4721b1bDFF9648",
         "chainId": MAINNET,
         "name": "connext BSC bridge",
-        "project": PROJECT_CONNEXT,
+        "project": PROJECT_CONNEXT.name,
       },
     ],
     ...PROJECT_BINANCE_SMART_CHAIN,
@@ -310,19 +310,19 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x65e64963b755043CA4FFC88029FfB8305615EeDD",
         "chainId": MAINNET,
         "name": "connext Fantom bridge",
-        "project": PROJECT_CONNEXT
+        "project": PROJECT_CONNEXT.name
       },
       {
         "address": "0xC564EE9f21Ed8A2d8E7e76c085740d5e4c5FaFbE",
         "chainId": MAINNET,
         "name": "connext Fantom bridge",
-        "project": PROJECT_CONNEXT
+        "project": PROJECT_CONNEXT.name
       },
       {
         "address": "0xBe008e52c5682A49dd0260735a26Aa221f303456",
         "chainId": MAINNET,
         "name": "connext Fantom bridge",
-        "project": PROJECT_CONNEXT
+        "project": PROJECT_CONNEXT.name
       },
     ],
     ...PROJECT_FANTOM
@@ -342,7 +342,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x46290B0c3A234E3d538050d8F34421797532A827",
         "chainId": MAINNET,
         "name": "connext Fusion bridge",
-        "project": PROJECT_CONNEXT
+        "project": PROJECT_CONNEXT.name
       },
     ],
     ...PROJECT_FUSION
@@ -384,7 +384,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0xD779967F8B511C5edf39115341B310022900eFED",
         "chainId": MAINNET,
         "name": "connext HECO bridge",
-        "project": PROJECT_CONNEXT
+        "project": PROJECT_CONNEXT.name
       },
     ],
     ...PROJECT_HUOBI_ECO_CHAIN
@@ -514,7 +514,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x668b9734FfE9eE8a01d4Ade3362De71E8989EA87",
         "chainId": MAINNET,
         "name": "connext Polygon bridge",
-        "project": PROJECT_CONNEXT,
+        "project": PROJECT_CONNEXT.name,
       },
     ],
     ...PROJECT_POLYGON
@@ -563,7 +563,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x2F10c5eE93ac666dA72195abA8a49FD6D27fA02F",
         "chainId": MAINNET,
         "name": "connext XDAI bridge",
-        "project": PROJECT_CONNEXT
+        "project": PROJECT_CONNEXT.name
       },
     ],
     ...PROJECT_XDAI

@@ -1,7 +1,9 @@
-import { ETH_BRIDGE_CONTRACTS } from '../data/bridge_contracts'
+import { ETH_BRIDGE_CONTRACTS, PROJECT_CONNEXT } from '../data/bridge_contracts'
 
 export const ProjectMetas = ({proj}) => {
-  const projMeta = ETH_BRIDGE_CONTRACTS[proj]
+  const projMeta = proj !== PROJECT_CONNEXT.name
+    ? ETH_BRIDGE_CONTRACTS[proj]
+    : PROJECT_CONNEXT
   const meta = [
     ['Website', projMeta.website],
     ['Explorer', projMeta.explorer],
