@@ -15,6 +15,127 @@ const MAINNET = 1 // ethereum
 const BSC = 57
 const XDAI = 100
 
+// define in alphabetic order
+const PROJECT_AZTEC = {
+  name: 'Aztec' // name need to be able to use as key
+}
+
+const PROJECT_AVALANCHE = {
+  name: 'Avalanche'
+}
+
+const PROJECT_BINANCE_SMART_CHAIN = {
+  name: 'Binance Smart Chain'
+}
+
+// https://github.com/connext/chaindata/blob/main/chains.json
+const PROJECT_CONNEXT = {
+  name: 'connext',
+  website: "https://www.connext.network/",
+  github: "https://github.com/connext",
+  twitter: "https://twitter.com/connextnetwork",
+  color: "#29c1fc",
+  type: TYPE_LIQUIDITY
+}
+
+const PROJECT_DYDX = {
+  name: 'dydx'
+}
+
+const PROJECT_DIVERSIFY = {
+  name: 'DeversiFi'
+}
+
+const PROJECT_FANTOM = {
+  name: 'Fantom'
+}
+
+const PROJECT_FUEL = {
+  name: 'Fuel'
+}
+
+const PROJECT_FUSION = {
+  name: 'Fusion'
+}
+
+const PROJECT_HARMONY = {
+  name: 'Harmony'
+}
+
+const PROJECT_HERMEZ = {
+  name: 'Hermez'
+}
+
+const PROJECT_HUOBI_ECO_CHAIN = {
+  name: 'HUOBI ECO CHAIN'
+}
+
+const PROJECT_IMMUTABLEX = {
+  name: 'ImmutableX'
+}
+
+const PROJECT_LAYER2_FINANCE = {
+  name: 'Layer2.Finance'
+}
+
+const PROJECT_LOOPRING = {
+  name: 'Loopring'
+}
+
+const PROJECT_OPTIMISM = {
+  name: 'Optimism'
+}
+
+const PROJECT_POLYGON = {
+  name: 'Polygon'
+}
+
+const PROJECT_POLY_NETWORK = {
+  name: 'PolyNetwork'
+}
+
+const PROJECT_RSK = {
+  name: 'RSK'
+}
+
+const PROJECT_XDAI = {
+  name: "xDai"
+}
+
+const PROJECT_ZKSWAP = {
+  name: "ZKSwap"
+}
+
+const PROJECT_ZKSYNC = {
+  name: "zkSync"
+}
+
+// define in alphabetic order
+const PROJECT_META = {
+  [PROJECT_AZTEC.name]: PROJECT_AZTEC,
+  [PROJECT_AVALANCHE.name]: PROJECT_AVALANCHE,
+  [PROJECT_BINANCE_SMART_CHAIN.name]: PROJECT_BINANCE_SMART_CHAIN,
+  [PROJECT_CONNEXT.name]: PROJECT_CONNEXT,
+  [PROJECT_DYDX.name]: PROJECT_DYDX,
+  [PROJECT_DIVERSIFY.name]: PROJECT_DIVERSIFY,
+  [PROJECT_FANTOM.name]: PROJECT_FANTOM,
+  [PROJECT_FUEL.name]: PROJECT_FUEL,
+  [PROJECT_FUSION.name]: PROJECT_FUSION,
+  [PROJECT_HARMONY.name]: PROJECT_HARMONY,
+  [PROJECT_HERMEZ.name]: PROJECT_HERMEZ,
+  [PROJECT_HUOBI_ECO_CHAIN.name]: PROJECT_HUOBI_ECO_CHAIN,
+  [PROJECT_IMMUTABLEX.name]: PROJECT_IMMUTABLEX,
+  [PROJECT_LAYER2_FINANCE.name]: PROJECT_LAYER2_FINANCE,
+  [PROJECT_LOOPRING.name]: PROJECT_LOOPRING,
+  [PROJECT_OPTIMISM.name]: PROJECT_OPTIMISM,
+  [PROJECT_POLYGON.name]: PROJECT_POLYGON,
+  [PROJECT_POLY_NETWORK.name]: PROJECT_POLY_NETWORK,
+  [PROJECT_RSK.name]: PROJECT_RSK,
+  [PROJECT_XDAI.name]: PROJECT_XDAI,
+  [PROJECT_ZKSWAP.name]: PROJECT_ZKSWAP,
+  [PROJECT_ZKSYNC.name]: PROJECT_ZKSYNC,
+}
+
 export const typeMap = {
   [TYPE_LAYER2]: 'General',
   [TYPE_LAYER2_PAYMENT]: 'Payment',
@@ -31,7 +152,7 @@ export const typeMap = {
 export const getTypeMap = (type) => typeMap[type] || 'Unknown'
 
 export const ETH_BRIDGE_CONTRACTS = {
-  "Aztec": {
+  [PROJECT_AZTEC.name]: {
     "bridges": [
       {
         "address": "0x737901bea3eeb88459df9ef1BE8fF3Ae1B42A2ba",
@@ -45,11 +166,17 @@ export const ETH_BRIDGE_CONTRACTS = {
     "color": "#944af2",
     "type": TYPE_LAYER2_PAYMENT
   },
-  "Avalanche": {
+  [PROJECT_AVALANCHE.name]: {
     "bridges": [
       {
         "address": "0xdAC7Bb7Ce4fF441A235F08408e632FA1D799A147",
         "chainId": MAINNET,
+      },
+      {
+        "address": "0x820A9eb227BF770A9dd28829380d53B76eAf1209",
+        "chainId": MAINNET,
+        "name": "connext Avalanche bridge",
+        "project": PROJECT_CONNEXT
       }
     ],
     "explorer": "https://cchain.explorer.avax.network/",
@@ -59,62 +186,29 @@ export const ETH_BRIDGE_CONTRACTS = {
     "color": "#e84142",
     "type": TYPE_LAYER2
   },
-  // https://github.com/connext/chaindata/blob/main/chains.json
-  "connext": {
+  [PROJECT_BINANCE_SMART_CHAIN.name]: {
     "bridges": [
       {
         "address": "0x13B432914A996b0A48695dF9B2d701edA45FF264",
         "chainId": MAINNET,
-        "name": "BSC bridge"
+        "name": "connext BSC bridge",
+        "project": PROJECT_CONNEXT,
       },
       {
         "address": "0x533e3c0e6b48010873B947bddC4721b1bDFF9648",
         "chainId": MAINNET,
-        "name": "BSC bridge"
+        "name": "connext BSC bridge",
+        "project": PROJECT_CONNEXT,
       },
-      {
-        "address": "0x2F10c5eE93ac666dA72195abA8a49FD6D27fA02F",
-        "chainId": MAINNET,
-        "name": "XDAI bridge"
-      },
-      {
-        "address": "0xD779967F8B511C5edf39115341B310022900eFED",
-        "chainId": MAINNET,
-        "name": "HECO bridge"
-      },
-      {
-        "address": "0x65e64963b755043CA4FFC88029FfB8305615EeDD",
-        "chainId": MAINNET,
-        "name": "Fantom bridge"
-      },
-      {
-        "address": "0xC564EE9f21Ed8A2d8E7e76c085740d5e4c5FaFbE",
-        "chainId": MAINNET,
-        "name": "Fantom bridge"
-      },
-      {
-        "address": "0xBe008e52c5682A49dd0260735a26Aa221f303456",
-        "chainId": MAINNET,
-        "name": "Fantom bridge"
-      },
-      {
-        "address": "0x46290B0c3A234E3d538050d8F34421797532A827",
-        "chainId": MAINNET,
-        "name": "Fusion bridge"
-      },
-      {
-        "address": "0x820A9eb227BF770A9dd28829380d53B76eAf1209",
-        "chainId": MAINNET,
-        "name": "Avalanche bridge"
-      }
     ],
-    "website": "https://www.connext.network/",
-    "github": "https://github.com/connext",
-    "twitter": "https://twitter.com/connextnetwork",
-    "color": "#29c1fc",
-    "type": TYPE_LIQUIDITY
+    "explorer": "https://bscscan.com/",
+    "website": "https://www.binance.org/en/smartChain",
+    "github": "https://github.com/binance-chain/",
+    "twitter": "https://twitter.com/binancechain",
+    "color": "#f8d12f",
+    "type": TYPE_SIDECHAIN
   },
-  "dydx": {
+  [PROJECT_DYDX.name]: {
     "bridges": [
       {
         "address": "0xD54f502e184B6B739d7D27a6410a67dc462D69c8",
@@ -127,7 +221,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     "color": "#6966FF",
     "type": TYPE_LAYER2_EXCHANGE
   },
-  "DeversiFi": {
+  [PROJECT_DIVERSIFY.name]: {
     "bridges": [
       {
         "address": "0x5d22045DAcEAB03B158031eCB7D9d06Fad24609b",
@@ -140,7 +234,35 @@ export const ETH_BRIDGE_CONTRACTS = {
     "color": "#5500FC",
     "type": TYPE_LAYER2_EXCHANGE
   },
-  "Fuel": {
+  [PROJECT_FANTOM.name]: {
+    "bridges": [
+      {
+        "address": "0x65e64963b755043CA4FFC88029FfB8305615EeDD",
+        "chainId": MAINNET,
+        "name": "connext Fantom bridge",
+        "project": PROJECT_CONNEXT
+      },
+      {
+        "address": "0xC564EE9f21Ed8A2d8E7e76c085740d5e4c5FaFbE",
+        "chainId": MAINNET,
+        "name": "connext Fantom bridge",
+        "project": PROJECT_CONNEXT
+      },
+      {
+        "address": "0xBe008e52c5682A49dd0260735a26Aa221f303456",
+        "chainId": MAINNET,
+        "name": "connext Fantom bridge",
+        "project": PROJECT_CONNEXT
+      },
+    ],
+    "explorer": "https://explorer.fantom.network/",
+    "website": "https://fantom.foundation/",
+    "github": "https://github.com/Fantom-Foundation",
+    "twitter": "https://twitter.com/FantomFDN",
+    "color": "#1969ff",
+    "type": TYPE_SIDECHAIN
+  },
+  [PROJECT_FUEL.name]: {
     "bridges": [
       {
         "address": "0x6880f6Fd960D1581C2730a451A22EED1081cfD72",
@@ -154,8 +276,24 @@ export const ETH_BRIDGE_CONTRACTS = {
     "color": "#04c399",
     "type": TYPE_LAYER2_PAYMENT
   },
+  [PROJECT_FUSION.name]: {
+    "bridges": [
+      {
+        "address": "0x46290B0c3A234E3d538050d8F34421797532A827",
+        "chainId": MAINNET,
+        "name": "connext Fusion bridge",
+        "project": PROJECT_CONNEXT
+      },
+    ],
+    "explorer": "https://fsnex.com/blocks",
+    "website": "https://www.fusion.org/en",
+    "github": "https://github.com/FUSIONFoundation",
+    "twitter": "https://twitter.com/FUSIONProtocol",
+    "color": "#358dcc",
+    "type": TYPE_SIDECHAIN
+  },
   // https://github.com/harmony-one/ethhmy-bridge.sdk/blob/main/src/configs/mainnet.ts
-  "Harmony": {
+  [PROJECT_HARMONY.name]: {
     "bridges": [
       {
         "address": "0xfD53b1B4AF84D59B20bF2C20CA89a6BeeAa2c628",
@@ -181,7 +319,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     "color": "#00ade8",
     "type": TYPE_SIDECHAIN
   },
-  "Hermez": {
+  [PROJECT_HERMEZ.name]: {
     "bridges": [
       {
         "address": "0xA68D85dF56E733A06443306A095646317B5Fa633",
@@ -195,7 +333,23 @@ export const ETH_BRIDGE_CONTRACTS = {
     "color": "#e75a2b",
     "type": TYPE_LAYER2_PAYMENT
   },
-  "ImmutableX": {
+  [PROJECT_HUOBI_ECO_CHAIN.name]: {
+    "bridges": [
+      {
+        "address": "0xD779967F8B511C5edf39115341B310022900eFED",
+        "chainId": MAINNET,
+        "name": "connext HECO bridge",
+        "project": PROJECT_CONNEXT
+      },
+    ],
+    "explorer": "https://hecoinfo.com/",
+    "website": "https://www.hecochain.com/en-us/",
+    "github": "https://github.com/huobiGroup/",
+    "twitter": "https://twitter.com/HECO_Chain",
+    "color": "#01943f",
+    "type": TYPE_SIDECHAIN
+  },
+  [PROJECT_IMMUTABLEX.name]: {
     "bridges": [
       {
         "address": "0x5FDCCA53617f4d2b9134B29090C87D01058e27e9",
@@ -210,7 +364,7 @@ export const ETH_BRIDGE_CONTRACTS = {
   // https://etherscan.io/address/0xFe81ab6930A30BdaE731fe7b6C6ABFbEAFc014a8#readContract
   // the main address's token balance will flow to other DEFI periodically,
   // need to track strategies TVL
-  "Layer2.Finance": {
+  [PROJECT_LAYER2_FINANCE.name]: {
     "bridges": [
       {
         "address": "0xf86FD6735f88d5b6aa709B357AD5Be22CEDf1A05",
@@ -287,7 +441,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     "color": "#ca9979",
     "type": TYPE_LAYER2_LEND
   },
-  "Loopring": {
+  [PROJECT_LOOPRING.name]: {
     "bridges": [
       {
         "address": "0x674bdf20A0F284D710BC40872100128e2d66Bd3f",
@@ -300,7 +454,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     "color": "#1c42ff",
     "type": TYPE_LAYER2_EXCHANGE
   },
-  "Optimism": {
+  [PROJECT_OPTIMISM.name]: {
     "bridges": [
       {
         "address": "0x045e507925d2e05D114534D0810a1abD94aca8d6",
@@ -315,7 +469,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     "type": TYPE_LAYER2_DERIVATIVES
   },
   // https://github.com/maticnetwork/static/blob/master/network/mainnet/v1/index.json
-  "Polygon": {
+  [PROJECT_POLYGON.name]: {
     "bridges": [
       {
         "address": "0x8484Ef722627bf18ca5Ae6BcF031c23E6e922B30",
@@ -341,7 +495,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     "type": TYPE_SIDECHAIN
   },
   // https://github.com/polynetwork/docs/blob/master/config/README.md
-  "PolyNetwork": {
+  [PROJECT_POLY_NETWORK.name]: {
     "bridges": [
       {
         "address": "0x250e76987d838a75310c34bf422ea9f1AC4Cc906",
@@ -362,7 +516,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     "type": TYPE_SIDECHAIN
   },
   // https://developers.rsk.co/tools/tokenbridge/contractaddresses/
-  "RSK": {
+  [PROJECT_RSK.name]: {
     "bridges": [
       {
         "address": "0x12ed69359919fc775bc2674860e8fe2d2b6a7b5d",
@@ -377,7 +531,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     "type": TYPE_SIDECHAIN
   },
   // https://www.xdaichain.com/about-xdai/news-and-information/comparisons/matic#similarities-and-differences
-  "xDai": {
+  [PROJECT_XDAI.name]: {
     "bridges": [
       {
         "address": "0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016",
@@ -388,7 +542,13 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x88ad09518695c6c3712ac10a214be5109a655671",
         "name": "Omni Bridge",
         "chainId": MAINNET,
-      }
+      },
+      {
+        "address": "0x2F10c5eE93ac666dA72195abA8a49FD6D27fA02F",
+        "chainId": MAINNET,
+        "name": "XDAI bridge",
+        "project": PROJECT_CONNEXT
+      },
     ],
     "explorer": "https://blockscout.com/poa/xdai/",
     "website": "https://www.xdaichain.com/",
@@ -396,7 +556,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     "color": "#1ca9a6",
     "type": TYPE_SIDECHAIN
   },
-  "ZKSwap": {
+  [PROJECT_ZKSWAP.name]: {
     "bridges": [
       {
         "address": "0x8eca806aecc86ce90da803b080ca4e3a9b8097ad",
@@ -410,7 +570,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     "color": "#596efd",
     "type": TYPE_LAYER2_EXCHANGE
   },
-  "zkSync": {
+  [PROJECT_ZKSYNC.name]: {
     "bridges": [
       {
         "address": "0xaBEA9132b05A70803a4E85094fD0e1800777fBEF",

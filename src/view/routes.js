@@ -3,5 +3,5 @@ import {Project} from './Project'
 
 export const routes = {
   '/': () => <Main />,
-  '/project/:proj': ({proj}) => <Project proj={proj} />,
+  '/project/:proj': ({proj}) => <Project proj={proj.replaceAll('%20', ' ')} />,
 }
