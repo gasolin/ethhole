@@ -10,8 +10,7 @@ import { ProjectMetas } from '../components/ProjectMetas'
 import { TokensTable } from '../components/TokensTable'
 import { TokenTableRow } from '../components/TokenTableRow'
 import { TokensTree } from '../components/TokensTree'
-
-const FILLTER = 1000 // USD
+import { FILLTER } from '../helpers/constants'
 
 export const Project = ({proj}) => {
   const [chainData, timestamp] = useChainData()
@@ -69,6 +68,7 @@ export const Project = ({proj}) => {
               <div className="flex items-center">
                 <p className="text-md text-black dark:text-white ml-2">
                 🔎 <a href={`https://etherscan.io/address/${bridge.address}`} className="text-blue-500 underline whitespace-no-wrap" target="_blank" rel="noreferrer">{bridgesMeta[idx]?.name || `Bridge ${idx + 1}`}</a>
+                {' '}({symbol}{human(bridge.tvl * price)})
                 </p>
               </div>
             </div>
