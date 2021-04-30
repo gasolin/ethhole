@@ -509,7 +509,13 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x401F6c983eA34274ec46f84D70b31C151321188b",
         "chainId": MAINNET,
         "name": "Plasma bridge"
-      }
+      },
+      {
+        "address": "0x668b9734FfE9eE8a01d4Ade3362De71E8989EA87",
+        "chainId": MAINNET,
+        "name": "connext Polygon bridge",
+        "project": PROJECT_CONNEXT,
+      },
     ],
     ...PROJECT_POLYGON
   },
