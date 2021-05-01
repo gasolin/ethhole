@@ -5,6 +5,7 @@ const TYPE_SIDECHAIN = 'sidechain'
 const TYPE_LAYER2_DERIVATIVES = 'l2derivatives'
 const TYPE_LAYER2_LEND = 'l2lend'
 const TYPE_LIQUIDITY = 'liquidity'
+const TYPE_CROSSCHAIN_DEX = 'crossdex'
 // const TYPE_OPTIMISTIC_ROLLUP = 'optimisticrollup'
 // const TYPE_ZK_ROLLUP = 'zkrollup'
 // const TYPE_STATE_CHANNEL = 'statechannel'
@@ -14,6 +15,32 @@ const MAINNET = 1 // ethereum
 // const MATIC = 137
 const BSC = 57
 const XDAI = 100
+
+export const typeMap = {
+  [TYPE_LAYER2]: 'General',
+  [TYPE_LAYER2_PAYMENT]: 'Payment',
+  [TYPE_LAYER2_EXCHANGE]: 'DEX',
+  [TYPE_SIDECHAIN]: 'Side Chain',
+  [TYPE_LAYER2_DERIVATIVES]: 'Derivatives',
+  [TYPE_LAYER2_LEND]: 'Lend',
+  [TYPE_LIQUIDITY]: 'Liquidity',
+  [TYPE_CROSSCHAIN_DEX]: 'Crosschain DEX',
+  // [TYPE_OPTIMISTIC_ROLLUP]: "Optimistic",
+  // [TYPE_ZK_ROLLUP]: "Zk",
+  // [TYPE_STATE_CHANNEL]: "State Channel",
+}
+
+export const getTypeMap = (type) => typeMap[type] || 'Unknown'
+
+// https://hackmd.io/@kSCbGhceTL2d5BmUdh7pwg/ryCPqIk7_
+const PROJECT_ANYSWAP = {
+  name: 'AnySwap',
+  website: 'https://anyswap.exchange/',
+  twitter: 'https://twitter.com/AnyswapNetwork',
+  github: 'https://github.com/anyswap',
+  color: '#2f80ed',
+  type: TYPE_CROSSCHAIN_DEX
+}
 
 // define in alphabetic order
 const PROJECT_AZTEC = {
@@ -228,21 +255,6 @@ const PROJECT_ZKSYNC = {
   type: TYPE_LAYER2_PAYMENT
 }
 
-export const typeMap = {
-  [TYPE_LAYER2]: 'General',
-  [TYPE_LAYER2_PAYMENT]: 'Payment',
-  [TYPE_LAYER2_EXCHANGE]: 'DEX',
-  [TYPE_SIDECHAIN]: 'Side Chain',
-  [TYPE_LAYER2_DERIVATIVES]: 'Derivatives',
-  [TYPE_LAYER2_LEND]: 'Lend',
-  [TYPE_LIQUIDITY]: 'Liquidity',
-  // [TYPE_OPTIMISTIC_ROLLUP]: "Optimistic",
-  // [TYPE_ZK_ROLLUP]: "Zk",
-  // [TYPE_STATE_CHANNEL]: "State Channel",
-}
-
-export const getTypeMap = (type) => typeMap[type] || 'Unknown'
-
 // define in alphabetic order
 export const ETH_BRIDGE_CONTRACTS = {
   [PROJECT_AZTEC.name]: {
@@ -263,8 +275,8 @@ export const ETH_BRIDGE_CONTRACTS = {
       {
         "address": "0x820A9eb227BF770A9dd28829380d53B76eAf1209",
         "chainId": MAINNET,
-        "name": "connext Avalanche bridge",
-        "project": PROJECT_CONNEXT.name
+        "name": "Anyswap Avalanche bridge",
+        "project": PROJECT_ANYSWAP.name
       }
     ],
     ...PROJECT_AVALANCHE,
@@ -274,14 +286,14 @@ export const ETH_BRIDGE_CONTRACTS = {
       {
         "address": "0x13B432914A996b0A48695dF9B2d701edA45FF264",
         "chainId": MAINNET,
-        "name": "connext BSC bridge",
-        "project": PROJECT_CONNEXT.name,
+        "name": "Anyswap BSC bridge",
+        "project": PROJECT_ANYSWAP.name,
       },
       {
         "address": "0x533e3c0e6b48010873B947bddC4721b1bDFF9648",
         "chainId": MAINNET,
-        "name": "connext BSC bridge",
-        "project": PROJECT_CONNEXT.name,
+        "name": "Anyswap BSC bridge",
+        "project": PROJECT_ANYSWAP.name,
       },
     ],
     ...PROJECT_BINANCE_SMART_CHAIN,
@@ -309,21 +321,21 @@ export const ETH_BRIDGE_CONTRACTS = {
       {
         "address": "0x65e64963b755043CA4FFC88029FfB8305615EeDD",
         "chainId": MAINNET,
-        "name": "connext Fantom bridge",
-        "project": PROJECT_CONNEXT.name
+        "name": "Anyswap Fantom bridge",
+        "project": PROJECT_ANYSWAP.name
       },
-      {
+      { // also use for BSC tokens
         "address": "0xC564EE9f21Ed8A2d8E7e76c085740d5e4c5FaFbE",
         "chainId": MAINNET,
-        "name": "connext Fantom bridge",
-        "project": PROJECT_CONNEXT.name
+        "name": "anyswap Fantom bridge",
+        "project": PROJECT_ANYSWAP.name
       },
-      {
-        "address": "0xBe008e52c5682A49dd0260735a26Aa221f303456",
-        "chainId": MAINNET,
-        "name": "connext Fantom bridge",
-        "project": PROJECT_CONNEXT.name
-      },
+      // {
+      //   "address": "0xBe008e52c5682A49dd0260735a26Aa221f303456",
+      //   "chainId": MAINNET,
+      //   "name": "connext Fantom bridge",
+      //   "project": PROJECT_CONNEXT.name
+      // },
     ],
     ...PROJECT_FANTOM
   },
@@ -341,8 +353,8 @@ export const ETH_BRIDGE_CONTRACTS = {
       {
         "address": "0x46290B0c3A234E3d538050d8F34421797532A827",
         "chainId": MAINNET,
-        "name": "connext Fusion bridge",
-        "project": PROJECT_CONNEXT.name
+        "name": "Anyswap Fusion bridge",
+        "project": PROJECT_ANYSWAP.name
       },
     ],
     ...PROJECT_FUSION
@@ -384,7 +396,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0xD779967F8B511C5edf39115341B310022900eFED",
         "chainId": MAINNET,
         "name": "connext HECO bridge",
-        "project": PROJECT_CONNEXT.name
+        "project": PROJECT_ANYSWAP.name
       },
     ],
     ...PROJECT_HUOBI_ECO_CHAIN
@@ -513,8 +525,8 @@ export const ETH_BRIDGE_CONTRACTS = {
       {
         "address": "0x668b9734FfE9eE8a01d4Ade3362De71E8989EA87",
         "chainId": MAINNET,
-        "name": "connext Polygon bridge",
-        "project": PROJECT_CONNEXT.name,
+        "name": "Anyswap Polygon bridge",
+        "project": PROJECT_ANYSWAP.name,
       },
     ],
     ...PROJECT_POLYGON
@@ -562,8 +574,8 @@ export const ETH_BRIDGE_CONTRACTS = {
       {
         "address": "0x2F10c5eE93ac666dA72195abA8a49FD6D27fA02F",
         "chainId": MAINNET,
-        "name": "connext XDAI bridge",
-        "project": PROJECT_CONNEXT.name
+        "name": "Anyswap XDAI bridge",
+        "project": PROJECT_ANYSWAP.name
       },
     ],
     ...PROJECT_XDAI
