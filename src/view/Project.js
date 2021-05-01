@@ -16,12 +16,14 @@ export const Project = ({proj}) => {
   const [chainData, timestamp] = useChainData()
   useTitle(proj)
 
-  // const tvl = price === 1 ? `Ξ ${human(project.tvl)}` : `$ ${human(project.tvl * price)}`
+  const projectData = chainData[proj]
+
+  if (!projectData) return null
+
   const price =  chainData?.ethereum?.usd || 1
   const threshold = FILLTER / price
+  // TODO: support toggle symbol
   const symbol = '$' //price !== 1 ? 'Ξ' : '$'
-
-  if (!chainData[proj]) return null
 
   return (
     <>
@@ -44,7 +46,7 @@ export const Project = ({proj}) => {
               </div>
               <div className="flex flex-col justify-start">
                   <p className="text-gray-700 dark:text-gray-100 text-4xl text-left font-bold my-4">
-                  {symbol} {human(chainData[proj].tvl * price)}
+                  {symbol} {human(projectData.tvl * price)}
                   </p>
                   <div className="flex items-center text-green-500 text-sm">
                       {/* <svg width="20" height="20" fill="currentColor" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
@@ -58,7 +60,7 @@ export const Project = ({proj}) => {
               </div>
             </div>
       </Panel>
-      {chainData[proj].bridges.map((bridge, idx) => {
+      {projectData.bridges.map((bridge, idx) => {
         // console.log('%O', bridge)
         const bridgesMeta = ETH_BRIDGE_CONTRACTS[proj].bridges
         const tokens = bridge.items.filter(item => item.quote > threshold)
