@@ -3,6 +3,7 @@ import { getTimeTag } from '../helpers/formatDate'
 
 // comment out for debug
 // import debugData from '../data/2021-04-30.json'
+const debugData = ''
 
 export const useChainData = () => {
   const [data, setData] = useState('{}')
