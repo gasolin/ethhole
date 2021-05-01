@@ -7,6 +7,12 @@ import { ETH_BRIDGE_CONTRACTS } from '../src/data/bridge_contracts.js'
 import { writeJson } from './write_data.js'
 const { args, exit } = Deno
 
+const ICON_URL_MAP = {
+  'DAI': 'https://logos.covalenthq.com/tokens/0x6b175474e89094c44da98b954eedeac495271d0f.png',
+  'USDC': 'https://logos.covalenthq.com/tokens/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png',
+  'USDT': 'https://logos.covalenthq.com/tokens/0xdac17f958d2ee523a2206206994597c13d831ec7.png',
+}
+
 // parse args
 const { key = '', quote = 'eth' } = parse(args)
 if (!key) {
@@ -25,9 +31,13 @@ const projects = Object.keys(ETH_BRIDGE_CONTRACTS)
 
 // collect contracts
 const addrInfo = {}
+const addrProtocol = {}
 Array.from(new Set(projects
   .map(project => ETH_BRIDGE_CONTRACTS[project]?.bridges.map(entry => {
     addrInfo[entry.address] = {project: project, name: entry.name || '', chainId: entry.chainId}
+    if (entry.protocol) {
+      addrProtocol[entry.address] = entry
+    }
     return entry.address
   }))
   .flat(1)
@@ -35,6 +45,7 @@ Array.from(new Set(projects
 // console.log('contracts %O', addrInfo)
 
 const getBalanceURL = (address, chainId = 1) => `https://api.covalenthq.com/v1/${chainId}/address/${address}/balances_v2/?${params}`
+const getStackedBalanceURL = (address) => `https://api.zapper.fi/v1/staked-balance/gauge?addresses%5B%5D=${address}&network=ethereum&api_key=96e0cc51-a62e-42ca-acee-910ea7d2a241`
 
 const QUOTE_THRESHOLD = 0.1
 
@@ -47,30 +58,59 @@ async function main() {
 
     const addrs = Object.keys(addrInfo)
     for (const addr of addrs) {
-      // multi-chain support
-      const link = getBalanceURL(addr, addrInfo[addr].chainId)
-      const res = await fetch(link)
-      const data = await res.json()
-      // calc per bridge tvl
-      let tvl = 0
-      data.data.items = data.data.items
-        .filter(token => token.quote > QUOTE_THRESHOLD)
-        .map(token => {
-          // console.log('tvl of ', bridge.address)
-          tvl += token.quote
-          return token
-        })
-      console.log(tvl)
-      data.data.tvl = tvl
-
       const proj = addrInfo[addr].project
       console.log('process ', proj, addrInfo[addr].name)
+      let tvl = 0
+      let dataset
+      if (!addrProtocol[addr]) {
+        // multi-chain support
+        const link = getBalanceURL(addr, addrInfo[addr].chainId)
+        const res = await fetch(link)
+        const data = await res.json()
+        // calc per bridge tvl
+        data.data.items = data.data.items
+          .filter(token => token.quote > QUOTE_THRESHOLD)
+          .map(token => {
+            // console.log('tvl of ', bridge.address)
+            tvl += token.quote
+            return token
+          })
+        console.log(tvl)
+        data.data.tvl = tvl
+        dataset = data.data
+      } else { // fetch stake balance
+        console.log('stake balance')
+        const stakeRes = await fetch(getStackedBalanceURL(addr))
+        const stakeDict = await stakeRes.json()
+        const stakeData = stakeDict[addr.toLowerCase()][0]
+        // console.log('>>> %O', stakeData)
+        const procData = {
+          address: addr,
+          quote_currency:"ETH",
+          chain_id: 1,
+          items: stakeData.tokens.map(token => {
+            const quote = token.balanceUSD / collectData.ethereum.usd
+            tvl += quote
+            return {
+              contract_ticker_symbol: token.symbol,
+              contract_address: token.address,
+              quote,
+              logo_url: ICON_URL_MAP[token.symbol]
+            }
+          })
+        }
+        dataset = {
+          ...procData,
+          tvl,
+        }
+      }
       if (!collectData[proj]) {
         collectData[proj] = {}
-        collectData[proj].bridges = [data.data]
+        collectData[proj].bridges = [dataset]
       } else {
-        collectData[proj].bridges.push(data.data)
+        collectData[proj].bridges.push(dataset)
       }
+
       // to not brute the API limit
       await Timeout.wait(200)
     }
