@@ -1,7 +1,6 @@
 import human from 'millify'
 
-export const TotalValueTracked = ({ data, price, projects, children}) => {
-  const tvl = projects.reduce((a,c) => a + data[c].tvl, 0)
+export const TotalValueTracked = ({ price, tvl, children}) => {
   const enabled = price === 1
   const token = enabled ? 'Ξ' : '$'
   return (

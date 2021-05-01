@@ -23,13 +23,14 @@ export const Main = () => {
 
   const price = showEth ? 1 : chainData?.ethereum?.usd || 1
   const symbol = showEth ? 'ETH' : 'USD'
+  const tvl = projects.reduce((a,c) => a + chainData[c].tvl, 0)
   return (<>
     <Nav ethUsdPrice={price} timestamp={timestamp} />
     <Panel>
       <BalanceFlow projects={projects} data={chainData} price={price} />
     </Panel>
     <Panel>
-      <TotalValueTracked projects={projects} data={chainData} price={price} setShowEth={setShowEth} >
+      <TotalValueTracked projects={projects} tvl={tvl} price={price} >
         <div className="mb-3">
           <div className="relative inline-block w-10 mr-2 align-middle select-none">
             <input type="checkbox" name="toggle" id="Purple" onChange={toggleValue} checked={showEth} className="checked:bg-purple-500 outline-none focus:outline-none right-4 checked:right-0 duration-200 ease-in absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
