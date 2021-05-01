@@ -45,8 +45,8 @@ export const Footer = () => (
                   </span>
                   <span className="mt-7 md:mt-1">
                       Created by{' '}
-                      <a className="underline hover:text-primary-gray-20" href="https://www.gasolin.idv.tw" target="_blank" rel="noreferrer">
-                          gasolin
+                      <a className="underline hover:text-primary-gray-20" href="https://twitter.com/stakerwatch" target="_blank" rel="noreferrer">
+                        @stakerwatch
                       </a>
                   </span>
                   <span>
