@@ -1,10 +1,9 @@
 import human from 'millify'
 
-export const TotalValueLocked = ({ data, price, projects, setShowEth}) => {
+export const TotalValueTracked = ({ data, price, projects, children}) => {
   const tvl = projects.reduce((a,c) => a + data[c].tvl, 0)
   const enabled = price === 1
   const token = enabled ? 'Ξ' : '$'
-  const symbol = enabled ? 'ETH' : 'USD'
   return (
     <div className="shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-800">
       <div className="flex items-center">
@@ -30,16 +29,7 @@ export const TotalValueLocked = ({ data, price, projects, setShowEth}) => {
               {/* <span>
                   5.5%
               </span> */}
-              <div className="mb-3">
-                <div className="relative inline-block w-10 mr-2 align-middle select-none">
-                  <input type="checkbox" name="toggle" id="Purple" onChange={() => setShowEth(!enabled)} checked={enabled} className="checked:bg-purple-500 outline-none focus:outline-none right-4 checked:right-0 duration-200 ease-in absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
-                  <label htmlFor="Purple" className="block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer">
-                  </label>
-                </div>
-                <span className="text-gray-400 font-medium">
-                  {symbol} Equivalent
-                </span>
-              </div>
+              {children}
           </div>
       </div>
     </div>
