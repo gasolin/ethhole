@@ -30,6 +30,7 @@ export const TotalValueTracked = ({ price, tvl, children}) => {
               </span> */}
               {children}
           </div>
+          <span className="text-purple-400 text-sm">Calculated by tokens deposit to bridge contracts on Ethereum.</span>
       </div>
     </div>
   )
