@@ -37,7 +37,7 @@ export const Project = ({proj}) => {
         <TotalValueTracked price={price} tvl={tvl} ></TotalValueTracked>
       </Panel>
       {projectData.bridges
-        .sort((a, b) => b.tvl - a.tvl)
+        // .sort((a, b) => b.tvl - a.tvl)
         .map((bridge, idx) => {
         // console.log('%O', bridge)
         const bridgesMeta = ETH_BRIDGE_CONTRACTS[proj].bridges
