@@ -63,6 +63,7 @@ const PROJECT_AVALANCHE = {
   type: TYPE_LAYER2
 }
 
+// https://www.binance.org/en/assets-proof
 const PROJECT_BINANCE_SMART_CHAIN = {
   name: 'Binance Smart Chain',
   explorer: "https://bscscan.com/",
@@ -283,6 +284,16 @@ export const ETH_BRIDGE_CONTRACTS = {
   },
   [PROJECT_BINANCE_SMART_CHAIN.name]: {
     "bridges": [
+      {
+        "address": "0x47ac0Fb4F2D84898e4D9E7b4DaB3C24507a6D503",
+        "chainId": MAINNET,
+        "name": "Binance Smart Chain Bridge",
+      },
+      {
+        "address": "0x9BF4001d307dFd62B26A2F1307ee0C0307632d59",
+        "chainId": MAINNET,
+        "name": "Binance Smart Chain ETH Bridge"
+      },
       {
         "address": "0x13B432914A996b0A48695dF9B2d701edA45FF264",
         "chainId": MAINNET,
