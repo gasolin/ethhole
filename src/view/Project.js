@@ -36,7 +36,9 @@ export const Project = ({proj}) => {
       <Panel>
         <TotalValueTracked price={price} tvl={tvl} ></TotalValueTracked>
       </Panel>
-      {projectData.bridges.map((bridge, idx) => {
+      {projectData.bridges
+        .sort((a, b) => b.tvl - a.tvl)
+        .map((bridge, idx) => {
         // console.log('%O', bridge)
         const bridgesMeta = ETH_BRIDGE_CONTRACTS[proj].bridges
         const tokens = bridge.items.filter(item => item.quote > threshold)
