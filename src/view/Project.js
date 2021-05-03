@@ -42,13 +42,17 @@ export const Project = ({proj}) => {
         // console.log('%O', bridge)
         const bridgesMeta = ETH_BRIDGE_CONTRACTS[proj].bridges
         const tokens = bridge.items.filter(item => item.quote > threshold)
+        const bridgeName = bridgesMeta[idx]?.name || `Bridge ${idx + 1}`
+        const bridgeLink = bridgesMeta[idx]?.website
+          ? <a href={bridgesMeta[idx].website} className="text-blue-500 underline whitespace-no-wrap" target="_blank" rel="noreferrer">{bridgeName}</a>
+          : <span>{bridgeName}</span>
         return (
           <Panel key={idx}>
             <div className="p-4 bg-white dark:bg-gray-800 border-b border-gray-200">
               <div className="flex items-center">
                 <p className="text-md text-black dark:text-white ml-2">
-                🔎 <a href={`https://etherscan.io/address/${bridge.address}`} className="text-blue-500 underline whitespace-no-wrap" target="_blank" rel="noreferrer">{bridgesMeta[idx]?.name || `Bridge ${idx + 1}`}</a>
-                {' '}({symbol}{human(bridge.tvl * price)})
+                {bridgeLink}{' '}
+                <a href={`https://etherscan.io/address/${bridge.address}`} target="_blank" rel="noreferrer" alt="smart contract">📝</a>{' '}({symbol}{human(bridge.tvl * price)})
                 </p>
               </div>
             </div>
