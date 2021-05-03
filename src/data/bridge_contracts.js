@@ -263,6 +263,8 @@ export const ETH_BRIDGE_CONTRACTS = {
       {
         "address": "0x737901bea3eeb88459df9ef1BE8fF3Ae1B42A2ba",
         "chainId": MAINNET,
+        "name": "zk.money",
+        "website": "https://zk.money/"
       }
     ],
     ...PROJECT_AZTEC,
@@ -272,12 +274,15 @@ export const ETH_BRIDGE_CONTRACTS = {
       {
         "address": "0xdAC7Bb7Ce4fF441A235F08408e632FA1D799A147",
         "chainId": MAINNET,
+        "name": "Avalanche-Ethereum Bridge",
+        "website": "https://aeb.xyz/"
       },
       {
         "address": "0x820A9eb227BF770A9dd28829380d53B76eAf1209",
         "chainId": MAINNET,
         "name": "Anyswap Avalanche bridge",
-        "project": PROJECT_ANYSWAP.name
+        "project": PROJECT_ANYSWAP.name,
+        "website": "https://anyswap.exchange/"
       }
     ],
     ...PROJECT_AVALANCHE,
@@ -288,23 +293,27 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x47ac0Fb4F2D84898e4D9E7b4DaB3C24507a6D503",
         "chainId": MAINNET,
         "name": "Binance Smart Chain Bridge",
+        "website": "https://www.binance.org/en/bridge"
       },
       {
         "address": "0x9BF4001d307dFd62B26A2F1307ee0C0307632d59",
         "chainId": MAINNET,
-        "name": "Binance Smart Chain ETH Bridge"
+        "name": "Binance Smart Chain ETH Bridge",
+        "website": "https://www.binance.org/en/bridge"
       },
       {
         "address": "0x13B432914A996b0A48695dF9B2d701edA45FF264",
         "chainId": MAINNET,
         "name": "Anyswap BSC bridge",
         "project": PROJECT_ANYSWAP.name,
+        "website": "https://anyswap.exchange/"
       },
       {
         "address": "0x533e3c0e6b48010873B947bddC4721b1bDFF9648",
         "chainId": MAINNET,
         "name": "Anyswap BSC bridge",
         "project": PROJECT_ANYSWAP.name,
+        "website": "https://anyswap.exchange/"
       },
     ],
     ...PROJECT_BINANCE_SMART_CHAIN,
@@ -333,19 +342,22 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x65e64963b755043CA4FFC88029FfB8305615EeDD",
         "chainId": MAINNET,
         "name": "Anyswap Fantom bridge",
-        "project": PROJECT_ANYSWAP.name
+        "project": PROJECT_ANYSWAP.name,
+        "website": "https://anyswap.exchange/"
       },
       { // also use for BSC tokens
         "address": "0xC564EE9f21Ed8A2d8E7e76c085740d5e4c5FaFbE",
         "chainId": MAINNET,
         "name": "Anyswap Fantom bridge",
-        "project": PROJECT_ANYSWAP.name
+        "project": PROJECT_ANYSWAP.name,
+        "website": "https://anyswap.exchange/"
       },
       {
         "address": "0xBe008e52c5682A49dd0260735a26Aa221f303456",
         "chainId": MAINNET,
         "name": "Anyswap Fantom bridge",
-        "project": PROJECT_ANYSWAP.name
+        "project": PROJECT_ANYSWAP.name,
+        "website": "https://anyswap.exchange/"
       },
     ],
     ...PROJECT_FANTOM
@@ -365,7 +377,8 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x46290B0c3A234E3d538050d8F34421797532A827",
         "chainId": MAINNET,
         "name": "Anyswap Fusion bridge",
-        "project": PROJECT_ANYSWAP.name
+        "project": PROJECT_ANYSWAP.name,
+        "website": "https://anyswap.exchange/"
       },
     ],
     ...PROJECT_FUSION
@@ -396,7 +409,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     "bridges": [
       {
         "address": "0xA68D85dF56E733A06443306A095646317B5Fa633",
-        "chainId": MAINNET
+        "chainId": MAINNET,
       }
     ],
     ...PROJECT_HERMEZ
