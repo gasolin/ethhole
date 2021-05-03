@@ -1,7 +1,7 @@
 const TYPE_LAYER2 = 'layer2'
 const TYPE_LAYER2_PAYMENT = 'l2payment'
 const TYPE_LAYER2_EXCHANGE = 'l2ex'
-const TYPE_SIDECHAIN = 'sidechain'
+export const TYPE_SIDECHAIN = 'sidechain'
 const TYPE_LAYER2_DERIVATIVES = 'l2derivatives'
 const TYPE_LAYER2_LEND = 'l2lend'
 const TYPE_LIQUIDITY = 'liquidity'
@@ -60,7 +60,7 @@ const PROJECT_AVALANCHE = {
   github: "https://github.com/ava-labs",
   twitter: "https://twitter.com/avalancheavax",
   color: "#e84142",
-  type: TYPE_LAYER2
+  type: TYPE_SIDECHAIN
 }
 
 // https://www.binance.org/en/assets-proof

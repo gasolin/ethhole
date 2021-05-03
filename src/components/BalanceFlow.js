@@ -3,6 +3,7 @@ import { Sankey, Hint } from 'react-vis'
 import human from 'millify'
 
 import { ETH_BRIDGE_CONTRACTS } from '../data/bridge_contracts.js'
+import { FLOW_THRESHOLD, L2_FLOW_THRESHOLD } from '../helpers/constants'
 
 const ETH_COLOR = '#747c84' //'#8facee'
 const LINK_COLOR = '#babcbc' //'#ecf0f1',
@@ -10,13 +11,13 @@ const LINK_COLOR = '#babcbc' //'#ecf0f1',
 const BLURRED_LINK_OPACITY = 0.3;
 const FOCUSED_LINK_OPACITY = 0.6;
 
-export const BalanceFlow = memo(({ data, price, projects, width = 400 }) => {
+export const BalanceFlow = memo(({ data, price, projects, layer2, width = 400 }) => {
   const [activeLink, setActiveLink] = useState(null)
 
-  const THRESHOLD = 35000 // ETH
+  const threshold = layer2 ? L2_FLOW_THRESHOLD : FLOW_THRESHOLD
   // console.log('%O', data)
   const entries = projects
-    .filter(proj => data[proj].tvl > THRESHOLD)
+    .filter(proj => data[proj].tvl > threshold)
   const rests = projects.filter(proj => !entries.includes(proj))
   // const nodes = [
   //   {name: 'Ethereum'},
