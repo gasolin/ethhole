@@ -493,19 +493,19 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x1DA1cebC2525a5Bb1242CAde6E923F3f1388874E",
         "chainId": MAINNET,
         "name": "Curve3Pool Dai",
-        "protocol": "curve"
+        "staked-balance": ["curve"]
       },
       {//11
         "address": "0x3D3092560d48c02f524dfb3fa3CAdDc8A5717751",
         "chainId": MAINNET,
         "name": "Curve3Pool USDC",
-        "protocol": "curve"
+        "staked-balance": ["curve"]
       },
       {//12
         "address": "0xca222c64b7f3ca0322356fA19e9A09a13bE71e06",
         "chainId": MAINNET,
         "name": "Curve3Pool USDT",
-        "protocol": "curve"
+        "staked-balance": ["curve"]
       },
     ],
     ...PROJECT_LAYER2_FINANCE
@@ -539,7 +539,8 @@ export const ETH_BRIDGE_CONTRACTS = {
       {
         "address": "0x40ec5B33f54e0E8A33A975908C5BA1c14e5BbbDf",
         "chainId": MAINNET,
-        "name": "PoS ERC20 bridge"
+        "name": "PoS ERC20 bridge",
+        "protocol": ["harvest", "badger", "synthetix"]
       },
       {
         "address": "0x401F6c983eA34274ec46f84D70b31C151321188b",
@@ -594,6 +595,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x88ad09518695c6c3712ac10a214be5109a655671",
         "name": "Omni Bridge",
         "chainId": MAINNET,
+        "protocol": ["sushiswap", "synthetix", "uniswap", "balancer"]
       },
       {
         "address": "0x2F10c5eE93ac666dA72195abA8a49FD6D27fA02F",

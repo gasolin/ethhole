@@ -32,11 +32,15 @@ const projects = Object.keys(ETH_BRIDGE_CONTRACTS)
 // collect contracts
 const addrInfo = {}
 const addrProtocol = {}
+const addrStaked = {}
 Array.from(new Set(projects
   .map(project => ETH_BRIDGE_CONTRACTS[project]?.bridges.map(entry => {
     addrInfo[entry.address] = {project: project, name: entry.name || '', chainId: entry.chainId}
     if (entry.protocol) {
       addrProtocol[entry.address] = entry
+    }
+    if (entry['staked-balance']) {
+      addrStaked[entry['staked-balance']] = entry
     }
     return entry.address
   }))
@@ -45,7 +49,9 @@ Array.from(new Set(projects
 // console.log('contracts %O', addrInfo)
 
 const getBalanceURL = (address, chainId = 1) => `https://api.covalenthq.com/v1/${chainId}/address/${address}/balances_v2/?${params}`
-const getStackedBalanceURL = (address) => `https://api.zapper.fi/v1/staked-balance/gauge?addresses%5B%5D=${address}&network=ethereum&api_key=96e0cc51-a62e-42ca-acee-910ea7d2a241`
+const ZAPPER_API_KEY = '96e0cc51-a62e-42ca-acee-910ea7d2a241'
+const getStackedBalanceURL = (address) => `https://api.zapper.fi/v1/staked-balance/gauge?addresses%5B%5D=${address}&network=ethereum&api_key=${ZAPPER_API_KEY}`
+const getProtocolBalanceURL = (address, protocol) => `https://api.zapper.fi/v1/protocols/${protocol}/balances?addresses%5B%5D=${address}&network=ethereum&api_key=${ZAPPER_API_KEY}`
 
 const QUOTE_THRESHOLD = 0.1
 
@@ -55,6 +61,7 @@ async function main() {
     console.log('Get ethereum price...')
     const ethPrice = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd')
     const collectData = await ethPrice.json()
+    const price = collectData.ethereum.usd
 
     const addrs = Object.keys(addrInfo)
     for (const addr of addrs) {
@@ -62,7 +69,7 @@ async function main() {
       console.log('process ', proj, addrInfo[addr].name)
       let tvl = 0
       let dataset
-      if (!addrProtocol[addr]) {
+      if (!addrStaked[addr]) {
         // multi-chain support
         const link = getBalanceURL(addr, addrInfo[addr].chainId)
         const res = await fetch(link)
@@ -75,11 +82,32 @@ async function main() {
             tvl += token.quote
             return token
           })
+        // protocol balance
+        if (addrProtocol[addr]) {
+          const protocols = addrProtocol[addr].protocol
+          for (let i = 0; i < protocols.length; i++) {
+            const protocol = protocols[i]
+            console.log('> process protocol ', protocol.toUpperCase())
+            const resProto = await fetch(getProtocolBalanceURL(addr, protocol))
+            const protoDict = await resProto.json()
+            const protoData = protoDict[addr.toLowerCase()]
+            const quote = protoData.meta[0].value / price
+            tvl += quote
+            const token = {
+              contract_ticker_symbol: protocol.toUpperCase(),
+              contract_address: '',
+              quote,
+              type: 'protocol'
+            }
+            // console.log('%O', token)
+            data.data.items.push(token)
+          }
+        }
         console.log(tvl)
         data.data.tvl = tvl
         dataset = data.data
       } else { // fetch stake balance
-        console.log('stake balance')
+        console.log('staked balance')
         const stakeRes = await fetch(getStackedBalanceURL(addr))
         const stakeDict = await stakeRes.json()
         const stakeData = stakeDict[addr.toLowerCase()][0]
@@ -89,13 +117,14 @@ async function main() {
           quote_currency:"ETH",
           chain_id: 1,
           items: stakeData.tokens.map(token => {
-            const quote = token.balanceUSD / collectData.ethereum.usd
+            const quote = token.balanceUSD / price
             tvl += quote
             return {
               contract_ticker_symbol: token.symbol,
               contract_address: token.address,
               quote,
-              logo_url: ICON_URL_MAP[token.symbol]
+              logo_url: ICON_URL_MAP[token.symbol],
+              type: 'stake'
             }
           })
         }
