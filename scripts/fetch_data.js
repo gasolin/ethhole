@@ -8,7 +8,12 @@ import { writeJson } from './write_data.js'
 const { args, exit } = Deno
 
 const ICON_URL_MAP = {
+  'BADGER': 'https://logos.covalenthq.com/tokens/0x3472a5a71965499acd81997a54bba8d852c6e53d.png',
+  'BALANCER': 'https://logos.covalenthq.com/tokens/0xba100000625a3754423978a60c9317c58a424e3d.png',
   'DAI': 'https://logos.covalenthq.com/tokens/0x6b175474e89094c44da98b954eedeac495271d0f.png',
+  'SUSHISWAP': 'https://logos.covalenthq.com/tokens/0x6b3595068778dd592e39a122f4f5a5cf09c90fe2.png',
+  'SYNTHETIX': 'https://logos.covalenthq.com/tokens/0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f.png',
+  'UNISWAP': 'https://logos.covalenthq.com/tokens/0x1f9840a85d5af5bf1d1762f925bdaddc4201f984.png',
   'USDC': 'https://logos.covalenthq.com/tokens/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png',
   'USDT': 'https://logos.covalenthq.com/tokens/0xdac17f958d2ee523a2206206994597c13d831ec7.png',
 }
@@ -93,9 +98,11 @@ async function main() {
             const protoData = protoDict[addr.toLowerCase()]
             const quote = protoData.meta[0].value / price
             tvl += quote
+            const SYM = protocol.toUpperCase()
             const token = {
-              contract_ticker_symbol: protocol.toUpperCase(),
+              contract_ticker_symbol: SYM,
               contract_address: '',
+              logo_url: ICON_URL_MAP[SYM] || undefined,
               quote,
               type: 'protocol'
             }
@@ -123,7 +130,7 @@ async function main() {
               contract_ticker_symbol: token.symbol,
               contract_address: token.address,
               quote,
-              logo_url: ICON_URL_MAP[token.symbol],
+              logo_url: ICON_URL_MAP[token.symbol] || undefined,
               type: 'stake'
             }
           })
