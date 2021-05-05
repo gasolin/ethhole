@@ -64,10 +64,11 @@ Event
 
 - Initial version made during [Scaling Ethereum Hackthon](https://scaling.ethglobal.co/)
 
-Contract
+Contracts
 
-- Collect lots of Layer 2 contract addresses from [l2beat](https://www.l2beat.com/)
+- Collected plenty of Layer 2 contract addresses from [l2beat](https://www.l2beat.com/)
 - Bridges balance fetched through [Covalent API](https://www.covalenthq.com/docs/api/#overview)
+- Protocol and Staked balance fetched through [Zapper API](https://docs.zapper.fi/zapper-api/api-guides)
 
 Design
 
