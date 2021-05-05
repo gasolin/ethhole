@@ -44,8 +44,8 @@ Array.from(new Set(projects
     if (entry.protocol) {
       addrProtocol[entry.address] = entry
     }
-    if (entry['staked-balance']) {
-      addrStaked[entry['staked-balance']] = entry
+    if (entry.staked) {
+      addrStaked[entry.address] = entry
     }
     return entry.address
   }))
