@@ -1,5 +1,5 @@
 export const TokenTableRow = ({bridge, idx, tokenData, sum}) => {
-  const {contract_ticker_symbol, logo_url, contract_address} = tokenData
+  const {contract_ticker_symbol, logo_url, contract_address, type} = tokenData
   return (
     <tr>
       <td className={`${idx%2 ? 'bg-white' : 'bg-gray-50'} px-5 py-5 border-b border-gray-200 bg-white text-sm`}>
@@ -18,6 +18,15 @@ export const TokenTableRow = ({bridge, idx, tokenData, sum}) => {
       <td className={`${idx%2 ? 'bg-white' : 'bg-gray-50'} px-5 py-5 border-b border-gray-200 bg-white text-sm`}>
           <p className="text-gray-900 whitespace-no-wrap">
               {sum}
+              {
+                type !== 'cryptocurrency' && (<span className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight ml-2">
+                <span aria-hidden="true" className="absolute inset-0 bg-green-200 opacity-50 rounded-full">
+                </span>
+                <span className="relative">
+                  {type}
+                </span>
+            </span>)
+              }
           </p>
       </td>
       {/* <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
