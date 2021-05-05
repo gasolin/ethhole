@@ -109,6 +109,7 @@ async function main() {
             // console.log('%O', token)
             data.data.items.push(token)
           }
+          data.data.items.sort((a,b)=> b.quote - a.quote)
         }
         console.log(tvl)
         data.data.tvl = tvl
