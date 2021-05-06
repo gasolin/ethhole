@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: ethhole.link
+Token: 8862547649a2289a4c5dd12e9c76afbc95c8183f8e04586eeebcdf1ffc94bf3f
