@@ -132,6 +132,16 @@ const PROJECT_FUSION = {
   type: TYPE_SIDECHAIN
 }
 
+const PROJECT_GLUON = {
+  name: "GLUON",
+  explorer: "https://gluon.leverj.io/",
+  website: "https://gluon.network/",
+  github: "https://github.com/leverj",
+  twitter: "https://twitter.com/GluonNetwork",
+  color: "#f7961c",
+  type: TYPE_SIDECHAIN
+}
+
 const PROJECT_HARMONY = {
   name: 'Harmony',
   explorer: "https://explorer.harmony.one/",
@@ -382,6 +392,18 @@ export const ETH_BRIDGE_CONTRACTS = {
       },
     ],
     ...PROJECT_FUSION
+  },
+  [PROJECT_GLUON.name]: {
+    "bridges": [
+      {
+        "address": "0x75ace7a086ea0fb1a79e43cc6331ad053d8c67cb",
+        "chainId": MAINNET,
+        "name": "GLUON bridge",
+        "project": PROJECT_GLUON.name,
+        "website": "https://gluon.network/"
+      }
+    ],
+    ...PROJECT_GLUON
   },
   // https://github.com/harmony-one/ethhmy-bridge.sdk/blob/main/src/configs/mainnet.ts
   [PROJECT_HARMONY.name]: {

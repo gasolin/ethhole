@@ -24,7 +24,7 @@ export const BalanceFlow = memo(({ data, price, projects, layer2, width = 400 })
   //   {name: 'others'},
   // ]
   const nodes = [
-    {name: 'Ethereum', color: ETH_COLOR},
+    {name: 'Ethereum', color: ETH_COLOR}, // 0
     ...entries.map((entry) => ({
       name: entry,
       color: ETH_BRIDGE_CONTRACTS[entry].color,
