@@ -400,6 +400,7 @@ export const ETH_BRIDGE_CONTRACTS = {
     ...PROJECT_FUSION
   },
   [PROJECT_GLUON.name]: {
+    // https://live.leverj.io/futures/api/v1/all/config assets
     "bridges": [
       {
         "address": "0x75ace7a086ea0fb1a79e43cc6331ad053d8c67cb",
@@ -407,12 +408,28 @@ export const ETH_BRIDGE_CONTRACTS = {
         "name": "GLUON bridge",
         "project": PROJECT_GLUON.name,
         "website": "https://gluon.network/"
-      }
+      },
+      // assets
+      {
+        "address": "0xBbff34E47E559ef680067a6B1c980639EEb64D24",
+        "chainId": MAINNET,
+        "name": "L2 bridge",
+      },
+      {
+        "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+        "chainId": MAINNET,
+        "name": "DAI bridge"
+      },
+      {
+        "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+        "chainId": MAINNET,
+        "name": "USDT bridge",
+      },
     ],
     ...PROJECT_GLUON
   },
-  // https://github.com/harmony-one/ethhmy-bridge.sdk/blob/main/src/configs/mainnet.ts
   [PROJECT_HARMONY.name]: {
+    // https://github.com/harmony-one/ethhmy-bridge.sdk/blob/main/src/configs/mainnet.ts
     "bridges": [
       {
         "address": "0xfD53b1B4AF84D59B20bF2C20CA89a6BeeAa2c628",
@@ -562,8 +579,8 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     ...PROJECT_OPTIMISM
   },
-  // https://github.com/maticnetwork/static/blob/master/network/mainnet/v1/index.json
   [PROJECT_POLYGON.name]: {
+    // https://github.com/maticnetwork/static/blob/master/network/mainnet/v1/index.json
     "bridges": [
       {
         "address": "0x8484Ef722627bf18ca5Ae6BcF031c23E6e922B30",
@@ -590,8 +607,8 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     ...PROJECT_POLYGON
   },
-  // https://github.com/polynetwork/docs/blob/master/config/README.md
   [PROJECT_POLY_NETWORK.name]: {
+    // https://github.com/polynetwork/docs/blob/master/config/README.md
     "bridges": [
       {
         "address": "0x250e76987d838a75310c34bf422ea9f1AC4Cc906",
@@ -606,8 +623,8 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     ...PROJECT_POLY_NETWORK
   },
-  // https://developers.rsk.co/tools/tokenbridge/contractaddresses/
   [PROJECT_RSK.name]: {
+    // https://developers.rsk.co/tools/tokenbridge/contractaddresses/
     "bridges": [
       {
         "address": "0x12ed69359919fc775bc2674860e8fe2d2b6a7b5d",
@@ -617,8 +634,8 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     ...PROJECT_RSK
   },
-  // https://www.xdaichain.com/about-xdai/news-and-information/comparisons/matic#similarities-and-differences
   [PROJECT_XDAI.name]: {
+    // https://www.xdaichain.com/about-xdai/news-and-information/comparisons/matic#similarities-and-differences
     "bridges": [
       {
         "address": "0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016",
@@ -662,8 +679,8 @@ export const ETH_BRIDGE_CONTRACTS = {
 
 // WIP
 export const XDAI_BRIDGE_CONTRACTS = {
-  // https://www.xdaichain.com/for-users/bridges/converting-xdai-via-bridge/transfer-sai-dai-without-the-ui-using-web3-or-mobile-wallet
   "xDai": {
+    // https://www.xdaichain.com/for-users/bridges/converting-xdai-via-bridge/transfer-sai-dai-without-the-ui-using-web3-or-mobile-wallet
     "bridges": [
       {
         "address": "0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6",
@@ -677,40 +694,12 @@ export const XDAI_BRIDGE_CONTRACTS = {
     "color": "#1ca9a6",
     "type": TYPE_SIDECHAIN
   },
-  // https://docs.connext.network/connext-MAINNET
-  "connext": {
-    "bridges": [
-      {
-        "address": "0xE540998865aFEB054021dc849Cc6191b8E09dC08",
-        "chainId": XDAI,
-      },
-    ],
-    "website": "https://www.connext.network/",
-    "github": "https://github.com/connext",
-    "twitter": "https://twitter.com/connextnetwork",
-    "color": "#29c1fc",
-    "type": TYPE_LAYER2_EXCHANGE
-  },
 }
 
 // WIP
 export const BSC_BRIDGE_CONTRACTS = {
-  // https://docs.connext.network/connext-MAINNET
-  "connext": {
-    "bridges": [
-      {
-        "address": "0xE540998865aFEB054021dc849Cc6191b8E09dC08",
-        "chainId": BSC,
-      },
-    ],
-    "website": "https://www.connext.network/",
-    "github": "https://github.com/connext",
-    "twitter": "https://twitter.com/connextnetwork",
-    "color": "#29c1fc",
-    "type": TYPE_LAYER2_EXCHANGE
-  },
-  // https://github.com/polynetwork/docs/blob/master/config/README.md
   "PolyNetwork": {
+    // https://github.com/polynetwork/docs/blob/master/config/README.md
     "bridges": [
       {
         "address": "0x2f7ac9436ba4B548f9582af91CA1Ef02cd2F1f03",
