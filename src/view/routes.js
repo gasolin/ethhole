@@ -1,11 +1,11 @@
 import {Main} from './Main'
 import {Project} from './Project'
-// import {Connext} from './Connext'
+import {Liquidity} from './Liquidity'
 
 export const routes = {
   '/': () => <Main />,
   '/l2': () => <Main layer2 />,
   '/layer2': () => <Main layer2 />,
-  // '/project/connext': () => <Connext/>,
+  '/liquidity/:proj': ({proj}) => <Liquidity proj={proj.replaceAll('%20', ' ')}/>,
   '/project/:proj': ({proj}) => <Project proj={proj.replaceAll('%20', ' ')} />,
 }

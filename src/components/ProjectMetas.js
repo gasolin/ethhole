@@ -1,9 +1,10 @@
-import { ETH_BRIDGE_CONTRACTS, PROJECT_CONNEXT } from '../data/bridge_contracts'
+import { ETH_BRIDGE_CONTRACTS, LIQUIDITY_PROJECTS } from '../data/bridge_contracts'
 
+const wildcards = Object.keys(LIQUIDITY_PROJECTS)
 export const ProjectMetas = ({proj}) => {
-  const projMeta = proj !== PROJECT_CONNEXT.name
-    ? ETH_BRIDGE_CONTRACTS[proj]
-    : PROJECT_CONNEXT
+  const projMeta = wildcards.includes(proj)
+    ? LIQUIDITY_PROJECTS[proj]
+    : ETH_BRIDGE_CONTRACTS[proj]
   const meta = [
     ['Website', projMeta.website],
     ['Explorer', projMeta.explorer],

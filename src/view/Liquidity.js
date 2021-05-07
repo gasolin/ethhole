@@ -2,7 +2,7 @@ import {useTitle} from 'hookrouter'
 import human from 'millify'
 
 import { useChainData } from '../hooks/useChainData'
-import { ETH_BRIDGE_CONTRACTS, PROJECT_CONNEXT } from '../data/bridge_contracts'
+import { ETH_BRIDGE_CONTRACTS } from '../data/bridge_contracts'
 import { Panel } from '../components/Panel'
 import { Nav } from '../components/Nav'
 import { Footer } from '../components/Footer'
@@ -10,35 +10,34 @@ import { ProjectMetas } from '../components/ProjectMetas'
 import { TokensTable } from '../components/TokensTable'
 import { TokenTableRow } from '../components/TokenTableRow'
 import { TokensTree } from '../components/TokensTree'
-import { FILLTER } from '../helpers/constants'
+// import { FILLTER } from '../helpers/constants'
 
-export const Connext = () => {
+export const Liquidity = ({proj}) => {
   const [chainData, timestamp] = useChainData()
-  const proj = 'connext'
   useTitle(proj)
 
   const price =  chainData?.ethereum?.usd || 1
-  const threshold = FILLTER / price
+  // const threshold = FILLTER / price
   const symbol = '$' //price !== 1 ? 'Ξ' : '$'
 
   if (Object.keys(chainData).length === 0) return null
 
-  // get connext addresss
-  const connextContractList = Object.keys(ETH_BRIDGE_CONTRACTS).map(key => {
-    const bridges = ETH_BRIDGE_CONTRACTS[key].bridges && ETH_BRIDGE_CONTRACTS[key].bridges.filter(bridge => bridge.project === PROJECT_CONNEXT.name)
+  // get project addresss
+  const projectContractList = Object.keys(ETH_BRIDGE_CONTRACTS).map(key => {
+    const bridges = ETH_BRIDGE_CONTRACTS[key].bridges && ETH_BRIDGE_CONTRACTS[key].bridges.filter(bridge => bridge.project === proj)
     // console.log('%O', bridges)
     return bridges
   }).flat(1)
   // console.log('%O', connextContractList)
   const metaMap = {}
-  connextContractList.map(entry => metaMap[entry.address.toLowerCase()] = entry)
+  projectContractList.map(entry => metaMap[entry.address.toLowerCase()] = entry)
   // console.log('addrMap %O', metaMap)
 
   const bridges = Object.keys(chainData)
     .filter(proj => chainData[proj] && chainData[proj].bridges)
     .map(proj => chainData[proj].bridges).flat(1)
     .filter(bridge => metaMap[bridge.address])
-  console.log('%O', bridges)
+  // console.log('%O', bridges)
 
   return (
     <>

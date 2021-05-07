@@ -75,7 +75,7 @@ const PROJECT_BINANCE_SMART_CHAIN = {
 }
 
 // https://github.com/connext/chaindata/blob/main/chains.json
-export const PROJECT_CONNEXT = {
+const PROJECT_CONNEXT = {
   name: 'connext',
   website: "https://www.connext.network/",
   github: "https://github.com/connext",
@@ -264,6 +264,12 @@ const PROJECT_ZKSYNC = {
   twitter: "https://twitter.com/zksync",
   color: "#8c8dfc",
   type: TYPE_LAYER2_PAYMENT
+}
+
+// not categorize as sidechain or layer 2, but provides liquidity
+export const LIQUIDITY_PROJECTS = {
+  [PROJECT_ANYSWAP.name]: PROJECT_ANYSWAP,
+  [PROJECT_CONNEXT.name]: PROJECT_CONNEXT,
 }
 
 // define in alphabetic order
@@ -648,6 +654,7 @@ export const ETH_BRIDGE_CONTRACTS = {
   }
 }
 
+// WIP
 export const XDAI_BRIDGE_CONTRACTS = {
   // https://www.xdaichain.com/for-users/bridges/converting-xdai-via-bridge/transfer-sai-dai-without-the-ui-using-web3-or-mobile-wallet
   "xDai": {
@@ -680,6 +687,7 @@ export const XDAI_BRIDGE_CONTRACTS = {
   },
 }
 
+// WIP
 export const BSC_BRIDGE_CONTRACTS = {
   // https://docs.connext.network/connext-MAINNET
   "connext": {
