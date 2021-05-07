@@ -16,6 +16,16 @@ export const BalanceFlow = memo(({ data, price, projects, layer2, width = 400 })
 
   const threshold = layer2 ? L2_FLOW_THRESHOLD : FLOW_THRESHOLD
   // console.log('%O', data)
+  const inbound = [
+    // {
+    //   name: 'WBTC',
+    //   color: 'red',
+    // },
+    // {
+    //   name: 'renBTC',
+    //   color: 'red',
+    // },
+  ]
   const entries = projects
     .filter(proj => data[proj].tvl > threshold)
   const rests = projects.filter(proj => !entries.includes(proj))
@@ -24,6 +34,7 @@ export const BalanceFlow = memo(({ data, price, projects, layer2, width = 400 })
   //   {name: 'others'},
   // ]
   const nodes = [
+    ...inbound,
     {name: 'Ethereum', color: ETH_COLOR}, // 0
     ...entries.map((entry) => ({
       name: entry,
@@ -39,9 +50,17 @@ export const BalanceFlow = memo(({ data, price, projects, layer2, width = 400 })
   //   {source: 0, target: 2, value: 31.32},
   //   {source: 0, target: 4, value: 2.73},
   // ];
+  const ethIdx = inbound.length
+  const outShift = ethIdx + 1
+  // const inboundLinks = inbound.map((entry, idx) => ({
+  //   source: idx,
+  //   target: ethIdx,
+  //   value: 9735057587,
+  //   color: entry.color
+  // }))
   const mainLinks = entries.map((entry, idx) => ({
-    source: 0,
-    target: idx + 1,
+    source: ethIdx,
+    target: idx + outShift,
     value: data[entry].tvl,
     color: idx < 3 ? ETH_BRIDGE_CONTRACTS[entry].color : LINK_COLOR,
   }))
@@ -50,10 +69,12 @@ export const BalanceFlow = memo(({ data, price, projects, layer2, width = 400 })
   //   100
   // )
   const restShare = rests.reduce((a,c)=> a + data[c].tvl, 0)
-  const links = [...mainLinks,
+  const links = [
+    // ...inboundLinks,
+    ...mainLinks,
     {
       source: 0,
-      target: entries.length + 1,
+      target: entries.length + outShift,
       value: restShare,
       color: LINK_COLOR,
     }
