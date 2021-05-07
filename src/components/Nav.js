@@ -1,6 +1,7 @@
-import { getTimeTag } from '../helpers/formatDate'
 import { Badge } from './Badge'
 import hole from './hole.svg'
+
+import { getTimeTag } from '../helpers/formatDate'
 
 export const Nav = ({ethUsdPrice, timestamp}) => {
   const price = ethUsdPrice === 1 ? '' : `Ξ = $${ethUsdPrice}`
