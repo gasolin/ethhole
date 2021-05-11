@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { getTimeTag } from '../helpers/formatDate'
 
 // comment out for debug
-// import debugData from '../data/2021-05-04.json'
+// import debugData from '../data/2021-05-10.json'
 const debugData = ''
 
 export const useChainData = () => {

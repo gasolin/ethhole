@@ -573,8 +573,9 @@ export const ETH_BRIDGE_CONTRACTS = {
   [PROJECT_OPTIMISM.name]: {
     "bridges": [
       {
-        "address": "0x045e507925d2e05D114534D0810a1abD94aca8d6",
+        "address": "0x5fd79d46eba7f351fe49bff9e87cdea6c821ef9f",
         "chainId": MAINNET,
+        "name": "Synthetix: L2 Deposit Escrow"
       }
     ],
     ...PROJECT_OPTIMISM
