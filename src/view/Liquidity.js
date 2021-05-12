@@ -1,4 +1,4 @@
-import {useTitle} from 'hookrouter'
+import {A, useTitle} from 'hookrouter'
 import human from 'millify'
 
 import { useChainData } from '../hooks/useChainData'
@@ -24,7 +24,8 @@ export const Liquidity = ({proj}) => {
 
   // get project addresss
   const projectContractList = Object.keys(ETH_BRIDGE_CONTRACTS).map(key => {
-    const bridges = ETH_BRIDGE_CONTRACTS[key].bridges && ETH_BRIDGE_CONTRACTS[key].bridges.filter(bridge => bridge.project === proj)
+    const bridges = ETH_BRIDGE_CONTRACTS[key].bridges && ETH_BRIDGE_CONTRACTS[key].bridges
+      .filter(bridge => bridge.project === proj)
     // console.log('%O', bridges)
     return bridges
   }).flat(1)
@@ -35,7 +36,10 @@ export const Liquidity = ({proj}) => {
 
   const bridges = Object.keys(chainData)
     .filter(proj => chainData[proj] && chainData[proj].bridges)
-    .map(proj => chainData[proj].bridges).flat(1)
+    .map(proj => chainData[proj].bridges
+    // attach main project name to the bridge
+    .map(bridge => ({...bridge, from: proj})))
+    .flat(1)
     .filter(bridge => metaMap[bridge.address])
   // console.log('%O', bridges)
 
@@ -80,7 +84,7 @@ export const Liquidity = ({proj}) => {
             <div className="flex items-center">
               <p className="text-md text-black dark:text-white ml-2">
               🔎 <a href={`https://etherscan.io/address/${bridge.address}`} className="text-blue-500 underline whitespace-no-wrap" target="_blank" rel="noreferrer">{metaMap[bridge.address]?.name || `Bridge ${idx + 1}`}</a>
-              {' '}({symbol}{human(bridge.tvl * price)})
+              {' '}({symbol}{human(bridge.tvl * price)}) for <A className="text-blue-500 underline whitespace-no-wrap" href={`/project/${bridge.from}`}>{bridge.from}</A>
               </p>
             </div>
           </div>
