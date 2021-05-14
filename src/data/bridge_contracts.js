@@ -198,6 +198,16 @@ const PROJECT_LOOPRING = {
   type: TYPE_LAYER2_EXCHANGE
 }
 
+const PROJECT_OKEX = {
+  name: "OKExChain",
+  explorer: "https://www.oklink.com/okexchain",
+  website: "https://www.okex.com/okexchain",
+  github: "https://github.com/okex/exchain",
+  twitter: "https://twitter.com/OKExChain",
+  color: "#205fec",
+  type: TYPE_SIDECHAIN
+}
+
 const PROJECT_OPTIMISM = {
   name: 'Optimism',
   explorer: "https://mainnet-l2-explorer.surge.sh/",
@@ -569,6 +579,15 @@ export const ETH_BRIDGE_CONTRACTS = {
       }
     ],
     ...PROJECT_LOOPRING
+  },
+  [PROJECT_OKEX.name]: {
+    "bridges": [
+      {
+        "addresses": "0x2c8fbb630289363ac80705a1a61273f76fd5a161",
+        "chainId": MAINNET,
+        "name": "OKEx bridge"
+      }
+    ]
   },
   [PROJECT_OPTIMISM.name]: {
     "bridges": [
