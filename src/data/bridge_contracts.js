@@ -198,7 +198,7 @@ const PROJECT_LOOPRING = {
   type: TYPE_LAYER2_EXCHANGE
 }
 
-const PROJECT_OKEX = {
+const PROJECT_OKEXCHAIN = {
   name: "OKExChain",
   explorer: "https://www.oklink.com/okexchain",
   website: "https://www.okex.com/okexchain",
@@ -580,12 +580,13 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     ...PROJECT_LOOPRING
   },
-  [PROJECT_OKEX.name]: {
+  [PROJECT_OKEXCHAIN.name]: {
     "bridges": [
+      // https://www.okex.com/cross-chain-gateway
       {
         "addresses": "0x2c8fbb630289363ac80705a1a61273f76fd5a161",
         "chainId": MAINNET,
-        "name": "OKEx bridge"
+        "name": "OKExChain bridge"
       }
     ]
   },
