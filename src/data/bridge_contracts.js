@@ -581,10 +581,10 @@ export const ETH_BRIDGE_CONTRACTS = {
     ...PROJECT_LOOPRING
   },
   [PROJECT_OKEXCHAIN.name]: {
+    // https://www.okex.com/cross-chain-gateway
     "bridges": [
-      // https://www.okex.com/cross-chain-gateway
       {
-        "addresses": "0x2c8fbb630289363ac80705a1a61273f76fd5a161",
+        "address": "0x2c8fbb630289363ac80705a1a61273f76fd5a161",
         "chainId": MAINNET,
         "name": "OKExChain bridge"
       }
