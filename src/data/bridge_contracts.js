@@ -588,7 +588,8 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET,
         "name": "OKExChain bridge"
       }
-    ]
+    ],
+    ...PROJECT_OKEXCHAIN
   },
   [PROJECT_OPTIMISM.name]: {
     "bridges": [
