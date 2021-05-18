@@ -344,6 +344,37 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     ...PROJECT_BINANCE_SMART_CHAIN,
   },
+  // [PROJECT_CONNEXT.name]: {
+  //   // https://github.com/DefiLlama/DefiLlama-Adapters/blob/main/projects/connext/index.js
+  //   "bridges": [
+  //     {
+  //       "address": "0xdfa6edAe2EC0cF1d4A60542422724A48195A5071",
+  //       "chainId": MAINNET,
+  //       "name": "hub"
+  //     },
+  //     {
+  //       "address": "0xe3cF69b86F274a14B87946bf641f11Ac837f4492",
+  //       "chainId": MAINNET,
+  //       "name": "router"
+  //     },
+  //     {
+  //       "address": "0xe6887c0cc3c37cb2ee34Bc58AB258f36825CA910",
+  //       "chainId": MAINNET,
+  //       "name": "router"
+  //     },
+  //     {
+  //       "address": "0xE540998865aFEB054021dc849Cc6191b8E09dC08",
+  //       "chainId": MAINNET,
+  //       "name": "ETH router"
+  //     },
+  //     // {
+  //     //   "address": "0xC6C68811E75EfD86d012587849F1A1D30427361d",
+  //     //   "chainId": MAINNET,
+  //     //   "name": "BSC router"
+  //     // },
+  //   ],
+  //   ...PROJECT_CONNEXT,
+  // },
   [PROJECT_DYDX.name]: {
     "bridges": [
       {
@@ -424,11 +455,6 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0xBbff34E47E559ef680067a6B1c980639EEb64D24",
         "chainId": MAINNET,
         "name": "L2 bridge",
-      },
-      {
-        "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-        "chainId": MAINNET,
-        "name": "DAI bridge"
       },
       {
         "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
