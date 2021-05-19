@@ -2,6 +2,7 @@ const TYPE_LAYER2 = 'layer2'
 const TYPE_LAYER2_PAYMENT = 'l2payment'
 const TYPE_LAYER2_EXCHANGE = 'l2ex'
 export const TYPE_SIDECHAIN = 'sidechain'
+export const TYPE_PUBLICCHAIN = 'publicchain'
 const TYPE_LAYER2_DERIVATIVES = 'l2derivatives'
 const TYPE_LAYER2_LEND = 'l2lend'
 const TYPE_LIQUIDITY = 'liquidity'
@@ -22,6 +23,7 @@ export const typeMap = {
   [TYPE_LAYER2_PAYMENT]: 'Payment',
   [TYPE_LAYER2_EXCHANGE]: 'DEX',
   [TYPE_SIDECHAIN]: 'Side Chain',
+  [TYPE_PUBLICCHAIN]: 'Public Chain',
   [TYPE_LAYER2_DERIVATIVES]: 'Derivatives',
   [TYPE_LAYER2_LEND]: 'Lend',
   [TYPE_LIQUIDITY]: 'Liquidity',
@@ -61,7 +63,7 @@ const PROJECT_AVALANCHE = {
   github: "https://github.com/ava-labs",
   twitter: "https://twitter.com/avalancheavax",
   color: "#e84142",
-  type: TYPE_SIDECHAIN
+  type: TYPE_PUBLICCHAIN
 }
 
 // https://www.binance.org/en/assets-proof
@@ -72,7 +74,7 @@ const PROJECT_BINANCE_SMART_CHAIN = {
   github: "https://github.com/binance-chain/",
   twitter: "https://twitter.com/binancechain",
   color: "#f8d12f",
-  type: TYPE_SIDECHAIN
+  type: TYPE_PUBLICCHAIN
 }
 
 // https://github.com/connext/chaindata/blob/main/chains.json
@@ -110,7 +112,7 @@ const PROJECT_FANTOM = {
   github: "https://github.com/Fantom-Foundation",
   twitter: "https://twitter.com/FantomFDN",
   color: "#1969ff",
-  type: TYPE_SIDECHAIN
+  type: TYPE_PUBLICCHAIN
 }
 
 const PROJECT_FUEL = {
@@ -130,7 +132,7 @@ const PROJECT_FUSION = {
   github: "https://github.com/FUSIONFoundation",
   twitter: "https://twitter.com/FUSIONProtocol",
   color: "#358dcc",
-  type: TYPE_SIDECHAIN
+  type: TYPE_PUBLICCHAIN
 }
 
 const PROJECT_GLUON = {
@@ -150,7 +152,7 @@ const PROJECT_HARMONY = {
   github: "https://github.com/harmony-one",
   twitter: "https://harmony.one/twitter",
   color: "#00ade8",
-  type: TYPE_SIDECHAIN
+  type: TYPE_PUBLICCHAIN
 }
 
 const PROJECT_HERMEZ = {
@@ -170,7 +172,7 @@ const PROJECT_HUOBI_ECO_CHAIN = {
   github: "https://github.com/huobiGroup/",
   twitter: "https://twitter.com/HECO_Chain",
   color: "#01943f",
-  type: TYPE_SIDECHAIN
+  type: TYPE_PUBLICCHAIN
 }
 
 const PROJECT_IMMUTABLEX = {
@@ -206,7 +208,7 @@ const PROJECT_OKEXCHAIN = {
   github: "https://github.com/okex/exchain",
   twitter: "https://twitter.com/OKExChain",
   color: "#205fec",
-  type: TYPE_SIDECHAIN
+  type: TYPE_PUBLICCHAIN
 }
 
 const PROJECT_OPTIMISM = {
