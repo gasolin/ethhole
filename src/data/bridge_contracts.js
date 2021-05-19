@@ -6,6 +6,7 @@ const TYPE_LAYER2_DERIVATIVES = 'l2derivatives'
 const TYPE_LAYER2_LEND = 'l2lend'
 const TYPE_LIQUIDITY = 'liquidity'
 const TYPE_CROSSCHAIN_DEX = 'crossdex'
+//
 // const TYPE_OPTIMISTIC_ROLLUP = 'optimisticrollup'
 // const TYPE_ZK_ROLLUP = 'zkrollup'
 // const TYPE_STATE_CHANNEL = 'statechannel'
@@ -629,6 +630,7 @@ export const ETH_BRIDGE_CONTRACTS = {
   },
   [PROJECT_POLYGON.name]: {
     // https://github.com/maticnetwork/static/blob/master/network/mainnet/v1/index.json
+    // https://github.com/DefiLlama/DefiLlama-Adapters/blob/main/projects/polygon/index.js
     "bridges": [
       {
         "address": "0x8484Ef722627bf18ca5Ae6BcF031c23E6e922B30",
@@ -645,6 +647,16 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x401F6c983eA34274ec46f84D70b31C151321188b",
         "chainId": MAINNET,
         "name": "Plasma bridge"
+      },
+      {
+        "address": "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0",
+        "chainId": MAINNET,
+        "name": "MATIC token"
+      },
+      {
+        "address": "0x5e3Ef299fDDf15eAa0432E6e66473ace8c13D908",
+        "chainId": MAINNET,
+        "name": "Stake Manager"
       },
       {
         "address": "0x668b9734FfE9eE8a01d4Ade3362De71E8989EA87",
@@ -684,6 +696,7 @@ export const ETH_BRIDGE_CONTRACTS = {
   },
   [PROJECT_XDAI.name]: {
     // https://www.xdaichain.com/about-xdai/news-and-information/comparisons/matic#similarities-and-differences
+    // https://github.com/DefiLlama/DefiLlama-Adapters/blob/main/projects/xdai/index.js
     "bridges": [
       {
         "address": "0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016",
@@ -695,6 +708,11 @@ export const ETH_BRIDGE_CONTRACTS = {
         "name": "Omni Bridge",
         "chainId": MAINNET,
         "protocol": ["sushiswap", "synthetix", "uniswap", "balancer"]
+      },
+      {
+        "address": "0xed7e6720ac8525ac1aeee710f08789d02cd87ecb",
+        "chainId": MAINNET,
+        "name": "owl bridge"
       },
       {
         "address": "0x2F10c5eE93ac666dA72195abA8a49FD6D27fA02F",
