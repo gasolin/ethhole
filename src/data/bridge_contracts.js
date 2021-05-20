@@ -18,6 +18,8 @@ const MAINNET = 1 // ethereum
 const BSC = 57
 const XDAI = 100
 
+export const NOT_LAYER2 = [TYPE_SIDECHAIN, TYPE_PUBLICCHAIN]
+
 export const typeMap = {
   [TYPE_LAYER2]: 'General',
   [TYPE_LAYER2_PAYMENT]: 'Payment',

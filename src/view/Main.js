@@ -9,7 +9,7 @@ import { Panel } from '../components/Panel'
 import { BalanceFlow } from '../components/BalanceFlow'
 import { Nav } from '../components/Nav'
 import { Footer } from '../components/Footer'
-import { ETH_BRIDGE_CONTRACTS, TYPE_SIDECHAIN } from '../data/bridge_contracts'
+import { ETH_BRIDGE_CONTRACTS, NOT_LAYER2 } from '../data/bridge_contracts'
 
 const FILTEROUT = ['ethereum', 'fuse']
 // console.log('%O', chainData)
@@ -21,7 +21,7 @@ export const Main = ({layer2}) => {
   const projects = Object.keys(chainData)
   .filter(proj => !FILTEROUT.includes(proj))
   // layer 2 strict mode
-  .filter(proj => !layer2 || ETH_BRIDGE_CONTRACTS[proj].type !== TYPE_SIDECHAIN)
+  .filter(proj => !layer2 || !NOT_LAYER2.includes(ETH_BRIDGE_CONTRACTS[proj].type))
   .sort((a, b) => chainData[b].tvl - chainData[a].tvl)
   // console.log('projects %O', projects)
 
