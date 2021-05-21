@@ -215,7 +215,7 @@ const PROJECT_OKEXCHAIN = {
 
 const PROJECT_OPTIMISM = {
   name: 'Optimism',
-  explorer: "https://mainnet-l2-explorer.surge.sh/",
+  explorer: "https://optimistic.etherscan.io/",
   website: "https://optimism.io/",
   github: "https://github.com/ethereum-optimism",
   twitter: "https://twitter.com/optimismPBC",
