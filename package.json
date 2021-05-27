@@ -1,6 +1,6 @@
 {
   "name": "ethhole",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "homepage": "http://ethhole.link",
   "dependencies": {
     "hookrouter": "^1.2.5",
