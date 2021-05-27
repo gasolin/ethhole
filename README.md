@@ -66,9 +66,9 @@ Event
 
 Contracts
 
-- Collected plenty of Layer 2 contract addresses from [l2beat](https://www.l2beat.com/)
 - Bridges balance fetched through [Covalent API](https://www.covalenthq.com/docs/api/#overview)
 - Protocol and Staked balance fetched through [Zapper API](https://docs.zapper.fi/zapper-api/api-guides)
+- Collected plenty of Layer 2 contract addresses from [l2beat](https://www.l2beat.com/)
 
 Design
 
