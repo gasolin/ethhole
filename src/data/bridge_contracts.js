@@ -47,6 +47,16 @@ const PROJECT_ANYSWAP = {
   type: TYPE_CROSSCHAIN_DEX
 }
 
+// const PROJECT_ARBITRUM = {
+//   name: 'Arbitrum One',
+//   explorer: "https://",
+//   website: "https://offchainlabs.com/",
+//   github: "https://github.com/OffchainLabs/arbitrum",
+//   twitter: "https://twitter.com/OffchainLabs",
+//   color: "#fe8605",
+//   type: TYPE_LAYER2
+// }
+
 // define in alphabetic order
 const PROJECT_AZTEC = {
   name: 'Aztec', // required, name need to be able to use as key
@@ -61,7 +71,7 @@ const PROJECT_AZTEC = {
 const PROJECT_AVALANCHE = {
   name: 'Avalanche',
   explorer: "https://cchain.explorer.avax.network/",
-  website: "https://www.avalabs.org/",
+  website: "https://www.avax.network/",
   github: "https://github.com/ava-labs",
   twitter: "https://twitter.com/avalancheavax",
   color: "#e84142",
