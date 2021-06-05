@@ -7,6 +7,7 @@ const TYPE_LAYER2_DERIVATIVES = 'l2derivatives'
 const TYPE_LAYER2_LEND = 'l2lend'
 const TYPE_LIQUIDITY = 'liquidity'
 const TYPE_CROSSCHAIN_DEX = 'crossdex'
+const TYPE_STAKING = 'staking'
 //
 // const TYPE_OPTIMISTIC_ROLLUP = 'optimisticrollup'
 // const TYPE_ZK_ROLLUP = 'zkrollup'
@@ -18,7 +19,7 @@ const MAINNET = 1 // ethereum
 const BSC = 57
 const XDAI = 100
 
-export const NOT_LAYER2 = [TYPE_SIDECHAIN, TYPE_PUBLICCHAIN]
+export const NOT_LAYER2 = [TYPE_SIDECHAIN, TYPE_PUBLICCHAIN, TYPE_STAKING]
 
 export const typeMap = {
   [TYPE_LAYER2]: 'General',
@@ -30,6 +31,7 @@ export const typeMap = {
   [TYPE_LAYER2_LEND]: 'Lend',
   [TYPE_LIQUIDITY]: 'Liquidity',
   [TYPE_CROSSCHAIN_DEX]: 'Crosschain DEX',
+  [TYPE_STAKING]: 'Staking'
   // [TYPE_OPTIMISTIC_ROLLUP]: "Optimistic",
   // [TYPE_ZK_ROLLUP]: "Zk",
   // [TYPE_STATE_CHANNEL]: "State Channel",
@@ -115,6 +117,15 @@ const PROJECT_DIVERSIFY = {
   twitter: "https://twitter.com/deversifi",
   color: "#5500FC",
   type: TYPE_LAYER2_EXCHANGE
+}
+
+const PROJECT_ETH2 = {
+  name: "ETH 2",
+  website: "https://ethereum.org/en/eth2/",
+  github: "https://github.com/ethereum/eth2.0-specs",
+  twitter: "https://twitter.com/ethdotorg",
+  color: "#747c84",
+  type: TYPE_STAKING
 }
 
 const PROJECT_FANTOM = {
@@ -428,6 +439,16 @@ export const ETH_BRIDGE_CONTRACTS = {
       }
     ],
     ...PROJECT_DIVERSIFY
+  },
+  [PROJECT_ETH2.name]: {
+    "bridges": [
+      {
+        "address": "0x00000000219ab540356cbb839cbe05303d7705fa",
+        "chainId": MAINNET,
+        "name": "ETH2 Staking",
+      },
+    ],
+    ...PROJECT_ETH2
   },
   [PROJECT_FANTOM.name]: {
     "bridges": [
