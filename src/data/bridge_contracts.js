@@ -49,11 +49,11 @@ const PROJECT_ANYSWAP = {
 
 const PROJECT_ARBITRUM = {
   name: 'Arbitrum One',
-  explorer: "https://",
+  explorer: "https://offchainlabs.com/",
   website: "https://offchainlabs.com/",
   github: "https://github.com/OffchainLabs/arbitrum",
   twitter: "https://twitter.com/OffchainLabs",
-  color: "#fe8605",
+  color: "#9e5ddb",
   type: TYPE_LAYER2
 }
 
@@ -315,7 +315,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x011B6E24FfB0B5f5fCc564cf4183C5BBBc96D515",
         "chainId": MAINNET,
         "name": "Arbitrum",
-        "website": "https://zk.money/"
+        "website": "https://offchainlabs.com/"
       }
     ],
     ...PROJECT_ARBITRUM,
