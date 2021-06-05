@@ -446,6 +446,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x00000000219ab540356cbb839cbe05303d7705fa",
         "chainId": MAINNET,
         "name": "ETH2 Staking",
+        "website": "https://launchpad.ethereum.org/en/"
       },
     ],
     ...PROJECT_ETH2
