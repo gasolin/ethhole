@@ -47,15 +47,15 @@ const PROJECT_ANYSWAP = {
   type: TYPE_CROSSCHAIN_DEX
 }
 
-// const PROJECT_ARBITRUM = {
-//   name: 'Arbitrum One',
-//   explorer: "https://",
-//   website: "https://offchainlabs.com/",
-//   github: "https://github.com/OffchainLabs/arbitrum",
-//   twitter: "https://twitter.com/OffchainLabs",
-//   color: "#fe8605",
-//   type: TYPE_LAYER2
-// }
+const PROJECT_ARBITRUM = {
+  name: 'Arbitrum One',
+  explorer: "https://",
+  website: "https://offchainlabs.com/",
+  github: "https://github.com/OffchainLabs/arbitrum",
+  twitter: "https://twitter.com/OffchainLabs",
+  color: "#fe8605",
+  type: TYPE_LAYER2
+}
 
 // define in alphabetic order
 const PROJECT_AZTEC = {
@@ -309,6 +309,17 @@ export const LIQUIDITY_PROJECTS = {
 
 // define in alphabetic order
 export const ETH_BRIDGE_CONTRACTS = {
+  [PROJECT_ARBITRUM.name]: {
+    "bridges": [
+      {
+        "address": "0x011B6E24FfB0B5f5fCc564cf4183C5BBBc96D515",
+        "chainId": MAINNET,
+        "name": "Arbitrum",
+        "website": "https://zk.money/"
+      }
+    ],
+    ...PROJECT_ARBITRUM,
+  },
   [PROJECT_AZTEC.name]: {
     "bridges": [
       {
