@@ -283,6 +283,16 @@ const PROJECT_RSK = {
   type: TYPE_SIDECHAIN
 }
 
+const PROJECT_SOLANA = {
+  name: 'SOLANA',
+  explorer: "https://explorer.solana.com/",
+  website: "https://solana.com/",
+  github: "https://github.com/solana-labs/",
+  twitter: "https://twitter.com/",
+  color: "#d83aeb",
+  type: TYPE_PUBLICCHAIN
+}
+
 const PROJECT_XDAI = {
   name: "xDai",
   explorer: "https://blockscout.com/poa/xdai/",
@@ -765,6 +775,16 @@ export const ETH_BRIDGE_CONTRACTS = {
       }
     ],
     ...PROJECT_RSK
+  },
+  [PROJECT_SOLANA.name]: {
+    "bridges": [
+      {
+        "address": "0xeae57ce9cc1984F202e15e038B964bb8bdF7229a",
+        "name": "Wormhole Bridge",
+        "chainId": MAINNET,
+      }
+    ],
+    ...PROJECT_SOLANA
   },
   [PROJECT_XDAI.name]: {
     // https://www.xdaichain.com/about-xdai/news-and-information/comparisons/matic#similarities-and-differences
