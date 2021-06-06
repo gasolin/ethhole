@@ -377,9 +377,9 @@ export const ETH_BRIDGE_CONTRACTS = {
       {
         "address": "0x13B432914A996b0A48695dF9B2d701edA45FF264",
         "chainId": MAINNET,
-        "name": "Anyswap BSC bridge",
+        "name": "Nerve Bridge",
         "project": PROJECT_ANYSWAP.name,
-        "website": "https://anyswap.exchange/"
+        "website": "https://app.nerve.fi/bridge"
       },
       {
         "address": "0x533e3c0e6b48010873B947bddC4721b1bDFF9648",
