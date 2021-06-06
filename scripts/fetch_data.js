@@ -78,7 +78,7 @@ async function main() {
         // multi-chain support
         const link = getBalanceURL(addr, addrInfo[addr].chainId)
         const res = await fetch(link)
-        const data = await res.json()
+        let data = await res.json()
         // calc per bridge tvl
         data.data.items = data.data.items
           .filter(token => token.quote > QUOTE_THRESHOLD)
