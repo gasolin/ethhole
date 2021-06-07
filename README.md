@@ -1,6 +1,8 @@
 # ethhole
 How the token flows
 
+[![Daily Fetch](https://github.com/gasolin/ethhole/actions/workflows/deno.yml/badge.svg)](https://github.com/gasolin/ethhole/actions/workflows/deno.yml)
+
 ## Usage
 
 ```
