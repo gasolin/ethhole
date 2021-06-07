@@ -73,14 +73,14 @@ async function main() {
       const proj = addrInfo[addr].project
       console.log('process ', proj, addrInfo[addr].name)
       let tvl = 0
-      let dataset
+      let dataset = {}
       if (!addrStaked[addr]) {
         // multi-chain support
         const link = getBalanceURL(addr, addrInfo[addr].chainId)
         const res = await fetch(link)
-        let data = await res.json()
+        const data = await res.json()
         // calc per bridge tvl
-        data.data.items = data.data.items
+        dataset.items = data.data && data.data.items
           .filter(token => token.quote > QUOTE_THRESHOLD)
           .map(token => {
             // console.log('tvl of ', bridge.address)
@@ -107,13 +107,12 @@ async function main() {
               type: 'protocol'
             }
             // console.log('%O', token)
-            data.data.items.push(token)
+            dataset.items.push(token)
           }
-          data.data.items.sort((a,b)=> b.quote - a.quote)
+          dataset.items.sort((a,b)=> b.quote - a.quote)
         }
         console.log(tvl)
-        data.data.tvl = tvl
-        dataset = data.data
+        dataset.tvl = tvl
       } else { // fetch stake balance
         console.log('staked balance')
         const stakeRes = await fetch(getStackedBalanceURL(addr))
