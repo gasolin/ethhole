@@ -484,6 +484,11 @@ export const ETH_BRIDGE_CONTRACTS = {
         "project": PROJECT_ANYSWAP.name,
         "website": "https://anyswap.exchange/"
       },
+      {
+        "address": "0x9A8C4bdCd75CFa1059A6E453Ac5cE9d3F5c82A35",
+        "chainId": MAINNET,
+        "name": "Fantom Bridge"
+      }
     ],
     ...PROJECT_FANTOM
   },
@@ -537,16 +542,24 @@ export const ETH_BRIDGE_CONTRACTS = {
     "bridges": [
       {
         "address": "0xfD53b1B4AF84D59B20bF2C20CA89a6BeeAa2c628",
-        "name": "BUSD manager"
+        "chainId": MAINNET,
+        "name": "BUSD bridge"
       },
       {
         "address": "0xfE601dE9D4295274b9904D5a9Ad7069F23eE2B32",
-        "name": "LINK manager"
+        "chainId": MAINNET,
+        "name": "LINK bridge"
       },
       {
         "address": "0x2dCCDB493827E15a5dC8f8b72147E6c4A5620857",
-        "name": "ERC20 manager"
+        "chainId": MAINNET,
+        "name": "ERC20 bridge"
       },
+      {
+        "address": "0xF9Fb1c508Ff49F78b60d3A96dea99Fa5d7F3A8A6",
+        "chainId": MAINNET,
+        "name": "ETH bridge"
+      }
       // {
       //   "address": "0x426A61A2127fDD1318Ec0EdCe02474f382FdAd30",
       //   "name": "ERC721 manager"
