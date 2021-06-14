@@ -98,7 +98,7 @@ async function main() {
             const protoData = protoDict[addr.toLowerCase()]
             const quote = protoData.meta[0].value / price
             tvl += quote
-            const SYM = protocol.toUpperCase()
+            const SYM = protocol.toUpperCase()+` (protocol)`
             const token = {
               contract_ticker_symbol: SYM,
               contract_address: '',
@@ -126,11 +126,12 @@ async function main() {
           items: stakeData.tokens.map(token => {
             const quote = token.balanceUSD / price
             tvl += quote
+            const SYM = token.symbol + ' (stake)'
             return {
-              contract_ticker_symbol: token.symbol,
+              contract_ticker_symbol: SYM,
               contract_address: token.address,
               quote,
-              logo_url: ICON_URL_MAP[token.symbol] || undefined,
+              logo_url: ICON_URL_MAP[SYM] || undefined,
               type: 'stake'
             }
           })
