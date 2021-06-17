@@ -10,6 +10,18 @@ yarn install
 yarn start
 ```
 
+## How its made
+
+How it's made
+1. Collect Layer 2 / Sidechain bridges contracts
+2. Collect TVL and token allocation of production Layer 2 (Loopring, ZkSwap, zkSync...) and Sidechain bridges contracts through [Covalent API](https://www.covalenthq.com/docs/api/#overview) (with Deno script)
+3. Get protocol and stake balance by [Zapper API](https://docs.zapper.fi/zapper-api/api-guides)
+4. Auto daily update data via github action
+5. Build website (react, hookrouter, tailwind) with leaderboard and the Sankey flow chart for quick glance
+6. Build per project page to show bridges and use Treemap diagrams to show its token composition
+7. Show ETH or USD based TVL
+8. Show emerging Layer 2 projects with the `strict mode`
+
 ## Fetch Data
 
 Install `deno` from https://deno.land/#installation
