@@ -20,7 +20,7 @@ export const TotalValueTracked = ({ price, tvl, children, tvlTrend, tvlDiff}) =>
                 {tvlTrend === true && '📈'}
                 {tvlTrend === false && '📉'}
                 {tvlDiff}
-                {'(24h)'}
+                {tvlDiff && '(24h)'}
               </span>
           </p>
       </div>
