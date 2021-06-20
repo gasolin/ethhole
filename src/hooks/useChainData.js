@@ -5,7 +5,9 @@ import { getTimeTag } from '../helpers/formatDate'
 // import debugData from '../data/2021-06-05.json'
 const debugData = ''
 
-export const useChainData = () => {
+const DAY_WHITELIST = ['yesterday']
+
+export const useChainData = (day) => {
   const [data, setData] = useState('{}')
   const [timestamp, setTimestamp] = useState('')
   const baseUrl = 'https://raw.githubusercontent.com/gasolin/ethhole'
@@ -30,9 +32,14 @@ export const useChainData = () => {
         if (debugData) {
           setData(JSON.stringify(debugData))
         } else {
-          const tag = timestamp
-            ? getTimeTag('today', new Date(timestamp))
-            : getTimeTag('yesterday', new Date())
+          const tag = DAY_WHITELIST.includes(day)
+            ? timestamp
+              ? getTimeTag(day, new Date(timestamp))
+              :getTimeTag(day, new Date())
+            : timestamp
+              ? getTimeTag('today', new Date(timestamp))
+              : getTimeTag('yesterday', new Date())
+          // console.warn('time ', tag)
           const res =  await fetch(`${baseUrl}/main/src/data/${tag}.json`)
           const chainData = await res.json()
           setData(JSON.stringify(chainData))
@@ -43,7 +50,7 @@ export const useChainData = () => {
     }
 
     timestamp && fetchData()
-  }, [timestamp])
+  }, [timestamp, day])
 
   // console.log('timestamp ', timestamp)
   return [JSON.parse(data), timestamp]

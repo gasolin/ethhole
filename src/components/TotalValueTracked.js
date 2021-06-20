@@ -1,8 +1,9 @@
 import human from 'millify'
 
-export const TotalValueTracked = ({ price, tvl, children}) => {
+export const TotalValueTracked = ({ price, tvl, children, tvlTrend, tvlDiff}) => {
   const enabled = price === 1
   const token = enabled ? 'Ξ' : '$'
+  const diffColorStyle = tvlTrend ? 'text-red-500' : 'text-green-500'
   return (
     <div className="shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-800">
       <div className="flex items-center">
@@ -14,11 +15,18 @@ export const TotalValueTracked = ({ price, tvl, children}) => {
           </span>
           <p className="text-md text-black dark:text-white ml-2">
               Total Value Tracked
+              <span className={`${diffColorStyle} text-2xl`}>
+                {'  '}
+                {tvlTrend === true && '📈'}
+                {tvlTrend === false && '📉'}
+                {tvlDiff}
+                {'(24h)'}
+              </span>
           </p>
       </div>
       <div className="flex flex-col justify-start">
           <p className="text-gray-700 dark:text-gray-100 text-4xl text-left font-bold my-4">
-          {token} {human(tvl * price)}
+            {token} {human(tvl * price)}
           </p>
           <div className="flex items-center text-green-500 text-sm">
               {/* <svg width="20" height="20" fill="currentColor" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">

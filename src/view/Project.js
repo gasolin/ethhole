@@ -15,17 +15,22 @@ import { FILLTER } from '../helpers/constants'
 
 export const Project = ({proj}) => {
   const [chainData, timestamp] = useChainData()
+  const [prevChainData] = useChainData('yesterday')
   useTitle(proj)
 
   const projectData = chainData[proj]
 
   if (!projectData) return null
 
+  const prevProjectData = prevChainData[proj]
+
   const price =  chainData?.ethereum?.usd || 1
   const threshold = FILLTER / price
   // TODO: support toggle symbol
   const symbol = '$' //price !== 1 ? 'Ξ' : '$'
   const tvl = projectData.tvl
+  const tvlTrend = prevProjectData?.tvl ? projectData.tvl - prevProjectData.tvl > 0 : undefined
+  const tvlDiff = prevProjectData?.tvl && prevProjectData.tvl > 0 ? ((projectData.tvl - prevProjectData.tvl) / prevProjectData.tvl * 100).toFixed(2) + '%' : undefined
 
   return (
     <>
@@ -34,7 +39,7 @@ export const Project = ({proj}) => {
         <ProjectMetas proj={proj} />
       </Panel>
       <Panel>
-        <TotalValueTracked price={price} tvl={tvl} ></TotalValueTracked>
+        <TotalValueTracked price={price} tvl={tvl} tvlTrend={tvlTrend} tvlDiff={tvlDiff}></TotalValueTracked>
       </Panel>
       {projectData.bridges
         // .sort((a, b) => b.tvl - a.tvl)
