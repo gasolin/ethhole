@@ -79,14 +79,18 @@ async function main() {
         const link = getBalanceURL(addr, addrInfo[addr].chainId)
         const res = await fetch(link)
         const data = await res.json()
+        // console.log('%O', data)
         // calc per bridge tvl
-        dataset.items = data.data && data.data.items
+        dataset.items = (data.data && data.data.items
           .filter(token => token.quote > QUOTE_THRESHOLD)
           .map(token => {
             // console.log('tvl of ', bridge.address)
             tvl += token.quote
             return token
-          })
+          })) || []
+        if (dataset.items.length === 0) {
+          console.warn('failed to fetch data %O', data)
+        }
         // protocol balance
         if (addrProtocol[addr]) {
           const protocols = addrProtocol[addr].protocol
@@ -107,9 +111,9 @@ async function main() {
               type: 'protocol'
             }
             console.log(token.quote)
-            dataset.items && token.quote && dataset.items.push(token)
+            dataset.items.push(token)
           }
-          dataset.items && dataset.items.sort((a,b)=> b.quote - a.quote)
+          dataset.items.sort((a,b)=> b.quote - a.quote)
         }
         console.log(tvl)
         dataset.tvl = tvl
