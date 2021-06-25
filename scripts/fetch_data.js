@@ -80,13 +80,13 @@ async function main() {
         const res = await fetch(link)
         const data = await res.json()
         // calc per bridge tvl
-        dataset.items = (data.data && data.data.items
+        dataset.items = data.data && data.data.items
           .filter(token => token.quote > QUOTE_THRESHOLD)
           .map(token => {
             // console.log('tvl of ', bridge.address)
             tvl += token.quote
             return token
-          })) || []
+          })
         // protocol balance
         if (addrProtocol[addr]) {
           const protocols = addrProtocol[addr].protocol
@@ -106,10 +106,10 @@ async function main() {
               quote,
               type: 'protocol'
             }
-            console.log(`protocol ${token.contract_ticker_symbol} ${token.quote}`)
-            dataset.items.push(token)
+            console.log(token.quote)
+            dataset.items && token.quote && dataset.items.push(token)
           }
-          dataset.items.sort((a,b)=> b.quote - a.quote)
+          dataset.items && dataset.items.sort((a,b)=> b.quote - a.quote)
         }
         console.log(tvl)
         dataset.tvl = tvl
