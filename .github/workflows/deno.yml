@@ -26,8 +26,8 @@ jobs:
         with:
           deno-version: v1.x
 
-      # - name: Run Script
-      #   run: deno run --allow-net --allow-write scripts/fetch_data.js --key ${{ secrets.COVALENT_KEY }}
+      - name: Run Script
+        run: deno run --allow-net --allow-write scripts/fetch_data.js --key ${{ secrets.COVALENT_KEY }}
 
       # - name: commit
       #   uses: stefanzweifel/git-auto-commit-action@v4
