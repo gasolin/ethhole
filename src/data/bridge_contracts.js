@@ -224,6 +224,15 @@ const PROJECT_LOOPRING = {
   type: TYPE_LAYER2_EXCHANGE
 }
 
+const PROJECT_NEAR = {
+  name: "NEAR",
+  website: "https://near.org/",
+  github: "https://github.com/near",
+  twitter: "https://twitter.com/nearprotocol",
+  color: "#111618",
+  type: TYPE_PUBLICCHAIN
+}
+
 const PROJECT_OKEXCHAIN = {
   name: "OKExChain",
   explorer: "https://www.oklink.com/okexchain",
@@ -692,6 +701,16 @@ export const ETH_BRIDGE_CONTRACTS = {
       }
     ],
     ...PROJECT_LOOPRING
+  },
+  [PROJECT_NEAR.name]: {
+    "bridges": [
+      {
+        "address": "0x23ddd3e3692d1861ed57ede224608875809e127f",
+        "chainId": MAINNET,
+        "name": "Rainbow bridge"
+      }
+    ],
+    ...PROJECT_NEAR
   },
   [PROJECT_OKEXCHAIN.name]: {
     // https://www.okex.com/cross-chain-gateway
