@@ -64,11 +64,11 @@ export const Main = ({layer2}) => {
         {projects.map(proj => <ProjectTableRow key={proj} price={price} name={proj} data={chainData} />)}
       </ProjectsTable>
     </Panel>
-    <Panel>
+    {/* <Panel>
       <div class="text-center w-full mx-auto py-4 px-4 z-20">
           <h2 class="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
               <span class="block">
-                Support Public goods like us
+                Support Public Goods like us
               </span>
               <span class="block text-indigo-400">
                in Gitcoin Grant 10
@@ -80,7 +80,7 @@ export const Main = ({layer2}) => {
               </div>
           </div>
       </div>
-    </Panel>
+    </Panel> */}
     <Footer/>
   </>)
 }
