@@ -761,7 +761,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x40ec5B33f54e0E8A33A975908C5BA1c14e5BbbDf",
         "chainId": MAINNET,
         "name": "PoS ERC20 bridge",
-        "protocol": ["harvest", "badger", "synthetix"]
+        "protocol": ["dhedge", "synthetix", "mushroom", "aave"]
       },
       {
         "address": "0x401F6c983eA34274ec46f84D70b31C151321188b",
