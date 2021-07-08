@@ -96,22 +96,24 @@ async function main() {
           const protocols = addrProtocol[addr].protocol
           for (let i = 0; i < protocols.length; i++) {
             const protocol = protocols[i]
-            console.log('> process protocol ', protocol.toUpperCase())
+            console.log('> process protocol', protocol.toUpperCase())
             const resProto = await fetch(getProtocolBalanceURL(addr, protocol))
             const protoDict = await resProto.json()
             const protoData = protoDict[addr.toLowerCase()]
             const quote = protoData.meta[0].value / price
             tvl += quote
-            const SYM = protocol.toUpperCase()+` (protocol)`
-            const token = {
-              contract_ticker_symbol: SYM,
-              contract_address: '',
-              logo_url: ICON_URL_MAP[SYM] || undefined,
-              quote,
-              type: 'protocol'
+            if (quote > QUOTE_THRESHOLD) {
+              const SYM = protocol.toUpperCase()+` (protocol)`
+              const token = {
+                contract_ticker_symbol: SYM,
+                contract_address: '',
+                logo_url: ICON_URL_MAP[SYM] || undefined,
+                quote,
+                type: 'protocol'
+              }
+              console.log(token.quote)
+              dataset.items.push(token)
             }
-            console.log(token.quote)
-            dataset.items.push(token)
           }
           dataset.items.sort((a,b)=> b.quote - a.quote)
         }
