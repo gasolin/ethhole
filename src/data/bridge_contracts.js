@@ -744,6 +744,11 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x5fd79d46eba7f351fe49bff9e87cdea6c821ef9f",
         "chainId": MAINNET,
         "name": "Synthetix: L2 Deposit Escrow"
+      },
+      {
+        "address": "0x467194771dAe2967Aef3ECbEDD3Bf9a310C76C65",
+        "chainId": MAINNET,
+        "name": "OPTIMISTIC L1 Escrow"
       }
     ],
     ...PROJECT_OPTIMISM
