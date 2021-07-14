@@ -1,6 +1,7 @@
 const TYPE_LAYER2 = 'layer2'
 const TYPE_LAYER2_PAYMENT = 'l2payment'
 const TYPE_LAYER2_EXCHANGE = 'l2ex'
+const TYPE_LAYER2_DAO = 'l2dao'
 export const TYPE_SIDECHAIN = 'sidechain'
 export const TYPE_PUBLICCHAIN = 'publicchain'
 const TYPE_LAYER2_DERIVATIVES = 'l2derivatives'
@@ -25,6 +26,7 @@ export const typeMap = {
   [TYPE_LAYER2]: 'General',
   [TYPE_LAYER2_PAYMENT]: 'Payment',
   [TYPE_LAYER2_EXCHANGE]: 'DEX',
+  [TYPE_LAYER2_DAO]: 'DAO',
   [TYPE_SIDECHAIN]: 'Side Chain',
   [TYPE_PUBLICCHAIN]: 'Public Chain',
   [TYPE_LAYER2_DERIVATIVES]: 'Derivatives',
@@ -166,6 +168,16 @@ const PROJECT_GLUON = {
   twitter: "https://twitter.com/GluonNetwork",
   color: "#f7961c",
   type: TYPE_SIDECHAIN
+}
+
+const PROJECT_HABITAT = {
+  name: 'Habitat',
+  explorer: "https://0xhabitat.org/explorer/",
+  website: "https://0xhabitat.org/",
+  github: "https://github.com/0xHabitat",
+  twitter: "https://twitter.com/EnterTheHabitat",
+  color: "#FBDC60",
+  type: TYPE_LAYER2_DAO
 }
 
 const PROJECT_HARMONY = {
@@ -551,6 +563,15 @@ export const ETH_BRIDGE_CONTRACTS = {
       },
     ],
     ...PROJECT_GLUON
+  },
+  [PROJECT_HABITAT.name]: {
+    "bridges": [
+      {
+        "address": "0x96E471B5945373dE238963B4E032D3574be4d195",
+        "chainId": MAINNET,
+      }
+    ],
+    ...PROJECT_HABITAT
   },
   [PROJECT_HARMONY.name]: {
     // https://github.com/harmony-one/ethhmy-bridge.sdk/blob/main/src/configs/mainnet.ts
