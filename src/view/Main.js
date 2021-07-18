@@ -19,11 +19,11 @@ export const Main = ({layer2}) => {
 
   const toggleValue = () => setShowEth(!showEth)
   const projects = Object.keys(chainData)
-  .filter(proj => !FILTEROUT.includes(proj))
-  // layer 2 strict mode
-  .filter(proj => !layer2 || !NOT_LAYER2.includes(ETH_BRIDGE_CONTRACTS[proj].type))
-  .sort((a, b) => chainData[b].tvl - chainData[a].tvl)
-  // console.log('projects %O', projects)
+    .filter(proj => !FILTEROUT.includes(proj))
+    // layer 2 strict mode
+    .filter(proj => !layer2 || !NOT_LAYER2.includes(ETH_BRIDGE_CONTRACTS[proj].type))
+    .sort((a, b) => chainData[b].tvl - chainData[a].tvl)
+    // console.log('projects %O', projects)
 
   const price = showEth ? 1 : chainData?.ethereum?.usd || 1
   const symbol = showEth ? 'ETH' : 'USD'

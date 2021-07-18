@@ -29,18 +29,18 @@ export const Liquidity = ({proj}) => {
     // console.log('%O', bridges)
     return bridges
   }).flat(1)
-  // console.log('%O', connextContractList)
+  // console.log('%O', projectContractList)
   const metaMap = {}
   projectContractList.map(entry => metaMap[entry.address.toLowerCase()] = entry)
-  // console.log('addrMap %O', metaMap)
+  // console.log('metaMap %O', metaMap)
 
   const bridges = Object.keys(chainData)
-    .filter(proj => chainData[proj] && chainData[proj].bridges)
-    .map(proj => chainData[proj].bridges
+    .filter(project => chainData[project] && chainData[project].bridges)
     // attach main project name to the bridge
-    .map(bridge => ({...bridge, from: proj})))
+    .map(project => chainData[project].bridges
+      .map((bridge, idx) => ({...bridge, from: project, address: ETH_BRIDGE_CONTRACTS[project].bridges[idx].address.toLowerCase()}))
+      .filter(bridge => metaMap[bridge.address]))
     .flat(1)
-    .filter(bridge => bridge.items.length > 0)
   // console.log('%O', bridges)
 
   return (
