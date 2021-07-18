@@ -40,7 +40,7 @@ export const Liquidity = ({proj}) => {
     // attach main project name to the bridge
     .map(bridge => ({...bridge, from: proj})))
     .flat(1)
-    .filter(bridge => metaMap[bridge.address])
+    .filter(bridge => bridge.items.length > 0)
   // console.log('%O', bridges)
 
   return (
