@@ -42,6 +42,7 @@ export const typeMap = {
 export const getTypeMap = (type) => typeMap[type] || 'Unknown'
 
 // https://hackmd.io/@kSCbGhceTL2d5BmUdh7pwg/ryCPqIk7_
+// https://github.com/anyswap/anyswap-frontend/tree/vi-new/src/contexts/Tokens/tokens
 const PROJECT_ANYSWAP = {
   name: 'AnySwap',
   website: 'https://anyswap.exchange/',
