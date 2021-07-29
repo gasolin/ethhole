@@ -315,6 +315,14 @@ const PROJECT_SOLANA = {
   type: TYPE_PUBLICCHAIN
 }
 
+const PROJECT_SORARE = {
+  name: 'sorare',
+  website: "https://sorare.com/",
+  twitter: "https://twitter.com/sorarehq",
+  color: "#21284a",
+  type: TYPE_LAYER2_EXCHANGE
+}
+
 const PROJECT_XDAI = {
   name: "xDai",
   explorer: "https://blockscout.com/poa/xdai/",
@@ -520,15 +528,15 @@ export const ETH_BRIDGE_CONTRACTS = {
     ],
     ...PROJECT_FANTOM
   },
-  [PROJECT_FUEL.name]: {
-    "bridges": [
-      {
-        "address": "0x6880f6Fd960D1581C2730a451A22EED1081cfD72",
-        "chainId": MAINNET,
-      }
-    ],
-    ...PROJECT_FUEL
-  },
+  // [PROJECT_FUEL.name]: {
+  //   "bridges": [
+  //     {
+  //       "address": "0x6880f6Fd960D1581C2730a451A22EED1081cfD72",
+  //       "chainId": MAINNET,
+  //     }
+  //   ],
+  //   ...PROJECT_FUEL
+  // },
   [PROJECT_FUSION.name]: {
     "bridges": [
       {
@@ -850,6 +858,16 @@ export const ETH_BRIDGE_CONTRACTS = {
       }
     ],
     ...PROJECT_SOLANA
+  },
+  [PROJECT_SORARE.name]: {
+    "bridges": [
+      {
+        "address": "0xF5C9F957705bea56a7e806943f98F7777B995826",
+        "name": "starkware",
+        "chainId": MAINNET,
+      },
+    ],
+    ...PROJECT_SORARE
   },
   [PROJECT_XDAI.name]: {
     // https://www.xdaichain.com/about-xdai/news-and-information/comparisons/matic#similarities-and-differences
