@@ -882,7 +882,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x88ad09518695c6c3712ac10a214be5109a655671",
         "name": "Omni Bridge",
         "chainId": MAINNET,
-        "protocol": ["sushiswap", "synthetix", "uniswap", "balancer"]
+        "protocol": ["sushiswap", "synthetix", "uniswap"]
       },
       {
         "address": "0xed7e6720ac8525ac1aeee710f08789d02cd87ecb",
