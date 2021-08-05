@@ -368,12 +368,12 @@ export const ETH_BRIDGE_CONTRACTS = {
         "name": "Ethereum Bridge",
         "website": "https://offchainlabs.com/"
       },
-      {
-        "address": "0x86E525A3565235b2bb934df43E01c8B092c03756",
-        "chainId": MAINNET,
-        "name": "ERC20 Bridge",
-        "website": "https://offchainlabs.com/"
-      }
+      // {
+      //   "address": "0x86E525A3565235b2bb934df43E01c8B092c03756",
+      //   "chainId": MAINNET,
+      //   "name": "ERC20 Bridge",
+      //   "website": "https://offchainlabs.com/"
+      // }
     ],
     ...PROJECT_ARBITRUM,
   },
