@@ -31,7 +31,7 @@ jobs:
         env:
           COVALENT_KEY: ${{ secrets.COVALENT_KEY }}
         run: |
-          deno run --allow-net --allow-write scripts/fetch_data.js --key $COVALENT_KEY
+          deno run --allow-net --allow-write scripts/fetch_data.js --key ckey_$COVALENT_KEY
 
       # - name: commit
       #   uses: stefanzweifel/git-auto-commit-action@v4
