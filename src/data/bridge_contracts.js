@@ -334,8 +334,8 @@ const PROJECT_XDAI = {
 
 const PROJECT_ZKSWAP = {
   name: "ZKSwap",
-  explorer: "https://zkswap.info/en/transactions",
-  website: "https://zkswap.info/en",
+  explorer: "https://zkswap.info/en",
+  website: "https://zks.app",
   github: "https://github.com/l2labs",
   twitter: "https://twitter.com/ZKSwapOfficial",
   color: "#596efd",
@@ -903,6 +903,12 @@ export const ETH_BRIDGE_CONTRACTS = {
       {
         "address": "0x8eca806aecc86ce90da803b080ca4e3a9b8097ad",
         "chainId": MAINNET,
+        "name": "ZKSwap (v1)",
+      },
+      {
+        "address": "0x6dE5bDC580f55Bc9dAcaFCB67b91674040A247e3",
+        "chainId": MAINNET,
+        "name": "ZKSwap (v2)",
       }
     ],
     ...PROJECT_ZKSWAP
