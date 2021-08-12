@@ -1,15 +1,25 @@
 import {useRoutes} from 'hookrouter'
 import { routes } from './view/routes'
 import { NotFound } from './view/NotFound'
+import {DAppProvider, ChainId} from '@usedapp/core'
 
 import { version as webVersion } from '../package.json'
+
+const config = {
+  readOnlyChainId: ChainId.Mainnet,
+  readOnlyUrls: {
+    [ChainId.Mainnet]: 'https://eth-mainnet.zerion.io/'
+  }
+}
 
 function App() {
   const Route = useRoutes(routes)
   return (
-    <div className="App">
-      {Route || <NotFound/>}
-    </div>
+    <DAppProvider config={config}>
+      <div className="App">
+        {Route || <NotFound/>}
+      </div>
+    </DAppProvider>
   );
 }
 
