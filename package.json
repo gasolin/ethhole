@@ -1,8 +1,9 @@
 {
   "name": "ethhole",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "homepage": "http://ethhole.link",
   "dependencies": {
+    "@ethersproject/units": "^5.4.0",
     "@usedapp/coingecko": "^0.3.22",
     "hookrouter": "^1.2.5",
     "lodash": "^4.17.21",
