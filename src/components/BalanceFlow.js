@@ -2,7 +2,7 @@ import {memo, useState} from 'react'
 import { Sankey, Hint } from 'react-vis'
 import human from 'millify'
 
-import { ETH_BRIDGE_CONTRACTS } from '../data/bridge_contracts.js'
+import { ETH_BRIDGE_CONTRACTS } from '../helpers/bridge_contracts.js'
 import { FLOW_THRESHOLD, L2_FLOW_THRESHOLD } from '../helpers/constants'
 
 const ETH_COLOR = '#747c84' //'#8facee'

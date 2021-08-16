@@ -9,7 +9,7 @@ import { Panel } from '../components/Panel'
 import { BalanceFlow } from '../components/BalanceFlow'
 import { Nav } from '../components/Nav'
 import { Footer } from '../components/Footer'
-import { ETH_BRIDGE_CONTRACTS, NOT_LAYER2 } from '../data/bridge_contracts'
+import { ETH_BRIDGE_CONTRACTS, NOT_LAYER2 } from '../helpers/bridge_contracts'
 
 const FILTEROUT = ['ethereum', 'fuse']
 // console.log('%O', chainData)

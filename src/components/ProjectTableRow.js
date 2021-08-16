@@ -1,7 +1,7 @@
 import human from 'millify'
 import {A} from 'hookrouter'
 
-import { ETH_BRIDGE_CONTRACTS, getTypeMap } from '../data/bridge_contracts.js'
+import { ETH_BRIDGE_CONTRACTS, getTypeMap } from '../helpers/bridge_contracts.js'
 
 export const ProjectTableRow = ({name, data, price}) => {
   const project = data[name]

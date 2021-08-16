@@ -3,7 +3,7 @@
 import { parse } from 'https://deno.land/std/flags/mod.ts'
 import { Timeout } from "https://deno.land/x/timeout/mod.ts"
 
-import { ETH_BRIDGE_CONTRACTS } from '../src/data/bridge_contracts.js'
+import { ETH_BRIDGE_CONTRACTS } from '../src/helpers/bridge_contracts.js'
 import { writeJson } from './write_data.js'
 const { args, exit } = Deno
 
