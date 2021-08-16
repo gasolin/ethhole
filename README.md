@@ -64,7 +64,7 @@ Can explorer data with JSON viewer, ex http://jsonviewer.stack.hu/
 ## Contribution
 
 To add new contracts
-https://github.com/gasolin/ethhole/blob/main/src/data/bridge_contracts.js
+https://github.com/gasolin/ethhole/blob/main/src/helpers/bridge_contracts.js
 
 To do analytics
 https://github.com/gasolin/ethhole/blob/main/src/data/

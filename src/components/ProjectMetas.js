@@ -1,4 +1,4 @@
-import { ETH_BRIDGE_CONTRACTS, LIQUIDITY_PROJECTS } from '../data/bridge_contracts'
+import { ETH_BRIDGE_CONTRACTS, LIQUIDITY_PROJECTS } from '../helpers/bridge_contracts'
 
 const wildcards = Object.keys(LIQUIDITY_PROJECTS)
 export const ProjectMetas = ({proj}) => {

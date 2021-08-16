@@ -13,7 +13,7 @@ export const Footer = () => (
                   <a aria-current="page" href="https://github.com/gasolin/ethhole/tree/main/src/data" className="hover:text-gray-700 dark:hover:text-white" target="_blank" rel="noreferrer">
                       Raw Data
                   </a>
-                  <a aria-current="page" href="https://github.com/gasolin/ethhole/blob/main/src/data/bridge_contracts.js" className="hover:text-gray-700 dark:hover:text-white" target="_blank" rel="noreferrer">
+                  <a aria-current="page" href="https://github.com/gasolin/ethhole/blob/main/src/helpers/bridge_contracts.js" className="hover:text-gray-700 dark:hover:text-white" target="_blank" rel="noreferrer">
                       List Your Project
                   </a>
               </nav>

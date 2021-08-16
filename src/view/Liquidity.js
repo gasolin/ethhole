@@ -2,7 +2,7 @@ import {A, useTitle} from 'hookrouter'
 import human from 'millify'
 
 import { useChainData } from '../hooks/useChainData'
-import { ETH_BRIDGE_CONTRACTS } from '../data/bridge_contracts'
+import { ETH_BRIDGE_CONTRACTS } from '../helpers/bridge_contracts'
 import { Panel } from '../components/Panel'
 import { Nav } from '../components/Nav'
 import { Footer } from '../components/Footer'
