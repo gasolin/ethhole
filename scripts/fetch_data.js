@@ -78,6 +78,11 @@ async function main() {
         // multi-chain support
         const link = getBalanceURL(addr, addrInfo[addr].chainId)
         const res = await fetch(link)
+        // console.log('%O', res.status)
+        if (res.status !== 200) {
+          console.log(proj, addrInfo[addr].name, ' fetch fail')
+          continue
+        }
         const data = await res.json()
         // console.log('%O', data)
         // calc per bridge tvl
