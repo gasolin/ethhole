@@ -94,6 +94,16 @@ const PROJECT_BINANCE_SMART_CHAIN = {
   type: TYPE_PUBLICCHAIN
 }
 
+const PROJECT_BOBA_NETWORK = {
+  name: 'Boba Network',
+  explorer: "https://blockexplorer.boba.network/",
+  website: "https://boba.network",
+  github: "https://github.com/omgnetwork",
+  twitter: "https://twitter.com/bobanetwork",
+  color: "#ccff00",
+  type: TYPE_LAYER2
+}
+
 // https://github.com/connext/chaindata/blob/main/chains.json
 const PROJECT_CONNEXT = {
   name: 'connext',
@@ -436,6 +446,21 @@ export const ETH_BRIDGE_CONTRACTS = {
       },
     ],
     ...PROJECT_BINANCE_SMART_CHAIN,
+  },
+  [PROJECT_BOBA_NETWORK.name]: {
+    "bridges": [
+      {
+        "address": "0xdc1664458d2f0B6090bEa60A8793A4E66c2F1c0",
+        "chainId": MAINNET,
+        "name": "L1 Standard Bridge"
+      },
+      {
+        "address": "0x6b4eab8D55A4f701C3FE58bDb8b3e1f181eA7087",
+        "chainId": MAINNET,
+        "name": "L1 Liquidity Pool"
+      }
+    ],
+    ...PROJECT_BOBA_NETWORK
   },
   // [PROJECT_CONNEXT.name]: {
   //   // https://github.com/DefiLlama/DefiLlama-Adapters/blob/main/projects/connext/index.js
