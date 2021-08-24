@@ -1,8 +1,8 @@
-import { /*ERC20Interface,*/ useContractCall } from '@usedapp/core'
-import { Interface } from '@ethersproject/abi'
+import { ERC20Interface, useContractCall } from '@usedapp/core'
+// import { Interface } from '@ethersproject/abi'
 
-import ERC20 from './ERC20.json'
-const ERC20Interface = new Interface(ERC20.abi)
+// import ERC20 from './ERC20.json'
+// const ERC20Interface = new Interface(ERC20.abi)
 
 export function useTotalSupply(tokenAddress) {
   const [totalSupply] =
