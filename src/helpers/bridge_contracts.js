@@ -775,10 +775,11 @@ export const ETH_BRIDGE_CONTRACTS = {
         "chainId": MAINNET,
         "name": "Synthetix: L2 Deposit Escrow"
       },
+      // https://github.com/makerdao/optimism-dai-bridge
       {
         "address": "0x467194771dAe2967Aef3ECbEDD3Bf9a310C76C65",
         "chainId": MAINNET,
-        "name": "OPTIMISTIC L1 Escrow"
+        "name": "Optimism Dai Bridge"
       }
     ],
     ...PROJECT_OPTIMISM
