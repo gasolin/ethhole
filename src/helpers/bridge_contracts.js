@@ -450,7 +450,7 @@ export const ETH_BRIDGE_CONTRACTS = {
   [PROJECT_BOBA_NETWORK.name]: {
     "bridges": [
       {
-        "address": "0xdc1664458d2f0B6090bEa60A8793A4E66c2F1c0",
+        "address": "0xdc1664458d2f0B6090bEa60A8793A4E66c2F1c00",
         "chainId": MAINNET,
         "name": "L1 Standard Bridge"
       },
