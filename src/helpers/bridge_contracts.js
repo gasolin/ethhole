@@ -795,16 +795,22 @@ export const ETH_BRIDGE_CONTRACTS = {
   },
   [PROJECT_OPTIMISM.name]: {
     "bridges": [
+      // old snx bridge
       {
         "address": "0x5fd79d46eba7f351fe49bff9e87cdea6c821ef9f",
         "chainId": MAINNET,
-        "name": "Synthetix: L2 Deposit Escrow"
+        "name": "old Synthetix bridge"
       },
       // https://github.com/makerdao/optimism-dai-bridge
       {
         "address": "0x467194771dAe2967Aef3ECbEDD3Bf9a310C76C65",
         "chainId": MAINNET,
         "name": "Optimism Dai Bridge"
+      },
+      {
+        "address": "0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1",
+        "chainId": MAINNET,
+        "name": "Optimism Gateway"
       }
     ],
     ...PROJECT_OPTIMISM
