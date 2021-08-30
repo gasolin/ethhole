@@ -6,121 +6,31 @@ import {
   TYPE_SIDECHAIN,
   TYPE_PUBLICCHAIN,
   TYPE_LAYER2_LEND,
-  TYPE_LIQUIDITY,
   TYPE_STAKING,
   typeMap,
 } from './projectTypes.js'
 import { BSC, MAINNET, XDAI } from './chainInfo.js'
 
 import anyswap from './projects/anyswap.js'
+import connext from './projects/connext.js'
 
 import arbitrum from './projects/arbitrum.js'
 import aztec from './projects/aztec.js'
 import avalanche from './projects/avalanche.js'
+import bsc from './projects/bsc.js'
+import boba from './projects/boba.js'
+import dydx from './projects/dydx.js'
+import deversifi from './projects/deversifi.js'
+import eth2 from './projects/eth2.js'
+import fantom from './projects/fantom.js'
+import fusion from './projects/fusion.js'
+import gluon from './projects/gluon.js'
 
 export const NOT_LAYER2 = [TYPE_SIDECHAIN, TYPE_PUBLICCHAIN, TYPE_STAKING]
 
 export const getTypeMap = (type) => typeMap[type] || 'Unknown'
 
 // define in alphabetic order
-
-// https://www.binance.org/en/assets-proof
-const PROJECT_BINANCE_SMART_CHAIN = {
-  name: 'Binance Smart Chain',
-  explorer: "https://bscscan.com/",
-  website: "https://www.binance.org/en/smartChain",
-  github: "https://github.com/binance-chain/",
-  twitter: "https://twitter.com/binancechain",
-  color: "#f8d12f",
-  type: TYPE_PUBLICCHAIN
-}
-
-const PROJECT_BOBA_NETWORK = {
-  name: 'Boba Network',
-  explorer: "https://blockexplorer.boba.network/",
-  website: "https://boba.network",
-  github: "https://github.com/omgnetwork",
-  twitter: "https://twitter.com/bobanetwork",
-  color: "#ccff00",
-  type: TYPE_LAYER2
-}
-
-// https://github.com/connext/chaindata/blob/main/chains.json
-const PROJECT_CONNEXT = {
-  name: 'connext',
-  website: "https://www.connext.network/",
-  github: "https://github.com/connext",
-  twitter: "https://twitter.com/connextnetwork",
-  color: "#29c1fc",
-  type: TYPE_LIQUIDITY
-}
-
-const PROJECT_DYDX = {
-  name: 'dydx',
-  website: "https://dydx.exchange/",
-  github: "https://github.com/dydxprotocol",
-  twitter: "https://twitter.com/dydxprotocol",
-  color: "#6966FF",
-  type: TYPE_LAYER2_EXCHANGE
-}
-
-const PROJECT_DIVERSIFY = {
-  name: 'DeversiFi',
-  website: "https://www.deversifi.com/",
-  github: "https://github.com/deversifi",
-  twitter: "https://twitter.com/deversifi",
-  color: "#5500FC",
-  type: TYPE_LAYER2_EXCHANGE
-}
-
-const PROJECT_ETH2 = {
-  name: "ETH 2",
-  website: "https://ethereum.org/en/eth2/",
-  github: "https://github.com/ethereum/eth2.0-specs",
-  twitter: "https://twitter.com/ethdotorg",
-  color: "#747c84",
-  type: TYPE_STAKING
-}
-
-const PROJECT_FANTOM = {
-  name: 'Fantom',
-  explorer: "https://explorer.fantom.network/",
-  website: "https://fantom.foundation/",
-  github: "https://github.com/Fantom-Foundation",
-  twitter: "https://twitter.com/FantomFDN",
-  color: "#1969ff",
-  type: TYPE_PUBLICCHAIN
-}
-
-const PROJECT_FUEL = {
-  name: 'Fuel',
-  explorer: "https://mainnet.fuel.sh/network",
-  website: "https://fuel.sh/",
-  github: "https://github.com/fuellabs",
-  twitter: "https://twitter.com/fuellabs_",
-  color: "#04c399",
-  type: TYPE_LAYER2_PAYMENT
-}
-
-const PROJECT_FUSION = {
-  name: 'Fusion',
-  explorer: "https://fsnex.com/blocks",
-  website: "https://www.fusion.org/en",
-  github: "https://github.com/FUSIONFoundation",
-  twitter: "https://twitter.com/FUSIONProtocol",
-  color: "#358dcc",
-  type: TYPE_PUBLICCHAIN
-}
-
-const PROJECT_GLUON = {
-  name: "GLUON",
-  explorer: "https://gluon.leverj.io/",
-  website: "https://gluon.network/",
-  github: "https://github.com/leverj",
-  twitter: "https://twitter.com/GluonNetwork",
-  color: "#f7961c",
-  type: TYPE_SIDECHAIN
-}
 
 const PROJECT_HABITAT = {
   name: 'Habitat',
@@ -306,7 +216,7 @@ const PROJECT_ZKSYNC = {
 // not categorize as sidechain or layer 2, but provides liquidity
 export const LIQUIDITY_PROJECTS = {
   [anyswap.name]: anyswap,
-  [PROJECT_CONNEXT.name]: PROJECT_CONNEXT,
+  [connext.name]: connext,
 }
 
 // define in alphabetic order
@@ -314,188 +224,14 @@ export const ETH_BRIDGE_CONTRACTS = {
   [arbitrum.name]: arbitrum,
   [aztec.name]: aztec,
   [avalanche.name]: avalanche,
-  [PROJECT_BINANCE_SMART_CHAIN.name]: {
-    "bridges": [
-      {
-        "address": "0x47ac0Fb4F2D84898e4D9E7b4DaB3C24507a6D503",
-        "chainId": MAINNET,
-        "name": "Binance Smart Chain Bridge",
-        "website": "https://www.binance.org/en/bridge"
-      },
-      {
-        "address": "0x9BF4001d307dFd62B26A2F1307ee0C0307632d59",
-        "chainId": MAINNET,
-        "name": "Binance Smart Chain ETH Bridge",
-        "website": "https://www.binance.org/en/bridge"
-      },
-      {
-        "address": "0x13B432914A996b0A48695dF9B2d701edA45FF264",
-        "chainId": MAINNET,
-        "name": "Nerve Bridge",
-        "project": anyswap.name,
-        "website": "https://app.nerve.fi/bridge"
-      },
-      {
-        "address": "0x533e3c0e6b48010873B947bddC4721b1bDFF9648",
-        "chainId": MAINNET,
-        "name": "Anyswap BSC bridge",
-        "project": anyswap.name,
-        "website": "https://anyswap.exchange/"
-      },
-    ],
-    ...PROJECT_BINANCE_SMART_CHAIN,
-  },
-  [PROJECT_BOBA_NETWORK.name]: {
-    "bridges": [
-      {
-        "address": "0xdc1664458d2f0B6090bEa60A8793A4E66c2F1c00",
-        "chainId": MAINNET,
-        "name": "L1 Standard Bridge"
-      },
-      {
-        "address": "0x6b4eab8D55A4f701C3FE58bDb8b3e1f181eA7087",
-        "chainId": MAINNET,
-        "name": "L1 Liquidity Pool"
-      }
-    ],
-    ...PROJECT_BOBA_NETWORK
-  },
-  // [PROJECT_CONNEXT.name]: {
-  //   // https://github.com/DefiLlama/DefiLlama-Adapters/blob/main/projects/connext/index.js
-  //   "bridges": [
-  //     {
-  //       "address": "0xdfa6edAe2EC0cF1d4A60542422724A48195A5071",
-  //       "chainId": MAINNET,
-  //       "name": "hub"
-  //     },
-  //     {
-  //       "address": "0xe3cF69b86F274a14B87946bf641f11Ac837f4492",
-  //       "chainId": MAINNET,
-  //       "name": "router"
-  //     },
-  //     {
-  //       "address": "0xe6887c0cc3c37cb2ee34Bc58AB258f36825CA910",
-  //       "chainId": MAINNET,
-  //       "name": "router"
-  //     },
-  //     {
-  //       "address": "0xE540998865aFEB054021dc849Cc6191b8E09dC08",
-  //       "chainId": MAINNET,
-  //       "name": "ETH router"
-  //     },
-  //     // {
-  //     //   "address": "0xC6C68811E75EfD86d012587849F1A1D30427361d",
-  //     //   "chainId": MAINNET,
-  //     //   "name": "BSC router"
-  //     // },
-  //   ],
-  //   ...PROJECT_CONNEXT,
-  // },
-  [PROJECT_DYDX.name]: {
-    "bridges": [
-      {
-        "address": "0xD54f502e184B6B739d7D27a6410a67dc462D69c8",
-        "chainId": MAINNET,
-      }
-    ],
-    ...PROJECT_DYDX
-  },
-  [PROJECT_DIVERSIFY.name]: {
-    "bridges": [
-      {
-        "address": "0x5d22045DAcEAB03B158031eCB7D9d06Fad24609b",
-        "chainId": MAINNET,
-      }
-    ],
-    ...PROJECT_DIVERSIFY
-  },
-  [PROJECT_ETH2.name]: {
-    "bridges": [
-      {
-        "address": "0x00000000219ab540356cbb839cbe05303d7705fa",
-        "chainId": MAINNET,
-        "name": "ETH2 Staking",
-        "website": "https://launchpad.ethereum.org/en/"
-      },
-    ],
-    ...PROJECT_ETH2
-  },
-  [PROJECT_FANTOM.name]: {
-    "bridges": [
-      {
-        "address": "0x65e64963b755043CA4FFC88029FfB8305615EeDD",
-        "chainId": MAINNET,
-        "name": "Anyswap Fantom bridge",
-        "project": anyswap.name,
-        "website": "https://anyswap.exchange/"
-      },
-      { // also use for BSC tokens
-        "address": "0xC564EE9f21Ed8A2d8E7e76c085740d5e4c5FaFbE",
-        "chainId": MAINNET,
-        "name": "Anyswap Fantom bridge",
-        "project": anyswap.name,
-        "website": "https://anyswap.exchange/"
-      },
-      {
-        "address": "0xBe008e52c5682A49dd0260735a26Aa221f303456",
-        "chainId": MAINNET,
-        "name": "Anyswap Fantom bridge",
-        "project": anyswap.name,
-        "website": "https://anyswap.exchange/"
-      },
-      {
-        "address": "0x9A8C4bdCd75CFa1059A6E453Ac5cE9d3F5c82A35",
-        "chainId": MAINNET,
-        "name": "Fantom Bridge"
-      }
-    ],
-    ...PROJECT_FANTOM
-  },
-  // [PROJECT_FUEL.name]: {
-  //   "bridges": [
-  //     {
-  //       "address": "0x6880f6Fd960D1581C2730a451A22EED1081cfD72",
-  //       "chainId": MAINNET,
-  //     }
-  //   ],
-  //   ...PROJECT_FUEL
-  // },
-  [PROJECT_FUSION.name]: {
-    "bridges": [
-      {
-        "address": "0x46290B0c3A234E3d538050d8F34421797532A827",
-        "chainId": MAINNET,
-        "name": "Anyswap Fusion bridge",
-        "project": anyswap.name,
-        "website": "https://anyswap.exchange/"
-      },
-    ],
-    ...PROJECT_FUSION
-  },
-  [PROJECT_GLUON.name]: {
-    // https://live.leverj.io/futures/api/v1/all/config assets
-    "bridges": [
-      {
-        "address": "0x75ace7a086ea0fb1a79e43cc6331ad053d8c67cb",
-        "chainId": MAINNET,
-        "name": "GLUON bridge",
-        "project": PROJECT_GLUON.name,
-        "website": "https://gluon.network/"
-      },
-      // assets
-      {
-        "address": "0xBbff34E47E559ef680067a6B1c980639EEb64D24",
-        "chainId": MAINNET,
-        "name": "L2 bridge",
-      },
-      {
-        "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-        "chainId": MAINNET,
-        "name": "USDT bridge",
-      },
-    ],
-    ...PROJECT_GLUON
-  },
+  [bsc.name]: bsc,
+  [boba.name]: boba,
+  [dydx.name]: dydx,
+  [deversifi.name]: deversifi,
+  [eth2.name]: eth2,
+  [fantom.name]: fantom,
+  [fusion.name]: fusion,
+  [gluon.name]: gluon,
   [PROJECT_HABITAT.name]: {
     "bridges": [
       {
