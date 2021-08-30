@@ -1,0 +1,22 @@
+import { TYPE_LAYER2 } from '../projectTypes.js'
+import { MAINNET } from '../chainInfo.js'
+
+export const project = {
+  name: 'chaiin name', // required, name need to be able to use as key
+  explorer: "https://",
+  website: "https://",
+  github: "https://github.com/",
+  twitter: "https://twitter.com/",
+  color: "#fff", // required
+  type: TYPE_LAYER2, // required
+  bridges: [
+    {
+      "address": "",  // required
+      "chainId": MAINNET,  // required
+      "name": "Ethereum Bridge",
+      "website": "https://"
+    },
+  ]
+}
+
+export default project

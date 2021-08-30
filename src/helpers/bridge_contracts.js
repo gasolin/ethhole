@@ -1,87 +1,28 @@
-const TYPE_LAYER2 = 'layer2'
-const TYPE_LAYER2_PAYMENT = 'l2payment'
-const TYPE_LAYER2_EXCHANGE = 'l2ex'
-const TYPE_LAYER2_DAO = 'l2dao'
-export const TYPE_SIDECHAIN = 'sidechain'
-export const TYPE_PUBLICCHAIN = 'publicchain'
-const TYPE_LAYER2_DERIVATIVES = 'l2derivatives'
-const TYPE_LAYER2_LEND = 'l2lend'
-const TYPE_LIQUIDITY = 'liquidity'
-const TYPE_CROSSCHAIN_DEX = 'crossdex'
-const TYPE_STAKING = 'staking'
-//
-// const TYPE_OPTIMISTIC_ROLLUP = 'optimisticrollup'
-// const TYPE_ZK_ROLLUP = 'zkrollup'
-// const TYPE_STATE_CHANNEL = 'statechannel'
+import {
+  TYPE_LAYER2,
+  TYPE_LAYER2_PAYMENT,
+  TYPE_LAYER2_EXCHANGE,
+  TYPE_LAYER2_DAO,
+  TYPE_SIDECHAIN,
+  TYPE_PUBLICCHAIN,
+  TYPE_LAYER2_LEND,
+  TYPE_LIQUIDITY,
+  TYPE_STAKING,
+  typeMap,
+} from './projectTypes.js'
+import { BSC, MAINNET, XDAI } from './chainInfo.js'
 
-// chainId
-const MAINNET = 1 // ethereum
-// const MATIC = 137
-const BSC = 57
-const XDAI = 100
+import anyswap from './projects/anyswap.js'
+
+import arbitrum from './projects/arbitrum.js'
+import aztec from './projects/aztec.js'
+import avalanche from './projects/avalanche.js'
 
 export const NOT_LAYER2 = [TYPE_SIDECHAIN, TYPE_PUBLICCHAIN, TYPE_STAKING]
 
-export const typeMap = {
-  [TYPE_LAYER2]: 'General',
-  [TYPE_LAYER2_PAYMENT]: 'Payment',
-  [TYPE_LAYER2_EXCHANGE]: 'DEX',
-  [TYPE_LAYER2_DAO]: 'DAO',
-  [TYPE_SIDECHAIN]: 'Side Chain',
-  [TYPE_PUBLICCHAIN]: 'Public Chain',
-  [TYPE_LAYER2_DERIVATIVES]: 'Derivatives',
-  [TYPE_LAYER2_LEND]: 'Lend',
-  [TYPE_LIQUIDITY]: 'Liquidity',
-  [TYPE_CROSSCHAIN_DEX]: 'Crosschain DEX',
-  [TYPE_STAKING]: 'Staking'
-  // [TYPE_OPTIMISTIC_ROLLUP]: "Optimistic",
-  // [TYPE_ZK_ROLLUP]: "Zk",
-  // [TYPE_STATE_CHANNEL]: "State Channel",
-}
-
 export const getTypeMap = (type) => typeMap[type] || 'Unknown'
 
-// https://hackmd.io/@kSCbGhceTL2d5BmUdh7pwg/ryCPqIk7_
-// https://github.com/anyswap/anyswap-frontend/tree/vi-new/src/contexts/Tokens/tokens
-const PROJECT_ANYSWAP = {
-  name: 'AnySwap',
-  website: 'https://anyswap.exchange/',
-  twitter: 'https://twitter.com/AnyswapNetwork',
-  github: 'https://github.com/anyswap',
-  color: '#2f80ed',
-  type: TYPE_CROSSCHAIN_DEX
-}
-
-const PROJECT_ARBITRUM = {
-  name: 'Arbitrum One',
-  explorer: "https://offchainlabs.com/",
-  website: "https://offchainlabs.com/",
-  github: "https://github.com/OffchainLabs/arbitrum",
-  twitter: "https://twitter.com/OffchainLabs",
-  color: "#9e5ddb",
-  type: TYPE_LAYER2
-}
-
 // define in alphabetic order
-const PROJECT_AZTEC = {
-  name: 'Aztec', // required, name need to be able to use as key
-  explorer: "https://explorer.aztec.network/",
-  website: "https://aztec.network/",
-  github: "https://github.com/AztecProtocol",
-  twitter: "https://twitter.com/aztecprotocol",
-  color: "#944af2", // required
-  type: TYPE_LAYER2_PAYMENT // required
-}
-
-const PROJECT_AVALANCHE = {
-  name: 'Avalanche',
-  explorer: "https://cchain.explorer.avax.network/",
-  website: "https://www.avax.network/",
-  github: "https://github.com/ava-labs",
-  twitter: "https://twitter.com/avalancheavax",
-  color: "#e84142",
-  type: TYPE_PUBLICCHAIN
-}
 
 // https://www.binance.org/en/assets-proof
 const PROJECT_BINANCE_SMART_CHAIN = {
@@ -283,7 +224,7 @@ const PROJECT_OPTIMISM = {
   github: "https://github.com/ethereum-optimism",
   twitter: "https://twitter.com/optimismPBC",
   color: "#f01a37",
-  type: TYPE_LAYER2_DERIVATIVES
+  type: TYPE_LAYER2
 }
 
 const PROJECT_POLYGON = {
@@ -364,58 +305,15 @@ const PROJECT_ZKSYNC = {
 
 // not categorize as sidechain or layer 2, but provides liquidity
 export const LIQUIDITY_PROJECTS = {
-  [PROJECT_ANYSWAP.name]: PROJECT_ANYSWAP,
+  [anyswap.name]: anyswap,
   [PROJECT_CONNEXT.name]: PROJECT_CONNEXT,
 }
 
 // define in alphabetic order
 export const ETH_BRIDGE_CONTRACTS = {
-  [PROJECT_ARBITRUM.name]: {
-    "bridges": [
-      {
-        "address": "0x011B6E24FfB0B5f5fCc564cf4183C5BBBc96D515",
-        "chainId": MAINNET,
-        "name": "Ethereum Bridge",
-        "website": "https://offchainlabs.com/"
-      },
-      // {
-      //   "address": "0x86E525A3565235b2bb934df43E01c8B092c03756",
-      //   "chainId": MAINNET,
-      //   "name": "ERC20 Bridge",
-      //   "website": "https://offchainlabs.com/"
-      // }
-    ],
-    ...PROJECT_ARBITRUM,
-  },
-  [PROJECT_AZTEC.name]: {
-    "bridges": [
-      {
-        "address": "0x737901bea3eeb88459df9ef1BE8fF3Ae1B42A2ba",
-        "chainId": MAINNET,
-        "name": "zk.money",
-        "website": "https://zk.money/"
-      }
-    ],
-    ...PROJECT_AZTEC,
-  },
-  [PROJECT_AVALANCHE.name]: {
-    "bridges": [
-      {
-        "address": "0xdAC7Bb7Ce4fF441A235F08408e632FA1D799A147",
-        "chainId": MAINNET,
-        "name": "Avalanche-Ethereum Bridge",
-        "website": "https://aeb.xyz/"
-      },
-      {
-        "address": "0x820A9eb227BF770A9dd28829380d53B76eAf1209",
-        "chainId": MAINNET,
-        "name": "Anyswap Avalanche bridge",
-        "project": PROJECT_ANYSWAP.name,
-        "website": "https://anyswap.exchange/"
-      }
-    ],
-    ...PROJECT_AVALANCHE,
-  },
+  [arbitrum.name]: arbitrum,
+  [aztec.name]: aztec,
+  [avalanche.name]: avalanche,
   [PROJECT_BINANCE_SMART_CHAIN.name]: {
     "bridges": [
       {
@@ -434,14 +332,14 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x13B432914A996b0A48695dF9B2d701edA45FF264",
         "chainId": MAINNET,
         "name": "Nerve Bridge",
-        "project": PROJECT_ANYSWAP.name,
+        "project": anyswap.name,
         "website": "https://app.nerve.fi/bridge"
       },
       {
         "address": "0x533e3c0e6b48010873B947bddC4721b1bDFF9648",
         "chainId": MAINNET,
         "name": "Anyswap BSC bridge",
-        "project": PROJECT_ANYSWAP.name,
+        "project": anyswap.name,
         "website": "https://anyswap.exchange/"
       },
     ],
@@ -528,21 +426,21 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x65e64963b755043CA4FFC88029FfB8305615EeDD",
         "chainId": MAINNET,
         "name": "Anyswap Fantom bridge",
-        "project": PROJECT_ANYSWAP.name,
+        "project": anyswap.name,
         "website": "https://anyswap.exchange/"
       },
       { // also use for BSC tokens
         "address": "0xC564EE9f21Ed8A2d8E7e76c085740d5e4c5FaFbE",
         "chainId": MAINNET,
         "name": "Anyswap Fantom bridge",
-        "project": PROJECT_ANYSWAP.name,
+        "project": anyswap.name,
         "website": "https://anyswap.exchange/"
       },
       {
         "address": "0xBe008e52c5682A49dd0260735a26Aa221f303456",
         "chainId": MAINNET,
         "name": "Anyswap Fantom bridge",
-        "project": PROJECT_ANYSWAP.name,
+        "project": anyswap.name,
         "website": "https://anyswap.exchange/"
       },
       {
@@ -568,7 +466,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x46290B0c3A234E3d538050d8F34421797532A827",
         "chainId": MAINNET,
         "name": "Anyswap Fusion bridge",
-        "project": PROJECT_ANYSWAP.name,
+        "project": anyswap.name,
         "website": "https://anyswap.exchange/"
       },
     ],
@@ -658,7 +556,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0xD779967F8B511C5edf39115341B310022900eFED",
         "chainId": MAINNET,
         "name": "connext HECO bridge",
-        "project": PROJECT_ANYSWAP.name
+        "project": anyswap.name
       },
     ],
     ...PROJECT_HUOBI_ECO_CHAIN
@@ -849,7 +747,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x668b9734FfE9eE8a01d4Ade3362De71E8989EA87",
         "chainId": MAINNET,
         "name": "Anyswap Polygon bridge",
-        "project": PROJECT_ANYSWAP.name,
+        "project": anyswap.name,
       },
     ],
     ...PROJECT_POLYGON
@@ -925,7 +823,7 @@ export const ETH_BRIDGE_CONTRACTS = {
         "address": "0x2F10c5eE93ac666dA72195abA8a49FD6D27fA02F",
         "chainId": MAINNET,
         "name": "Anyswap XDAI bridge",
-        "project": PROJECT_ANYSWAP.name
+        "project": anyswap.name
       },
     ],
     ...PROJECT_XDAI
