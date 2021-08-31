@@ -3,7 +3,7 @@ import { MAINNET } from '../chainInfo.js'
 
 export const project = {
   name: 'Arbitrum One',
-  explorer: "https://offchainlabs.com/",
+  explorer: "https://arbiscan.io/",
   website: "https://offchainlabs.com/",
   github: "https://github.com/OffchainLabs/arbitrum",
   twitter: "https://twitter.com/OffchainLabs",
