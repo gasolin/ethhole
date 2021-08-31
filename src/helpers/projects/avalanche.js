@@ -12,10 +12,10 @@ export const project = {
   type: TYPE_PUBLICCHAIN,
   bridges: [
     {
-      "address": "0xdAC7Bb7Ce4fF441A235F08408e632FA1D799A147",
+      "address": "0xE78388b4CE79068e89Bf8aA7f218eF6b9AB0e9d0",
       "chainId": MAINNET,
-      "name": "Avalanche-Ethereum Bridge",
-      "website": "https://aeb.xyz/"
+      "name": "Avalanche Bridge",
+      "website": "https://bridge.avax.network/"
     },
     {
       "address": "0x820A9eb227BF770A9dd28829380d53B76eAf1209",
