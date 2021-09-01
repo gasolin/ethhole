@@ -14,14 +14,20 @@ export const project = {
       "address": "0x011B6E24FfB0B5f5fCc564cf4183C5BBBc96D515",
       "chainId": MAINNET,
       "name": "Ethereum Bridge",
-      "website": "https://offchainlabs.com/"
+      "website": "https://bridge.arbitrum.io/"
     },
-    // {
-    //   "address": "0x86E525A3565235b2bb934df43E01c8B092c03756",
-    //   "chainId": MAINNET,
-    //   "name": "ERC20 Bridge",
-    //   "website": "https://offchainlabs.com/"
-    // }
+    {
+      "address": "0xa3A7B6F88361F48403514059F1F16C8E78d60EeC",
+      "chainId": MAINNET,
+      "name": "ERC20 Bridge",
+      "website": "https://bridge.arbitrum.io/"
+    },
+    {
+      "address": "0xcEe284F754E854890e311e3280b767F80797180d",
+      "chainId": MAINNET,
+      "name": "Custom Gateway",
+      "website": "https://bridge.arbitrum.io"
+    }
   ],
 }
 
