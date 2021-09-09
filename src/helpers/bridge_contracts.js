@@ -8,6 +8,7 @@ import { BSC, XDAI } from './chainInfo.js'
 
 import anyswap from './projects/anyswap.js'
 import connext from './projects/connext.js'
+import cbridge from './projects/cbridge.js'
 
 import arbitrum from './projects/arbitrum.js'
 import aztec from './projects/aztec.js'
@@ -50,6 +51,7 @@ export const getTypeMap = (type) => typeMap[type] || 'Unknown'
 export const LIQUIDITY_PROJECTS = {
   [anyswap.name]: anyswap,
   [connext.name]: connext,
+  [cbridge.name]: cbridge,
 }
 
 // define in alphabetic order
@@ -59,6 +61,7 @@ export const ETH_BRIDGE_CONTRACTS = {
   [avalanche.name]: avalanche,
   [bsc.name]: bsc,
   [boba.name]: boba,
+  [cbridge.name]: cbridge,
   [dydx.name]: dydx,
   [deversifi.name]: deversifi,
   [eth2.name]: eth2,
