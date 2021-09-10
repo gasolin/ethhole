@@ -16,7 +16,7 @@ export const project = {
       "chainId": MAINNET,
       "name": "Anyswap Fusion bridge",
       "project": anyswap.name,
-      "website": "https://anyswap.exchange/"
+      "website": anyswap.website
     },
   ],
 }

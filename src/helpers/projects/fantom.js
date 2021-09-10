@@ -16,21 +16,23 @@ export const project = {
       "chainId": MAINNET,
       "name": "Anyswap Fantom bridge",
       "project": anyswap.name,
-      "website": "https://anyswap.exchange/"
+      "website": anyswap.website
     },
+    // fUSDT
     { // also use for BSC tokens
       "address": "0xC564EE9f21Ed8A2d8E7e76c085740d5e4c5FaFbE",
       "chainId": MAINNET,
       "name": "Anyswap Fantom bridge",
       "project": anyswap.name,
-      "website": "https://anyswap.exchange/"
+      "website": anyswap.website
     },
+    // USDT
     {
       "address": "0xBe008e52c5682A49dd0260735a26Aa221f303456",
       "chainId": MAINNET,
       "name": "Anyswap Fantom bridge",
       "project": anyswap.name,
-      "website": "https://anyswap.exchange/"
+      "website": anyswap.website
     },
     {
       "address": "0x9A8C4bdCd75CFa1059A6E453Ac5cE9d3F5c82A35",

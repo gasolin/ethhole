@@ -44,6 +44,7 @@ export const project = {
       "chainId": MAINNET,
       "name": "Anyswap Polygon bridge",
       "project": anyswap.name,
+      "website": anyswap.website
     },
   ],
 }

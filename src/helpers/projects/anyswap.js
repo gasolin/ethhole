@@ -1,6 +1,5 @@
 import { TYPE_CROSSCHAIN_DEX } from '../projectTypes.js'
 
-// https://hackmd.io/@kSCbGhceTL2d5BmUdh7pwg/ryCPqIk7_
 // https://github.com/anyswap/anyswap-frontend/tree/vi-new/src/contexts/Tokens/tokens
 export const project = {
   name: 'AnySwap',
