@@ -10,6 +10,7 @@ import { ProjectMetas } from '../components/ProjectMetas'
 import { TokensTable } from '../components/TokensTable'
 import { TokenTableRow } from '../components/TokenTableRow'
 import { TokensTree } from '../components/TokensTree'
+import { Banner } from '../components/Banner'
 // import { FILLTER } from '../helpers/constants'
 
 export const Liquidity = ({proj}) => {
@@ -100,6 +101,7 @@ export const Liquidity = ({proj}) => {
           </TokensTable>
         </Panel>
       ))}
+      <Banner/>
       <Footer/>
     </>
   )

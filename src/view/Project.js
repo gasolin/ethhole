@@ -11,6 +11,7 @@ import { TotalValueTracked } from '../components/TotalValueTracked'
 import { TokensTable } from '../components/TokensTable'
 import { TokenTableRow } from '../components/TokenTableRow'
 import { TokensTree } from '../components/TokensTree'
+import { Banner } from '../components/Banner'
 import { FILLTER } from '../helpers/constants'
 
 export const Project = ({proj}) => {
@@ -80,6 +81,7 @@ export const Project = ({proj}) => {
           </Panel>
         )
       })}
+      <Banner/>
       <Footer/>
     </>
   )

@@ -7,6 +7,7 @@ import { Nav } from '../components/Nav'
 import { Footer } from '../components/Footer'
 import { SupplyTable } from '../components/SupplyTable'
 import { TotalSupplyRow } from '../components/TotalSupplyRow'
+import { Banner } from '../components/Banner'
 
 // https://www.gemini.com/cryptopedia/wrapped-bitcoin-vs-bitcoin-wbtc-tbtc-wnxm-hbtc-crypto
 const supplyTokens = [
@@ -92,6 +93,7 @@ export const Flow = () => {
           ))}
         </SupplyTable>
       </Panel>
+      <Banner/>
       <Footer/>
     </>
   )

@@ -8,7 +8,7 @@ export const project = {
   website: "https://moonbeam.network/networks/moonriver/",
   github: "https://github.com/PureStake/moonbeam",
   twitter: "https://twitter.com/moonbeamnetwork",
-  description: "Solidity Smart Contracts on Kusama",
+  // description: "Solidity Smart Contracts on Kusama",
   color: "#e1147b", // required
   type: TYPE_PUBLICCHAIN, // required
   bridges: [
