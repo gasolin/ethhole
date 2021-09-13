@@ -41,6 +41,7 @@ import sorare from './projects/sorare.js'
 import xdai from './projects/xdai.js'
 import zkswap from './projects/zkswap.js'
 import zksync from './projects/zksync.js'
+import iotex from './projects/iotex.js'
 
 export const NOT_LAYER2 = [TYPE_SIDECHAIN, TYPE_PUBLICCHAIN, TYPE_STAKING]
 
@@ -89,6 +90,7 @@ export const ETH_BRIDGE_CONTRACTS = {
   [xdai.name]: xdai,
   [zkswap.name]: zkswap,
   [zksync.name]: zksync,
+  [iotex.name]: iotex,
 }
 
 // WIP
