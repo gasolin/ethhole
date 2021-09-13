@@ -25,6 +25,7 @@ import habitat from './projects/habitat.js'
 import harmony from './projects/harmony.js'
 import hermez from './projects/hermez.js'
 import heco from './projects/heco.js'
+import hop from './projects/hop.js'
 import immutablex from './projects/immutablex.js'
 import layer2finance from './projects/layer2finance.js'
 import loopring from './projects/loopring.js'
@@ -54,6 +55,7 @@ export const LIQUIDITY_PROJECTS = {
   [anyswap.name]: anyswap,
   [connext.name]: connext,
   [cbridge.name]: cbridge,
+  [hop.name]: hop,
 }
 
 // define in alphabetic order

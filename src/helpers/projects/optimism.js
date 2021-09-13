@@ -1,5 +1,6 @@
 import { TYPE_LAYER2 } from '../projectTypes.js'
 import { MAINNET } from '../chainInfo.js'
+import hop from './hop.js'
 
 export const project = {
   name: 'Optimism',
@@ -26,6 +27,13 @@ export const project = {
       "address": "0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1",
       "chainId": MAINNET,
       "name": "Optimism Gateway"
+    },
+    {
+      "address": "0x3E4a3a4796d16c0Cd582C382691998f7c06420B6",
+      "chainId": MAINNET,
+      "name": "Hop Optimism bridge",
+      "project": hop.name,
+      "website": hop.website
     }
   ],
 }
