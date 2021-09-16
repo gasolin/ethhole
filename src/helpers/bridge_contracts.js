@@ -66,6 +66,7 @@ export const ETH_BRIDGE_CONTRACTS = {
   [bsc.name]: bsc,
   [boba.name]: boba,
   [cbridge.name]: cbridge,
+  [connext.name]: connext,
   [dydx.name]: dydx,
   [deversifi.name]: deversifi,
   [eth2.name]: eth2,
