@@ -16,7 +16,7 @@ export const project = {
       "name": "L1 Standard Bridge"
     },
     {
-      "address": "0x6b4eab8D55A4f701C3FE58bDb8b3e1f181eA7087",
+      "address": "0x1A26ef6575B7BBB864d984D9255C069F6c361a14",
       "chainId": MAINNET,
       "name": "L1 Liquidity Pool"
     }
