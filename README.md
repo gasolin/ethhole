@@ -83,7 +83,7 @@ Contracts
 - Bridges balance fetched through [Covalent API](https://www.covalenthq.com/docs/api/#overview)
 - Protocol and Staked balance fetched through [Zapper API](https://docs.zapper.fi/zapper-api/api-guides)
 - Collected plenty of Layer 2 contract addresses from [l2beat](https://github.com/l2beat/l2beat/tree/master/config/src/projects)
-- Also referred [DefiLlama](https://github.com/DefiLlama/DefiLlama-Adapters/tree/main/projects) and [DefiPulse](https://github.com/ConcourseOpen/DeFi-Pulse-Adapters/tree/master/projects)
+- Also referred [DefiLlama](https://github.com/DefiLlama/DefiLlama-Adapters/tree/main/projects), [DefiPulse](https://github.com/ConcourseOpen/DeFi-Pulse-Adapters/tree/master/projects), and [Blockscan](https://blockscan.com/bridges/)
 
 Design
 

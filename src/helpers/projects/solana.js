@@ -12,6 +12,12 @@ export const project = {
   bridges: [
     {
       "address": "0xeae57ce9cc1984F202e15e038B964bb8bdF7229a",
+      "name": "Sollet Bridge",
+      "chainId": MAINNET,
+      "website": "https://www.sollet.io/",
+    },
+    {
+      "address": "0xf92cD566Ea4864356C5491c177A430C222d7e678",
       "name": "Wormhole Bridge",
       "chainId": MAINNET,
     }

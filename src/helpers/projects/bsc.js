@@ -38,6 +38,12 @@ export const project = {
       "project": anyswap.name,
       "website": anyswap.website,
     },
+    {
+      "address": "0xf301d525da003e874DF574BCdd309a6BF0535bb6",
+      "chainId": MAINNET,
+      "name": "Fuse tokens bridge",
+      "website": "https://fuseswap.com/#/bridge",
+    }
   ]
 }
 
