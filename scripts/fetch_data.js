@@ -40,7 +40,12 @@ const addrProtocol = {}
 const addrStaked = {}
 Array.from(new Set(projects
   .map(project => ETH_BRIDGE_CONTRACTS[project]?.bridges.map(entry => {
-    addrInfo[entry.address] = {project: project, name: entry.name || '', chainId: entry.chainId}
+    addrInfo[entry.address] = {
+      project: project,
+      name: entry.name || '',
+      chainId: entry.chainId,
+      exclude: entry.exclude || [],
+    }
     if (entry.protocol) {
       addrProtocol[entry.address] = entry
     }
@@ -71,7 +76,8 @@ async function main() {
     const addrs = Object.keys(addrInfo)
     for (const addr of addrs) {
       const proj = addrInfo[addr].project
-      console.log('process ', proj, addrInfo[addr].name)
+      const name = addrInfo[addr].name
+      console.log('process ', proj, name)
       let tvl = 0
       let dataset = {}
       if (!addrStaked[addr]) {
@@ -80,16 +86,30 @@ async function main() {
         const res = await fetch(link)
         // console.log('%O', res.status)
         if (res.status !== 200) {
-          console.log(proj, addrInfo[addr].name, ' fetch fail')
+          console.log(proj, name, ' fetch fail')
           continue
         }
         const data = await res.json()
+        const excludedTokens = addrInfo[addr].exclude
         // console.log('%O', data)
         // calc per bridge tvl
         dataset.items = (data.data && data.data.items
-          .filter(token => token.quote > QUOTE_THRESHOLD)
+          // filter out invalid tokens that
+          // empty or long symbol name
+          // in exclude list
+          // quote too small
+          .filter(token =>
+            token.contract_ticker_symbol &&
+            token.contract_ticker_symbol.length < 20 &&
+            !excludedTokens.includes(token.contract_ticker_symbol) &&
+            token.quote > QUOTE_THRESHOLD
+          )
           .map(token => {
             // console.log('tvl of ', bridge.address)
+            // if (name === 'PoS ERC20 bridge') {
+            //   console.log(token.contract_ticker_symbol, token.quote)
+            // }
+            // console.log(JSON.stringify(token))
             tvl += token.quote
             return token
           })) || []
@@ -132,7 +152,7 @@ async function main() {
         // console.log('>>> %O', stakeData)
         const procData = {
           address: addr,
-          quote_currency:"ETH",
+          quote_currency: "ETH",
           chain_id: 1,
           items: stakeData.tokens.map(token => {
             const quote = token.balanceUSD / price

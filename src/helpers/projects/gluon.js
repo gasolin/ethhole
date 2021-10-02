@@ -16,7 +16,8 @@ export const project = {
       "chainId": MAINNET,
       "name": "GLUON bridge",
       "project": 'GLUON',
-      "website": "https://gluon.network/"
+      "website": "https://gluon.network/",
+      "exclude": ["uxtw.com$0.02回购"]
     },
     // assets
     {
@@ -28,6 +29,7 @@ export const project = {
       "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
       "chainId": MAINNET,
       "name": "USDT bridge",
+      "exclude": ['SPA'],
     },
   ]
 }

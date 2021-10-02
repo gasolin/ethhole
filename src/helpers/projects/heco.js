@@ -16,6 +16,7 @@ export const project = {
       "address": "0xa929022c9107643515f5c777ce9a910f0d1e490c",
       "chainId": MAINNET,
       "name": "Huobi ECO Chain bridge",
+      "exclude": ['PLS', '🧙‍♂️WIZ🧙‍♂️']
     },
     {
       "address": "0xD779967F8B511C5edf39115341B310022900eFED",

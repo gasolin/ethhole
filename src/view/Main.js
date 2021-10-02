@@ -14,17 +14,25 @@ import { ETH_BRIDGE_CONTRACTS, NOT_LAYER2 } from '../helpers/bridge_contracts'
 
 const FILTEROUT = ['ethereum', 'fuse']
 // console.log('%O', chainData)
+
+const getProjects = (chainData, isLayer2) => {
+  return Object.keys(chainData)
+  .filter(proj =>
+    ETH_BRIDGE_CONTRACTS[proj] &&
+    !FILTEROUT.includes(proj) &&
+    // layer 2 strict mode
+    (!isLayer2 || !NOT_LAYER2.includes(ETH_BRIDGE_CONTRACTS[proj].type))
+  )
+  .sort((a, b) => chainData[b].tvl - chainData[a].tvl)
+  // console.log('projects %O', projects)
+}
+
 export const Main = ({layer2}) => {
   const [chainData, timestamp] = useChainData()
   const [showEth, setShowEth] = useState(false)
 
   const toggleValue = () => setShowEth(!showEth)
-  const projects = Object.keys(chainData)
-    .filter(proj => ETH_BRIDGE_CONTRACTS[proj] && !FILTEROUT.includes(proj))
-    // layer 2 strict mode
-    .filter(proj => !layer2 || !NOT_LAYER2.includes(ETH_BRIDGE_CONTRACTS[proj].type))
-    .sort((a, b) => chainData[b].tvl - chainData[a].tvl)
-    // console.log('projects %O', projects)
+  const projects = getProjects(chainData, layer2)
 
   const price = showEth ? 1 : chainData?.ethereum?.usd || 1
   const symbol = showEth ? 'ETH' : 'USD'
