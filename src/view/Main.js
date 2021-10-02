@@ -20,7 +20,7 @@ export const Main = ({layer2}) => {
 
   const toggleValue = () => setShowEth(!showEth)
   const projects = Object.keys(chainData)
-    .filter(proj => !FILTEROUT.includes(proj))
+    .filter(proj => ETH_BRIDGE_CONTRACTS[proj] && !FILTEROUT.includes(proj))
     // layer 2 strict mode
     .filter(proj => !layer2 || !NOT_LAYER2.includes(ETH_BRIDGE_CONTRACTS[proj].type))
     .sort((a, b) => chainData[b].tvl - chainData[a].tvl)
