@@ -2,7 +2,7 @@ import { TYPE_LAYER2_PAYMENT } from '../projectTypes.js'
 import { MAINNET } from '../chainInfo.js'
 
 export const project = {
-  name: 'Hermez',
+  name: 'Polygon Hermez',
   explorer: "https://explorer.hermez.io/",
   website: "https://hermez.io/",
   github: "https://github.com/hermeznetwork/",
