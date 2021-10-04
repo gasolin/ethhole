@@ -45,6 +45,7 @@ Array.from(new Set(projects
       name: entry.name || '',
       chainId: entry.chainId,
       exclude: entry.exclude || [],
+      excludeAddr: entry.excludeAddr || [],
     }
     if (entry.protocol) {
       addrProtocol[entry.address] = entry
@@ -91,17 +92,19 @@ async function main() {
         }
         const data = await res.json()
         const excludedTokens = addrInfo[addr].exclude
+        const excludeAddr = addrInfo[addr].excludeAddr
         // console.log('%O', data)
         // calc per bridge tvl
         dataset.items = (data.data && data.data.items
           // filter out invalid tokens that
           // empty or long symbol name
-          // in exclude list
+          // in exclude symbol/address list
           // quote too small
           .filter(token =>
             token.contract_ticker_symbol &&
             token.contract_ticker_symbol.length < 20 &&
             !excludedTokens.includes(token.contract_ticker_symbol) &&
+            !excludeAddr.includes(token.contract_address) &&
             token.quote > QUOTE_THRESHOLD
           )
           .map(token => {

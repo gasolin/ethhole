@@ -37,14 +37,22 @@ export const project = {
       "name": "Anyswap BSC bridge",
       "project": anyswap.name,
       "website": anyswap.website,
-      "exclude": ["FORM"],
+      "exclude": ["STAR", "FORM"],
+      "excludeAddr": [
+        "0xd2dda223b2617cb616c1580db421e4cfae6a8a85", //BONDLY
+        "0x676cdc3312d0350749bed17cd3eb3b90e5917f42", //BONDLY
+        "0xb5a4ac5b04e777230ba3381195eff6a60c3934f2", // SURE
+        "0xa283aa7cfbb27ef0cfbcb2493dd9f4330e0fd304", //MM
+      ]
     },
     {
       "address": "0xf301d525da003e874DF574BCdd309a6BF0535bb6",
       "chainId": MAINNET,
       "name": "Fuse tokens bridge",
       "website": "https://fuseswap.com/#/bridge",
-      "exclude": ["DEXT"],
+      "excludeAddr": [
+        "0x26ce25148832c04f3d7f26f32478a9fe55197166", //DEXT
+      ]
     }
   ]
 }
