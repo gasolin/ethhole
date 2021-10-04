@@ -23,7 +23,7 @@ export const project = {
       "chainId": MAINNET,
       "name": "PoS ERC20 bridge",
       "protocol": ["dhedge", "synthetix", "mushroom", "aave"],
-      "exclude": ["KNG", "XTM", "MM", "PAR"],
+      "exclude": ["KNG", "XTM", "MM", "PAR", "BONDLY"],
     },
     {
       "address": "0x401F6c983eA34274ec46f84D70b31C151321188b",
