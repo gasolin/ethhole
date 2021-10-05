@@ -62,7 +62,7 @@ export const BalanceFlow = memo(({ data, price, projects, layer2, width = 400 })
     source: ethIdx,
     target: idx + outShift,
     value: data[entry].tvl,
-    color: idx < 3 ? ETH_BRIDGE_CONTRACTS[entry].color : LINK_COLOR,
+    color: idx < 4 ? ETH_BRIDGE_CONTRACTS[entry].color : LINK_COLOR,
   }))
   // const restShare = entries.reduce(
   //   (a, c) => a - c.share,
