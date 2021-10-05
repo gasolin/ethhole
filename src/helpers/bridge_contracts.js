@@ -33,7 +33,9 @@ import moonriver from './projects/moonriver.js'
 import near from './projects/near.js'
 import okex from './projects/okex.js'
 import omg from './projects/omg.js'
+import optics from './projects/optics.js'
 import optimism from './projects/optimism.js'
+import orbit from './projects/orbit.js'
 import polygon from './projects/polygon.js'
 import polynetwork from './projects/polynetwork.js'
 import rsk from './projects/rsk.js'
@@ -56,6 +58,8 @@ export const LIQUIDITY_PROJECTS = {
   [connext.name]: connext,
   [cbridge.name]: cbridge,
   [hop.name]: hop,
+  [optics.name]: optics,
+  [orbit.name]: orbit,
 }
 
 // define in alphabetic order
@@ -77,6 +81,7 @@ export const ETH_BRIDGE_CONTRACTS = {
   [harmony.name]: harmony,
   [hermez.name]: hermez,
   [heco.name]: heco,
+  [hop.name]: hop,
   [immutablex.name]: immutablex,
   [layer2finance.name]: layer2finance,
   [loopring.name]: loopring,
@@ -84,7 +89,9 @@ export const ETH_BRIDGE_CONTRACTS = {
   [near.name]: near,
   [okex.name]: okex,
   [omg.name]: omg,
+  [optics.name]: optics,
   [optimism.name]: optimism,
+  [orbit.name]: orbit,
   [polygon.name]: polygon,
   [polynetwork.name]: polynetwork,
   [rsk.name]: rsk,

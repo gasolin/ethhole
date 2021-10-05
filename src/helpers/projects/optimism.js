@@ -15,7 +15,7 @@ export const project = {
     {
       "address": "0x5fd79d46eba7f351fe49bff9e87cdea6c821ef9f",
       "chainId": MAINNET,
-      "name": "old Synthetix bridge"
+      "name": "Optimism Synthetix escrow"
     },
     // https://github.com/makerdao/optimism-dai-bridge
     {
