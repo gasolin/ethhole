@@ -15,6 +15,9 @@ export const project = {
       "name": "Sollet Bridge",
       "chainId": MAINNET,
       "website": "https://www.sollet.io/",
+      "excludeAddr": [
+        "0xc0134b5b924c2fca106efb33c45446c466fbe03e", //ALEPH
+      ],
     },
     {
       "address": "0xf92cD566Ea4864356C5491c177A430C222d7e678",

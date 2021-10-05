@@ -24,7 +24,10 @@ export const project = {
       "chainId": MAINNET,
       "name": "Anyswap Fantom bridge",
       "project": anyswap.name,
-      "website": anyswap.website
+      "website": anyswap.website,
+      "excludeAddr": [
+        "0x3472a5a71965499acd81997a54bba8d852c6e53d", //BADGER
+      ],
     },
     // USDT
     {
