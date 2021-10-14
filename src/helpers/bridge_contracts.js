@@ -27,7 +27,7 @@ import hermez from './projects/hermez.js'
 import heco from './projects/heco.js'
 import hop from './projects/hop.js'
 import immutablex from './projects/immutablex.js'
-// import layer2finance from './projects/layer2finance.js'
+import layer2finance from './projects/layer2finance.js'
 import loopring from './projects/loopring.js'
 import moonriver from './projects/moonriver.js'
 import near from './projects/near.js'
@@ -83,7 +83,7 @@ export const ETH_BRIDGE_CONTRACTS = {
   [heco.name]: heco,
   [hop.name]: hop,
   [immutablex.name]: immutablex,
-  // [layer2finance.name]: layer2finance,
+  [layer2finance.name]: layer2finance,
   [loopring.name]: loopring,
   [moonriver.name]: moonriver,
   [near.name]: near,
