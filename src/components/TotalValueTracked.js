@@ -1,4 +1,4 @@
-import human from 'millify'
+import { getTVL } from '../helpers/formatTVL'
 
 export const TotalValueTracked = ({ price, tvl, children, tvlTrend, tvlDiff}) => {
   const enabled = price === 1
@@ -26,7 +26,7 @@ export const TotalValueTracked = ({ price, tvl, children, tvlTrend, tvlDiff}) =>
       </div>
       <div className="flex flex-col justify-start">
           <p className="text-gray-700 dark:text-gray-100 text-4xl text-left font-bold my-4">
-            {token} {human(tvl * price)}
+            {token} {getTVL(tvl, price, token)}
           </p>
           <div className="flex items-center text-green-500 text-sm">
               {/* <svg width="20" height="20" fill="currentColor" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">

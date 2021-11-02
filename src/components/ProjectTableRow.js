@@ -6,7 +6,7 @@ import { ETH_BRIDGE_CONTRACTS, getTypeMap } from '../helpers/bridge_contracts.js
 export const ProjectTableRow = ({name, data, price}) => {
   const project = data[name]
   const projMeta = ETH_BRIDGE_CONTRACTS[name]
-  const tvl = price === 1 ? `Ξ${human(project.tvl)}` : `$${human(project.tvl * price)}`
+  const sum = price === 1 ? `Ξ${human(project.tvl)}` : `$${human(project.tvl * price)}`
   return (
     <tr>
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
@@ -24,7 +24,7 @@ export const ProjectTableRow = ({name, data, price}) => {
       </td>
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
           <p className="text-gray-900 whitespace-no-wrap">
-              {tvl}
+              {sum}
           </p>
       </td>
       {/* <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
