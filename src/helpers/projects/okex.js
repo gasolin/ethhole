@@ -14,7 +14,10 @@ export const project = {
     {
       "address": "0x2c8fbb630289363ac80705a1a61273f76fd5a161",
       "chainId": MAINNET,
-      "name": "OKExChain bridge"
+      "name": "OKExChain bridge",
+      "excludeAddr": [
+        "0xa06884f35916badb1bf974a30df1accb2cc316cb", //Floki
+      ]
     },
   ]
 }
