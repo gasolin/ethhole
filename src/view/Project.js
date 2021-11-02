@@ -1,5 +1,6 @@
 import {A, useTitle} from 'hookrouter'
-import human from 'millify'
+
+import { getTVL } from '../helpers/formatTVL'
 
 import { useChainData } from '../hooks/useChainData'
 import { ETH_BRIDGE_CONTRACTS } from '../helpers/bridge_contracts'
@@ -56,6 +57,7 @@ export const Project = ({proj}) => {
           <a href={`https://etherscan.io/address/${bridgesMeta[idx].address}`} target="_blank" rel="noreferrer" alt="smart contract">📝</a>
         )
         const bridgeProvider = bridgesMeta[idx]?.project
+        const sum = getTVL(bridge.tvl, price, bridgeName)
         return (
           <Panel key={idx}>
             <div className="p-4 bg-white dark:bg-gray-800 border-b border-gray-200">
@@ -63,7 +65,7 @@ export const Project = ({proj}) => {
                 <p className="text-md text-black dark:text-white ml-2">
                 {bridgeLink}{' '}
                 {contractLink}{' '}
-                ({symbol}{human(bridge.tvl * price)})
+                ({symbol}{sum})
                 {bridgeProvider && <> by <A className="text-blue-500 underline whitespace-no-wrap" href={`/liquidity/${bridgeProvider}`}>{bridgeProvider}</A></>}
                 </p>
               </div>
@@ -71,10 +73,15 @@ export const Project = ({proj}) => {
             <TokensTree project={proj} tokens={tokens} price={price} />
             <TokensTable>
             {tokens.map((item, idx) => {
-              // console.log('%O', item)
               const symbol = item.contract_ticker_symbol
               return (
-                <TokenTableRow key={symbol} idx={idx} tokenData={item} bridge={bridge.address} sum={`$${human(item.quote * price)}`} />
+                <TokenTableRow
+                  key={symbol}
+                  idx={idx}
+                  tokenData={item}
+                  bridge={bridge.address}
+                  sum={`$${getTVL(item.quote, price, symbol)}`}
+                />
               )
             })}
             </TokensTable>
