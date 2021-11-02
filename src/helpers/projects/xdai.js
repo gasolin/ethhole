@@ -21,7 +21,14 @@ export const project = {
       "address": "0x88ad09518695c6c3712ac10a214be5109a655671",
       "name": "Omni Bridge",
       "chainId": MAINNET,
-      "protocol": ["sushiswap", "synthetix", "uniswap"]
+      "protocol": ["sushiswap", "synthetix", "uniswap"],
+      "excludeAddr": [
+        "0xdada02029134f73af874640ef351a8cf85ddada0", //NODE
+        "0xa06884f35916badb1bf974a30df1accb2cc316cb", //Floki
+        "0x9ca85572e6a3ebf24dedd195623f188735a5179f", //y3CRV
+        "0x70f823ed7643fd7a26fdf8753827d31c16374fde", //PKGX
+        "0x072b999fc3d82f9ea08b8adbb9d63a980ff2b14d", //Sushiswap LP old
+      ]
     },
     {
       "address": "0xed7e6720ac8525ac1aeee710f08789d02cd87ecb",

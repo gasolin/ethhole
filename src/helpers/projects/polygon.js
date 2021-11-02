@@ -25,7 +25,7 @@ export const project = {
       "protocol": ["dhedge", "synthetix", "mushroom", "aave"],
       "exclude": ["KNG"],
       "excludeAddr": [
-        "0x91dfbee3965baaee32784c2d546b7a0c62f268c9", // BONDLY
+        "0x91dfbee3965baaee32784c2d546b7a0c62f268c9", //BONDLY
         "0xcd1faff6e578fa5cac469d2418c95671ba1a62fe", //XTM
         "0xa283aa7cfbb27ef0cfbcb2493dd9f4330e0fd304", //MM
         "0x1beef31946fbbb40b877a72e4ae04a8d1a5cee06", //PAR
@@ -35,6 +35,9 @@ export const project = {
         "0x2baecdf43734f22fd5c152db08e3c27233f0c7d2", //OM
         "0x5dc02ea99285e17656b8350722694c35154db1e8", //BOND
         "0xdd974d5c2e2928dea5f71b9825b8b646686bd200", //KNC
+        "0x55b1a124c04a54eefdefe5fa2ef5f852fb5f2f26", //ETHM
+        "0x1eb754b8355d3185a7429109bde75e473434b26b", //EZ
+        "0xdd1ad9a21ce722c151a836373babe42c868ce9a4", //UBI
       ],
     },
     {
