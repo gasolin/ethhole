@@ -4,6 +4,7 @@ import { parse } from 'https://deno.land/std/flags/mod.ts'
 import { Timeout } from "https://deno.land/x/timeout/mod.ts"
 
 import { ETH_BRIDGE_CONTRACTS } from '../src/helpers/bridge_contracts.js'
+import { MAX_AMOUNT } from '../src/helpers/constants.js'
 import { writeJson } from './write_data.js'
 const { args, exit } = Deno
 
@@ -105,7 +106,8 @@ async function main() {
             token.contract_ticker_symbol.length < 20 &&
             !excludedTokens.includes(token.contract_ticker_symbol) &&
             !excludeAddr.includes(token.contract_address) &&
-            token.quote > QUOTE_THRESHOLD
+            token.quote > QUOTE_THRESHOLD &&
+            token.quote < MAX_AMOUNT
           )
           .map(token => {
             // console.log('tvl of ', bridge.address)
