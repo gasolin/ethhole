@@ -3,6 +3,7 @@ import { Chart } from "react-google-charts"
 
 // https://react-google-charts.com/treemap-chart
 export const TokensTree = ({project, tokens, price, width = 400}) => {
+  const tokenNames = []
   const tokenData = [
     [
       'Token',
@@ -12,8 +13,13 @@ export const TokensTree = ({project, tokens, price, width = 400}) => {
     ],
     [project, null, 0, 0],
     ...tokens
-      // dirty hack for showing matic bridge tree
-      .filter(item => item.contract_ticker_symbol !== 'YLD')
+      .filter(item => {
+        if (tokenNames.includes(item.contract_ticker_symbol)) {
+          return false
+        }
+        tokenNames.push(item.contract_ticker_symbol)
+        return true
+      })
       .map(item => [item.contract_ticker_symbol, project, item.quote, item.quote]),
   ]
 
