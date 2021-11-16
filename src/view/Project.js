@@ -1,4 +1,5 @@
 import {A, useTitle} from 'hookrouter'
+import { Chart } from "react-google-charts"
 
 import { getTVL } from '../helpers/formatTVL'
 
@@ -34,12 +35,34 @@ export const Project = ({proj}) => {
   const tvlTrend = prevProjectData?.tvl ? projectData.tvl - prevProjectData.tvl > 0 : undefined
   const tvlDiff = prevProjectData?.tvl && prevProjectData.tvl > 0 ? ((projectData.tvl - prevProjectData.tvl) / prevProjectData.tvl * 100).toFixed(2) + '%' : undefined
 
+  const getBridgesByProject = (proj) => ETH_BRIDGE_CONTRACTS[proj].bridges
+  const getBridgeName = (proj, idx) => {
+    const bridgesMeta = getBridgesByProject(proj)
+    return bridgesMeta[idx]?.name || `Bridge ${idx + 1}`
+  }
+
   return (
     <>
       <Nav ethUsdPrice={price} timestamp={timestamp} />
       <Panel>
         <ProjectMetas proj={proj} />
       </Panel>
+      {projectData.bridges.length > 1 && (<Panel>
+        <Chart
+          width={'400px'}
+          height={'300px'}
+          chartType="Sankey"
+          loader={<div>Loading Chart</div>}
+          data={[
+            ['From', 'To', 'TVL'],
+            ...projectData.bridges.map((bridge, idx) => {
+              const bridgeName = getBridgeName(proj, idx)
+              return [proj, bridgeName, bridge.tvl]
+            })
+          ]}
+          rootProps={{ 'data-testid': '1' }}
+        />
+      </Panel>)}
       <Panel>
         <TotalValueTracked price={price} tvl={tvl} tvlTrend={tvlTrend} tvlDiff={tvlDiff}></TotalValueTracked>
       </Panel>
