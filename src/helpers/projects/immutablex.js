@@ -5,6 +5,7 @@ export const project = {
   name: 'ImmutableX',
   website: "https://www.immutable.com/",
   twitter: "https://twitter.com/immutable",
+  explorer: "https://immutascan.io/",
   color: "#24d1e9",
   type: TYPE_LAYER2_EXCHANGE,
   bridges: [
