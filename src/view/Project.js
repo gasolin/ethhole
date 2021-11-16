@@ -57,7 +57,7 @@ export const Project = ({proj}) => {
             ['From', 'To', 'TVL'],
             ...projectData.bridges.map((bridge, idx) => {
               const bridgeName = getBridgeName(proj, idx)
-              return [proj, bridgeName, bridge.tvl]
+              return [bridgeName, proj, bridge.tvl]
             })
           ]}
           rootProps={{ 'data-testid': '1' }}
