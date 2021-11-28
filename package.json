@@ -1,11 +1,11 @@
 {
   "name": "ethhole",
-  "version": "0.11.1",
+  "version": "0.11.2",
   "homepage": "http://ethhole.link",
   "dependencies": {
-    "@ethersproject/units": "^5.4.0",
-    "@usedapp/coingecko": "^0.3.22",
-    "@usedapp/core": "^0.4.6",
+    "@ethersproject/units": "^5.5.0",
+    "@usedapp/coingecko": "^0.3.25",
+    "@usedapp/core": "^0.6.3",
     "hookrouter": "^1.2.5",
     "lodash": "^4.17.21",
     "millify": "^4.0.0",
@@ -16,7 +16,7 @@
     "react-google-charts": "^3.0.15",
     "react-scripts": "4.0.3",
     "react-vis": "^1.11.7",
-    "web-vitals": "^2.1.0"
+    "web-vitals": "^2.1.2"
   },
   "scripts": {
     "start": "craco start",

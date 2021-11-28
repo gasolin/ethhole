@@ -30,6 +30,7 @@ import immutablex from './projects/immutablex.js'
 import layer2finance from './projects/layer2finance.js'
 import loopring from './projects/loopring.js'
 import moonriver from './projects/moonriver.js'
+import metis from './projects/metis.js'
 import near from './projects/near.js'
 import okex from './projects/okex.js'
 import omg from './projects/omg.js'
@@ -85,6 +86,7 @@ export const ETH_BRIDGE_CONTRACTS = {
   [immutablex.name]: immutablex,
   [layer2finance.name]: layer2finance,
   [loopring.name]: loopring,
+  [metis.name]: metis,
   [moonriver.name]: moonriver,
   [near.name]: near,
   [okex.name]: okex,
