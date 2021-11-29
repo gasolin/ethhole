@@ -13,7 +13,10 @@ export const project = {
       "address": "0x00000000219ab540356cbb839cbe05303d7705fa",
       "chainId": MAINNET,
       "name": "ETH2 Staking",
-      "website": "https://launchpad.ethereum.org/en/"
+      "website": "https://launchpad.ethereum.org/en/",
+      "excludeAddr": [
+        "0x8727c112c712c4a03371ac87a74dd6ab104af768", // JET
+      ]
     },
   ]
 }
