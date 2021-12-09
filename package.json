@@ -1,6 +1,6 @@
 {
   "name": "ethhole",
-  "version": "0.11.3",
+  "version": "0.11.4",
   "homepage": "http://ethhole.link",
   "dependencies": {
     "@ethersproject/units": "^5.5.0",

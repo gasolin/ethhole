@@ -18,7 +18,10 @@ export const project = {
     {
       "address": "0x070cB1270A4B2bA53c81CeF89d0FD584Ed4F430B",
       "chainId": MAINNET,
-      "name": "ERC20 bridge"
+      "name": "ERC20 bridge",
+      "excludeAddr": [
+        "0x49d716dfe60b37379010a75329ae09428f17118d",
+      ],
     },
   ]
 }
