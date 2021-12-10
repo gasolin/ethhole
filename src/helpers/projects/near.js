@@ -12,7 +12,10 @@ export const project = {
     {
       "address": "0x23ddd3e3692d1861ed57ede224608875809e127f",
       "chainId": MAINNET,
-      "name": "Rainbow bridge"
+      "name": "Rainbow bridge",
+      "excludeAddr": [
+        "0xaaaaaa20d9e0e2461697782ef11675f668207961", //AURORA
+      ],
     }
   ],
 }
