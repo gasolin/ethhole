@@ -28,6 +28,7 @@ import harmony from './projects/harmony.js'
 import hermez from './projects/hermez.js'
 import heco from './projects/heco.js'
 import hop from './projects/hop.js'
+import hyphen from './projects/hyphen.js'
 import immutablex from './projects/immutablex.js'
 import layer2finance from './projects/layer2finance.js'
 import loopring from './projects/loopring.js'
@@ -69,6 +70,7 @@ export const LIQUIDITY_PROJECTS = {
   [connext.name]: connext,
   [cbridge.name]: cbridge,
   [hop.name]: hop,
+  [hyphen.name]: hyphen,
   [optics.name]: optics,
   [orbit.name]: orbit,
   [thorswap.name]: thorswap,
@@ -94,6 +96,7 @@ export const ETH_BRIDGE_CONTRACTS = {
   [hermez.name]: hermez,
   [heco.name]: heco,
   [hop.name]: hop,
+  [hyphen.name]: hyphen,
   [immutablex.name]: immutablex,
   [layer2finance.name]: layer2finance,
   [loopring.name]: loopring,
