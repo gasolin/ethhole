@@ -2,6 +2,8 @@ import {
   TYPE_SIDECHAIN,
   TYPE_PUBLICCHAIN,
   TYPE_STAKING,
+  TYPE_CROSSCHAIN_DEX,
+  TYPE_LIQUIDITY,
   typeMap,
 } from './projectTypes.js'
 import { BSC, XDAI } from './chainInfo.js'
@@ -43,12 +45,19 @@ import ronin from './projects/ronin.js'
 import rsk from './projects/rsk.js'
 import solana from './projects/solana.js'
 import sorare from './projects/sorare.js'
+import thorswap from './projects/thorswap.js'
 import xdai from './projects/xdai.js'
 import zkswap from './projects/zkswap.js'
 import zksync from './projects/zksync.js'
 import iotex from './projects/iotex.js'
 
-export const NOT_LAYER2 = [TYPE_SIDECHAIN, TYPE_PUBLICCHAIN, TYPE_STAKING]
+export const NOT_LAYER2 = [
+  TYPE_SIDECHAIN,
+  TYPE_PUBLICCHAIN,
+  TYPE_STAKING,
+  TYPE_CROSSCHAIN_DEX,
+  TYPE_LIQUIDITY,
+]
 
 export const getTypeMap = (type) => typeMap[type] || 'Unknown'
 
@@ -62,6 +71,7 @@ export const LIQUIDITY_PROJECTS = {
   [hop.name]: hop,
   [optics.name]: optics,
   [orbit.name]: orbit,
+  [thorswap.name]: thorswap,
 }
 
 // define in alphabetic order
@@ -101,6 +111,7 @@ export const ETH_BRIDGE_CONTRACTS = {
   [rsk.name]: rsk,
   [solana.name]: solana,
   [sorare.name]: sorare,
+  [thorswap.name]: thorswap,
   [xdai.name]: xdai,
   [zkswap.name]: zkswap,
   [zksync.name]: zksync,
