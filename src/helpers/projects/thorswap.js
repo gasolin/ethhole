@@ -9,10 +9,10 @@ export const project = {
   type: TYPE_LIQUIDITY, // required
   bridges: [
     {
-      "address": "0x5427fefa711eff984124bfbb1ab6fbf5e3da1820",
+      "address": "0xc145990e84155416144c532e31f89b840ca8c2ce",
       "chainId": MAINNET,  // required
       "name": "THORSwap V2",
-      "website": "0xc145990e84155416144c532e31f89b840ca8c2ce"
+      "website": "https://app.thorswap.finance/"
     },
   ]
 }
