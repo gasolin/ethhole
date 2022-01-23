@@ -11,11 +11,17 @@ export const project = {
   type: TYPE_LIQUIDITY, // required
   bridges: [
     {
+      "address": "0x5427fefa711eff984124bfbb1ab6fbf5e3da1820",
+      "chainId": MAINNET,  // required
+      "name": "cBridge V2",
+      "website": "https://cbridge.celer.network/"
+    },
+    {
       "address": "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C",  // required
       "chainId": MAINNET,  // required
       "name": "cBridge",
       "website": "https://cbridge.celer.network/"
-    },
+    }
   ]
 }
 
