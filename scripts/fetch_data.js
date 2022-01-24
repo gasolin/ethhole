@@ -180,8 +180,10 @@ async function main() {
       if (!collectData[proj]) {
         collectData[proj] = {}
         collectData[proj].bridges = [dataset]
+        console.log('new bridges for', proj)
       } else {
         collectData[proj].bridges.push(dataset)
+        console.log('add bridge for', proj)
       }
 
       // to not brute the API limit
@@ -192,8 +194,8 @@ async function main() {
     projects
       .map(project => {
         let tvl = 0
-        console.log('tvl of ', project)
-        collectData[project].bridges.map(bridge => {
+        console.log('tvl of', project)
+        collectData[project]?.bridges?.map(bridge => {
           tvl += bridge.tvl
           return ''
         })
