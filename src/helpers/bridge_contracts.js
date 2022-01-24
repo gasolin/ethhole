@@ -45,7 +45,7 @@ import polynetwork from './projects/polynetwork.js'
 import ronin from './projects/ronin.js'
 import rsk from './projects/rsk.js'
 import solana from './projects/solana.js'
-import sorare from './projects/sorare.js'
+// import sorare from './projects/sorare.js'
 import thorswap from './projects/thorswap.js'
 import xdai from './projects/xdai.js'
 import zkswap from './projects/zkswap.js'
@@ -113,7 +113,7 @@ export const ETH_BRIDGE_CONTRACTS = {
   [ronin.name]: ronin,
   [rsk.name]: rsk,
   [solana.name]: solana,
-  [sorare.name]: sorare,
+  // [sorare.name]: sorare,
   [thorswap.name]: thorswap,
   [xdai.name]: xdai,
   [zkswap.name]: zkswap,
