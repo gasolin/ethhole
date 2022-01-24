@@ -50,12 +50,6 @@ export const project = {
       "name": "Anyswap Polygon bridge",
       "project": anyswap.name,
       "website": anyswap.website
-    },
-    {
-      "address": "0xF78765bd14B4E8527d9E4E5c5a5c11A44ad12F47",
-      "chainId": MAINNET,
-      "name": "Biconomy Hyphen Bridge",
-      "website": "https://hyphen.biconomy.io/",
     }
   ],
 }

@@ -11,7 +11,7 @@ export const project = {
     {
       "address": "0xF78765bd14B4E8527d9E4E5c5a5c11A44ad12F47",
       "chainId": MAINNET,  // required
-      "name": "Bitconomy: Hyphen Bridge",
+      "name": "Bitconomy Hyphen Bridge",
       "website": "https://hyphen.biconomy.io/"
     },
   ]
