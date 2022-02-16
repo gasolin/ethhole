@@ -42,7 +42,7 @@ import optimism from './projects/optimism.js'
 import orbit from './projects/orbit.js'
 import polygon from './projects/polygon.js'
 import polynetwork from './projects/polynetwork.js'
-import ronin from './projects/ronin.js'
+// import ronin from './projects/ronin.js'
 import rsk from './projects/rsk.js'
 import solana from './projects/solana.js'
 // import sorare from './projects/sorare.js'
@@ -110,7 +110,7 @@ export const ETH_BRIDGE_CONTRACTS = {
   [orbit.name]: orbit,
   [polygon.name]: polygon,
   [polynetwork.name]: polynetwork,
-  [ronin.name]: ronin,
+  // [ronin.name]: ronin,
   [rsk.name]: rsk,
   [solana.name]: solana,
   // [sorare.name]: sorare,
