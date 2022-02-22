@@ -23,7 +23,6 @@ import eth2 from './projects/eth2.js'
 import fantom from './projects/fantom.js'
 import fusion from './projects/fusion.js'
 import gluon from './projects/gluon.js'
-import habitat from './projects/habitat.js'
 import harmony from './projects/harmony.js'
 import hermez from './projects/hermez.js'
 import heco from './projects/heco.js'
@@ -91,7 +90,6 @@ export const ETH_BRIDGE_CONTRACTS = {
   [fantom.name]: fantom,
   [fusion.name]: fusion,
   [gluon.name]: gluon,
-  [habitat.name]: habitat,
   [harmony.name]: harmony,
   [hermez.name]: hermez,
   [heco.name]: heco,
