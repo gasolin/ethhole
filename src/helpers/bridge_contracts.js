@@ -47,7 +47,7 @@ import solana from './projects/solana.js'
 // import sorare from './projects/sorare.js'
 import thorswap from './projects/thorswap.js'
 import xdai from './projects/xdai.js'
-import zkswap from './projects/zkswap.js'
+import zkspace from './projects/zkspace.js'
 import zksync from './projects/zksync.js'
 import iotex from './projects/iotex.js'
 
@@ -114,7 +114,7 @@ export const ETH_BRIDGE_CONTRACTS = {
   // [sorare.name]: sorare,
   [thorswap.name]: thorswap,
   [xdai.name]: xdai,
-  [zkswap.name]: zkswap,
+  [zkspace.name]: zkspace,
   [zksync.name]: zksync,
   [iotex.name]: iotex,
 }
