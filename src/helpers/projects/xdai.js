@@ -3,7 +3,7 @@ import { MAINNET } from '../chainInfo.js'
 import anyswap from './anyswap.js'
 
 export const project = {
-  name: "xDai",
+  name: "Gnosis",
   explorer: "https://blockscout.com/poa/xdai/",
   website: "https://www.xdaichain.com/",
   twitter: "https://twitter.com/xdaichain",
