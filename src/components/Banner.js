@@ -1,7 +1,7 @@
 import { Panel } from '../components/Panel'
 
-export const Banner = () => (<></>)
-/*(
+export const Banner = () => //(<></>)
+(
   <Panel>
     <div class="text-center w-full mx-auto py-4 px-4 z-20">
       <h2 class="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
@@ -9,7 +9,7 @@ export const Banner = () => (<></>)
           Support Public Goods like us
         </span>
         <span class="block text-indigo-400">
-          in Gitcoin Grant 12
+          in Gitcoin Grant 13
         </span>
       </h2>
       <div class="lg:mt-0 lg:flex-shrink-0">
@@ -19,4 +19,4 @@ export const Banner = () => (<></>)
       </div>
     </div>
   </Panel>
-)*/
+)
