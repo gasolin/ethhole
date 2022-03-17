@@ -45,6 +45,7 @@ import polynetwork from './projects/polynetwork.js'
 import rsk from './projects/rsk.js'
 import solana from './projects/solana.js'
 // import sorare from './projects/sorare.js'
+import tezos from './projects/tezos.js'
 import thorswap from './projects/thorswap.js'
 import xdai from './projects/xdai.js'
 import zkspace from './projects/zkspace.js'
@@ -112,6 +113,7 @@ export const ETH_BRIDGE_CONTRACTS = {
   [rsk.name]: rsk,
   [solana.name]: solana,
   // [sorare.name]: sorare,
+  [tezos.name]: tezos,
   [thorswap.name]: thorswap,
   [xdai.name]: xdai,
   [zkspace.name]: zkspace,
@@ -119,6 +121,7 @@ export const ETH_BRIDGE_CONTRACTS = {
   [iotex.name]: iotex,
 }
 
+/*
 // WIP
 export const XDAI_BRIDGE_CONTRACTS = {
   "xDai": {
@@ -157,3 +160,4 @@ export const BSC_BRIDGE_CONTRACTS = {
     "type": TYPE_SIDECHAIN
   },
 }
+*/
