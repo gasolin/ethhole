@@ -6,7 +6,7 @@ import {
   TYPE_LIQUIDITY,
   typeMap,
 } from './projectTypes.js'
-import { BSC, XDAI } from './chainInfo.js'
+// import { BSC, XDAI } from './chainInfo.js'
 
 import anyswap from './projects/anyswap.js'
 import connext from './projects/connext.js'
