@@ -16,7 +16,10 @@ export const project = {
       "address": "0x47ac0Fb4F2D84898e4D9E7b4DaB3C24507a6D503",
       "chainId": MAINNET,
       "name": "Binance Smart Chain Bridge",
-      "website": "https://www.binance.org/en/bridge"
+      "website": "https://www.binance.org/en/bridge",
+      "excludeAddr": [
+        "0x8ab448a98840f13e38e1a25328abe3eba190809b", // fake Samsung
+      ]
     },
     {
       "address": "0x9BF4001d307dFd62B26A2F1307ee0C0307632d59",

@@ -17,6 +17,7 @@ export const project = {
       "name": "OKExChain bridge",
       "excludeAddr": [
         "0xa06884f35916badb1bf974a30df1accb2cc316cb", //Floki
+        "0x8ab448a98840f13e38e1a25328abe3eba190809b", // fake Samsung
       ]
     },
   ]
