@@ -1,7 +1,7 @@
-import { Panel } from '../components/Panel'
+// import { Panel } from '../components/Panel'
 
-export const Banner = () => //(<></>)
-(
+export const Banner = () => (<></>)
+/*(
   <Panel>
     <div class="text-center w-full mx-auto py-4 px-4 z-20">
       <h2 class="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
@@ -19,4 +19,4 @@ export const Banner = () => //(<></>)
       </div>
     </div>
   </Panel>
-)
+)*/
