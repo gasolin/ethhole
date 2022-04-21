@@ -31,6 +31,7 @@ import hyphen from './projects/hyphen.js'
 import immutablex from './projects/immutablex.js'
 import layer2finance from './projects/layer2finance.js'
 import loopring from './projects/loopring.js'
+import moonbeam from './projects/moonbeam.js'
 import moonriver from './projects/moonriver.js'
 import metis from './projects/metis.js'
 import near from './projects/near.js'
@@ -100,6 +101,7 @@ export const ETH_BRIDGE_CONTRACTS = {
   [layer2finance.name]: layer2finance,
   [loopring.name]: loopring,
   [metis.name]: metis,
+  [moonbeam.name]: moonbeam,
   [moonriver.name]: moonriver,
   [near.name]: near,
   [okex.name]: okex,

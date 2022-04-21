@@ -3,9 +3,9 @@ import { MAINNET } from '../chainInfo.js'
 import anyswap from './anyswap.js'
 
 export const project = {
-  name: 'Moonriver', // required, name need to be able to use as key
+  name: 'Moonbeam', // required, name need to be able to use as key
   // explorer: "https://",
-  website: "https://moonbeam.network/networks/moonriver/",
+  website: "https://moonbeam.network/networks/moonbeam/",
   github: "https://github.com/PureStake/moonbeam",
   twitter: "https://twitter.com/moonbeamnetwork",
   // description: "Solidity Smart Contracts on Kusama",
@@ -13,9 +13,9 @@ export const project = {
   type: TYPE_PUBLICCHAIN, // required
   bridges: [
     {
-      "address": "0x10c6b61DbF44a083Aec3780aCF769C77BE747E23",  // required
+      "address": "0xec4486a90371c9b66f499ff3936f29f0d5af8b7e",  // required
       "chainId": MAINNET,  // required
-      "name": "Multichain MoonRiver bridge",
+      "name": "Multichain MoonBean bridge",
       "project": anyswap.name,
       "website": anyswap.website
     },

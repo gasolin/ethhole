@@ -35,7 +35,7 @@ export const project = {
     {
       "address": "0x2F10c5eE93ac666dA72195abA8a49FD6D27fA02F",
       "chainId": MAINNET,
-      "name": "Anyswap XDAI bridge",
+      "name": "Multichain XDAI bridge",
       "project": anyswap.name
     },
   ]

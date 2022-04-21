@@ -14,7 +14,7 @@ export const project = {
     {
       "address": "0x65e64963b755043CA4FFC88029FfB8305615EeDD",
       "chainId": MAINNET,
-      "name": "Anyswap Fantom bridge",
+      "name": "Multichain Fantom bridge",
       "project": anyswap.name,
       "website": anyswap.website
     },
@@ -22,7 +22,7 @@ export const project = {
     {
       "address": "0xC564EE9f21Ed8A2d8E7e76c085740d5e4c5FaFbE",
       "chainId": MAINNET,
-      "name": "Anyswap Fantom bridge",
+      "name": "Multichain Fantom bridge",
       "project": anyswap.name,
       "website": anyswap.website,
       "excludeAddr": [
@@ -33,7 +33,7 @@ export const project = {
     {
       "address": "0xBe008e52c5682A49dd0260735a26Aa221f303456",
       "chainId": MAINNET,
-      "name": "Anyswap Fantom bridge",
+      "name": "Multichain Fantom bridge",
       "project": anyswap.name,
       "website": anyswap.website
     },

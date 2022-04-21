@@ -14,7 +14,7 @@ export const project = {
     {
       "address": "0x46290B0c3A234E3d538050d8F34421797532A827",
       "chainId": MAINNET,
-      "name": "Anyswap Fusion bridge",
+      "name": "Multichain Fusion bridge",
       "project": anyswap.name,
       "website": anyswap.website
     },

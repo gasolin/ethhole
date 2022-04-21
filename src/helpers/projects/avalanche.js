@@ -23,7 +23,7 @@ export const project = {
     {
       "address": "0x820A9eb227BF770A9dd28829380d53B76eAf1209",
       "chainId": MAINNET,
-      "name": "Anyswap Avalanche bridge",
+      "name": "Multichain Avalanche bridge",
       "project": anyswap.name,
       "website": anyswap.website,
     }

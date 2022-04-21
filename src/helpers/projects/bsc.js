@@ -37,7 +37,7 @@ export const project = {
     {
       "address": "0x533e3c0e6b48010873B947bddC4721b1bDFF9648",
       "chainId": MAINNET,
-      "name": "Anyswap BSC bridge",
+      "name": "Multichain BSC bridge",
       "project": anyswap.name,
       "website": anyswap.website,
       "exclude": ["STAR", "FORM"],

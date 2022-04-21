@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { getTimeTag } from '../helpers/formatDate'
 
 // comment out for debug
-// import debugData from '../data/2022-03-17.json'
+// import debugData from '../data/2022-04-21.json'
 const debugData = ''
 
 const DAY_WHITELIST = ['yesterday']
